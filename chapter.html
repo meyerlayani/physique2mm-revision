@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter · Physics 2mm</title>
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap row">
+    <a href="index.html" class="back">← All chapters</a>
+    <div class="lang" role="group" aria-label="Language of lessons and corrections">
+      <button data-lang="fr">FR</button><button data-lang="he">HE</button>
+    </div>
+  </div>
+  <div class="wrap">
+    <h1 id="title">…</h1>
+    <div class="bar thin"><div id="ch-bar" class="fill" style="width:0%"></div></div>
+    <p id="ch-detail" class="muted small"></p>
+  </div>
+</header>
+<main class="wrap">
+  <nav class="tabs">
+    <a href="#lesson">Lesson</a><a href="#questions">Questions</a>
+  </nav>
+  <section id="lesson" class="card lesson"><p class="muted">Loading lesson…</p></section>
+  <h2 id="questions" class="section-title">Questions</h2>
+  <div id="qlist"></div>
+  <nav id="pager" class="pager"></nav>
+</main>
+<script src="vendor/katex/katex.min.js"></script>
+<script src="vendor/katex/contrib/auto-render.min.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/chapter.js"></script>
+</body>
+</html>

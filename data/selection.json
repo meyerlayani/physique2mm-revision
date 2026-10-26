@@ -1,0 +1,644 @@
+{
+ "1": [
+  {
+   "exam": "25wnA",
+   "q": 1,
+   "alsoIn": [
+    {
+     "exam": "26spM",
+     "q": 1
+    }
+   ]
+  },
+  {
+   "exam": "26spM",
+   "q": 2,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spA",
+   "q": 1,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spA",
+   "q": 2,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spB",
+   "q": 1,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spB",
+   "q": 2,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnA",
+   "q": 1,
+   "alsoIn": []
+  },
+  {
+   "exam": "25wnA",
+   "q": 2,
+   "alsoIn": []
+  },
+  {
+   "exam": "25wnB",
+   "q": 1,
+   "alsoIn": []
+  },
+  {
+   "exam": "25wnB",
+   "q": 2,
+   "alsoIn": []
+  }
+ ],
+ "2": [
+  {
+   "exam": "26wnC",
+   "q": 3,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnA",
+   "q": 3,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spM",
+   "q": 4,
+   "alsoIn": []
+  },
+  {
+   "exam": "25wnA",
+   "q": 3,
+   "alsoIn": []
+  },
+  {
+   "exam": "25spA",
+   "q": 2,
+   "alsoIn": []
+  },
+  {
+   "exam": "25spB",
+   "q": 2,
+   "alsoIn": []
+  },
+  {
+   "exam": "24wnB",
+   "q": 2,
+   "alsoIn": []
+  },
+  {
+   "exam": "24spC",
+   "q": 3,
+   "alsoIn": []
+  },
+  {
+   "exam": "23wnB",
+   "q": 1,
+   "alsoIn": []
+  },
+  {
+   "exam": "22spB",
+   "q": 2,
+   "alsoIn": []
+  }
+ ],
+ "3": [
+  {
+   "exam": "26wnC",
+   "q": 2,
+   "alsoIn": [
+    {
+     "exam": "24spB",
+     "q": 2
+    }
+   ]
+  },
+  {
+   "exam": "25wnB",
+   "q": 3,
+   "alsoIn": [
+    {
+     "exam": "25spB",
+     "q": 5
+    }
+   ]
+  },
+  {
+   "exam": "26spM",
+   "q": 3,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spA",
+   "q": 3,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spA",
+   "q": 4,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnA",
+   "q": 4,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spB",
+   "q": 3,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spA",
+   "q": 5,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnA",
+   "q": 2,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnC",
+   "q": 1,
+   "alsoIn": []
+  },
+  {
+   "exam": "25wnB",
+   "q": 5,
+   "alsoIn": []
+  },
+  {
+   "exam": "23wnA",
+   "q": 4,
+   "alsoIn": []
+  }
+ ],
+ "4": [
+  {
+   "exam": "26spM",
+   "q": 6,
+   "alsoIn": [
+    {
+     "exam": "23wnB",
+     "q": 4
+    }
+   ]
+  },
+  {
+   "exam": "26spB",
+   "q": 4,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spA",
+   "q": 6,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spB",
+   "q": 5,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnC",
+   "q": 6,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnC",
+   "q": 7,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnA",
+   "q": 5,
+   "alsoIn": []
+  },
+  {
+   "exam": "25wnA",
+   "q": 4,
+   "alsoIn": []
+  },
+  {
+   "exam": "24wnA",
+   "q": 5,
+   "alsoIn": []
+  },
+  {
+   "exam": "24wnB",
+   "q": 4,
+   "alsoIn": []
+  }
+ ],
+ "5": [
+  {
+   "exam": "26wnC",
+   "q": 5,
+   "alsoIn": [
+    {
+     "exam": "26wnB",
+     "q": 3
+    }
+   ]
+  },
+  {
+   "exam": "26wnC",
+   "q": 9,
+   "alsoIn": [
+    {
+     "exam": "24spB",
+     "q": 9
+    }
+   ]
+  },
+  {
+   "exam": "26spM",
+   "q": 5,
+   "alsoIn": [
+    {
+     "exam": "22spB",
+     "q": 6
+    }
+   ]
+  },
+  {
+   "exam": "26wnB",
+   "q": 10,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spA",
+   "q": 7,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spB",
+   "q": 6,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spA",
+   "q": 9,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spB",
+   "q": 10,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnB",
+   "q": 4,
+   "alsoIn": []
+  },
+  {
+   "exam": "25wnB",
+   "q": 10,
+   "alsoIn": []
+  },
+  {
+   "exam": "25wnA",
+   "q": 10,
+   "alsoIn": []
+  }
+ ],
+ "6": [
+  {
+   "exam": "26spM",
+   "q": 8,
+   "alsoIn": [
+    {
+     "exam": "22spB",
+     "q": 8
+    }
+   ]
+  },
+  {
+   "exam": "26spM",
+   "q": 9,
+   "alsoIn": [
+    {
+     "exam": "25wnA",
+     "q": 9
+    }
+   ]
+  },
+  {
+   "exam": "26spM",
+   "q": 7,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spA",
+   "q": 8,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spB",
+   "q": 7,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnA",
+   "q": 7,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnB",
+   "q": 7,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnB",
+   "q": 6,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnB",
+   "q": 5,
+   "alsoIn": []
+  },
+  {
+   "exam": "25wnA",
+   "q": 7,
+   "alsoIn": []
+  }
+ ],
+ "7": [
+  {
+   "exam": "26wnB",
+   "q": 8,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spA",
+   "q": 10,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spB",
+   "q": 8,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spB",
+   "q": 9,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnB",
+   "q": 9,
+   "alsoIn": []
+  },
+  {
+   "exam": "25wnB",
+   "q": 9,
+   "alsoIn": []
+  },
+  {
+   "exam": "25wnA",
+   "q": 5,
+   "alsoIn": []
+  },
+  {
+   "exam": "25spA",
+   "q": 9,
+   "alsoIn": []
+  },
+  {
+   "exam": "25spA",
+   "q": 10,
+   "alsoIn": []
+  },
+  {
+   "exam": "24wnB",
+   "q": 9,
+   "alsoIn": []
+  },
+  {
+   "exam": "24wnA",
+   "q": 8,
+   "alsoIn": []
+  },
+  {
+   "exam": "24spC",
+   "q": 9,
+   "alsoIn": []
+  }
+ ],
+ "8": [
+  {
+   "exam": "26wnA",
+   "q": 9,
+   "alsoIn": []
+  },
+  {
+   "exam": "24wnA",
+   "q": 9,
+   "alsoIn": []
+  },
+  {
+   "exam": "24spB",
+   "q": 7,
+   "alsoIn": []
+  },
+  {
+   "exam": "23spA",
+   "q": 10,
+   "alsoIn": []
+  },
+  {
+   "exam": "22wnC",
+   "q": 3,
+   "alsoIn": []
+  },
+  {
+   "exam": "22wnC",
+   "q": 7,
+   "alsoIn": []
+  },
+  {
+   "exam": "22wnB",
+   "q": 8,
+   "alsoIn": []
+  }
+ ],
+ "9": [
+  {
+   "exam": "26spM",
+   "q": 10,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spA",
+   "q": 11,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnB",
+   "q": 11,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnC",
+   "q": 10,
+   "alsoIn": []
+  },
+  {
+   "exam": "25spA",
+   "q": 12,
+   "alsoIn": []
+  },
+  {
+   "exam": "24wnA",
+   "q": 10,
+   "alsoIn": []
+  },
+  {
+   "exam": "22wnC",
+   "q": 10,
+   "alsoIn": []
+  },
+  {
+   "exam": "22wnA",
+   "q": 11,
+   "alsoIn": []
+  }
+ ],
+ "10": [
+  {
+   "exam": "26wnC",
+   "q": 11,
+   "alsoIn": [
+    {
+     "exam": "24spB",
+     "q": 11
+    }
+   ]
+  },
+  {
+   "exam": "26spM",
+   "q": 11,
+   "alsoIn": [
+    {
+     "exam": "24wnB",
+     "q": 10
+    }
+   ]
+  },
+  {
+   "exam": "26spA",
+   "q": 12,
+   "alsoIn": []
+  },
+  {
+   "exam": "26spB",
+   "q": 11,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnB",
+   "q": 12,
+   "alsoIn": []
+  },
+  {
+   "exam": "26wnA",
+   "q": 10,
+   "alsoIn": []
+  },
+  {
+   "exam": "25wnA",
+   "q": 12,
+   "alsoIn": []
+  },
+  {
+   "exam": "25wnB",
+   "q": 11,
+   "alsoIn": []
+  },
+  {
+   "exam": "25spB",
+   "q": 11,
+   "alsoIn": []
+  },
+  {
+   "exam": "25spB",
+   "q": 12,
+   "alsoIn": []
+  }
+ ],
+ "11": [
+  {
+   "exam": "26spM",
+   "q": 12,
+   "alsoIn": [
+    {
+     "exam": "24spC",
+     "q": 12
+    }
+   ]
+  },
+  {
+   "exam": "26wnC",
+   "q": 12,
+   "alsoIn": [
+    {
+     "exam": "23wnB",
+     "q": 12
+    }
+   ]
+  },
+  {
+   "exam": "26spB",
+   "q": 12,
+   "alsoIn": [
+    {
+     "exam": "22spB",
+     "q": 12
+    }
+   ]
+  },
+  {
+   "exam": "25wnB",
+   "q": 12,
+   "alsoIn": []
+  },
+  {
+   "exam": "25wnA",
+   "q": 11,
+   "alsoIn": []
+  },
+  {
+   "exam": "24wnA",
+   "q": 12,
+   "alsoIn": []
+  },
+  {
+   "exam": "24spB",
+   "q": 12,
+   "alsoIn": []
+  },
+  {
+   "exam": "24spA",
+   "q": 12,
+   "alsoIn": []
+  },
+  {
+   "exam": "23spB",
+   "q": 12,
+   "alsoIn": []
+  },
+  {
+   "exam": "22wnC",
+   "q": 12,
+   "alsoIn": []
+  }
+ ]
+}
