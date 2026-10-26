@@ -1,0 +1,234 @@
+{
+ "chapter": 11,
+ "title": "Interference",
+ "questions": [
+  {
+   "id": "26spM-q12",
+   "exam": "26spM",
+   "examLabel": "Spring 2026 · Reserve-duty Moed",
+   "num": 12,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    1,
+    0,
+    2,
+    4,
+    3,
+    5
+   ],
+   "officialSol": true,
+   "alsoIn": [
+    {
+     "exam": "24spC",
+     "q": 12,
+     "label": "Spring 2024 · Moed C Q12"
+    }
+   ],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "26wnC-q12",
+   "exam": "26wnC",
+   "examLabel": "Winter 2026 · Moed C",
+   "num": 12,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    3,
+    4,
+    0,
+    1,
+    2,
+    5
+   ],
+   "officialSol": true,
+   "alsoIn": [
+    {
+     "exam": "23wnB",
+     "q": 12,
+     "label": "Winter 2023 · Moed B Q12"
+    }
+   ],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "26spB-q12",
+   "exam": "26spB",
+   "examLabel": "Spring 2026 · Moed B",
+   "num": 12,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    1,
+    3,
+    5,
+    4,
+    0,
+    2
+   ],
+   "officialSol": true,
+   "alsoIn": [
+    {
+     "exam": "22spB",
+     "q": 12,
+     "label": "Spring 2022 · Moed B Q12 (same statement, other answer choices)"
+    }
+   ],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "25wnB-q12",
+   "exam": "25wnB",
+   "examLabel": "Winter 2025 · Moed B",
+   "num": 12,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    1,
+    3,
+    4,
+    0,
+    5,
+    2
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "25wnA-q11",
+   "exam": "25wnA",
+   "examLabel": "Winter 2025 · Moed A",
+   "num": 11,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    3,
+    2,
+    4,
+    0,
+    5,
+    1
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "24wnA-q12",
+   "exam": "24wnA",
+   "examLabel": "Winter 2024 · Moed A",
+   "num": 12,
+   "n": 6,
+   "split": true,
+   "answer": 5,
+   "order": [
+    2,
+    3,
+    5,
+    4,
+    0,
+    1
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "24spB-q12",
+   "exam": "24spB",
+   "examLabel": "Spring 2024 · Moed B",
+   "num": 12,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    1,
+    0,
+    2,
+    5,
+    4,
+    3
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "24spA-q12",
+   "exam": "24spA",
+   "examLabel": "Spring 2024 · Moed A",
+   "num": 12,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    0,
+    3,
+    5,
+    2,
+    1,
+    4
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "23spB-q12",
+   "exam": "23spB",
+   "examLabel": "Spring 2023 · Moed B",
+   "num": 12,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    0,
+    5,
+    2,
+    4,
+    3,
+    1
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "22wnC-q12",
+   "exam": "22wnC",
+   "examLabel": "Winter 2022 · Moed C",
+   "num": 12,
+   "n": 6,
+   "split": true,
+   "answer": 1,
+   "order": [
+    3,
+    2,
+    4,
+    5,
+    0,
+    1
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  }
+ ]
+}

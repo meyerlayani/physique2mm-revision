@@ -1,0 +1,77 @@
+<section lang="fr">
+<h2>Interférence : l'expérience de Young et les sources cohérentes</h2>
+
+<h3>1. L'idée : additionner des amplitudes, pas des intensités</h3>
+<p>Deux ondes <b>cohérentes</b> (même fréquence, déphasage fixe) qui arrivent au même point s'additionnent champ par champ. L'intensité ($\propto E^2$) contient alors un terme croisé, qui peut renforcer (interférence constructive) ou annuler (destructive). Tout se joue sur la <b>différence de marche</b> $\Delta$ entre les deux chemins :</p>
+<div class="box">$$\delta=\frac{2\pi}{\lambda}\Delta\ (+\text{déphasage initial}),\qquad \text{constructive : }\Delta=m\lambda,\qquad\text{destructive : }\Delta=\left(m+\tfrac12\right)\lambda$$</div>
+<p>Image : deux vagues sur l'eau. Là où une crête rencontre une crête, la houle double ; là où une crête rencontre un creux, l'eau reste plate.</p>
+
+<h3>2. Expérience de Young (deux fentes)</h3>
+<p>Fentes distantes de $d$, écran à la distance $L\gg d$. Vers un point de l'écran vu sous l'angle $\theta$, la différence de marche est $\Delta=d\sin\theta$.</p>
+<div class="box">$$\text{maxima : }d\sin\theta=m\lambda,\qquad\text{minima : }d\sin\theta=\left(m+\tfrac12\right)\lambda$$
+$$\text{petits angles : }y_m=\frac{m\lambda L}{d},\qquad \text{interfrange }\ \Delta y=\frac{\lambda L}{d},\qquad I(\theta)=4I_0\cos^2\!\left(\frac{\pi d\sin\theta}{\lambda}\right)$$</div>
+<ul>
+<li>Frange centrale ($m=0$) : largeur entre les deux minima voisins $=\Delta y=\frac{\lambda L}{d}$.</li>
+<li>Distance entre les maxima d'ordre $m$ de part et d'autre de l'axe : $2y_m$.</li>
+<li>Deux longueurs d'onde : le maximum d'ordre $m_2$ de $\lambda_2$ coïncide avec l'ordre $m_1$ de $\lambda_1$ si $m_1\lambda_1=m_2\lambda_2$.</li>
+<li>Ordre maximal visible : $|m|\le d/\lambda$ (puisque $|\sin\theta|\le1$).</li>
+</ul>
+
+<h3>3. Incidence oblique</h3>
+<p>Si l'onde arrive sous l'angle $\alpha$ par rapport à la normale, elle atteint les fentes avec un retard $d\sin\alpha$ l'une par rapport à l'autre. Différence de marche totale :</p>
+<div class="box">$$\Delta=d(\sin\theta-\sin\alpha)\qquad\Rightarrow\qquad d(\sin\theta-\sin\alpha)=m\lambda$$</div>
+<p>La figure se décale : le maximum central se trouve en $\theta=\alpha$ (dans la direction de l'onde incidente). Attention à l'angle donné : si on donne l'angle avec la <b>ligne des fentes</b> (et non avec la normale), utiliser le cosinus : $\Delta_{\text{entrée}}=d\cos\beta$.</p>
+
+<h3>4. Lame mince devant une fente</h3>
+<p>Une lame d'épaisseur $e$ et d'indice $n$ allonge le chemin optique de $(n-1)e$. La figure se décale de $\Delta y=\frac{(n-1)eL}{d}$, du côté de la fente couverte.</p>
+
+<h3>5. Quelques sources cohérentes ponctuelles (2 ou 3)</h3>
+<p>Méthode : pour chaque source, distance $r_i$ au point, phase $kr_i$, puis somme des amplitudes (avec signes) :</p>
+<div class="box">$$E_{\text{tot}}=\sum_iE_i\cos(kr_i-\omega t)\ \Rightarrow\ \text{si toutes les }kr_i\text{ diffèrent de multiples de }2\pi:\ E_{\max}=\sum E_i$$</div>
+<p>Pour savoir si l'interférence est constructive, on regarde $\Delta r_{ij}/\lambda$ : entier, donc en phase ; demi-entier, donc en opposition.</p>
+<p class="muted small">Hors programme : réseau à N fentes (formule d'intensité du réseau) et diffraction par une fente unique.</p>
+
+<h3>6. Pièges</h3>
+<div class="trap">L'approximation $\sin\theta\approx\tan\theta\approx y/L$ n'est valable que pour les petits angles ($y\ll L$). Si l'angle est grand, il faut calculer $\theta$ exactement.</div>
+<div class="trap">« Entre le 2<sup>e</sup> et le 3<sup>e</sup> maximum » correspond à un seul interfrange $\Delta y=\lambda L/d$, et non à $3\Delta y$.</div>
+<div class="trap">Unités : nm ($10^{-9}$), µm ($10^{-6}$), mm ($10^{-3}$). La plupart des erreurs numériques viennent de là.</div>
+</section>
+
+<section lang="he">
+<h2>התאבכות: ניסוי יאנג ומקורות קוהרנטיים</h2>
+
+<h3>1. הרעיון: מחברים אמפליטודות, לא עוצמות</h3>
+<p>שני גלים <b>קוהרנטיים</b> (אותה תדירות, הפרש פאזה קבוע) שמגיעים לאותה נקודה מתחברים שדה עם שדה. העוצמה ($\propto E^2$) מכילה אז איבר מעורב, שיכול לחזק (התאבכות בונה) או לבטל (הורסת). הכול נקבע על ידי <b>הפרש הדרכים</b> $\Delta$ בין שני המסלולים:</p>
+<div class="box">$$\delta=\frac{2\pi}{\lambda}\Delta\ (+\text{פאזה התחלתית}),\qquad \text{בונה: }\Delta=m\lambda,\qquad\text{הורסת: }\Delta=\left(m+\tfrac12\right)\lambda$$</div>
+<p>תמונה: שני גלים על פני מים. במקום שבו רכס פוגש רכס הגל מוכפל; במקום שבו רכס פוגש שקע המים נשארים שטוחים.</p>
+
+<h3>2. ניסוי יאנג (שני סדקים)</h3>
+<p>סדקים במרחק $d$, מסך במרחק $L\gg d$. לנקודה על המסך שנראית בזווית $\theta$, הפרש הדרכים הוא $\Delta=d\sin\theta$.</p>
+<div class="box">$$\text{מקסימום: }d\sin\theta=m\lambda,\qquad\text{מינימום: }d\sin\theta=\left(m+\tfrac12\right)\lambda$$
+$$\text{זוויות קטנות: }y_m=\frac{m\lambda L}{d},\qquad \text{מרווח בין פסים }\ \Delta y=\frac{\lambda L}{d},\qquad I(\theta)=4I_0\cos^2\!\left(\frac{\pi d\sin\theta}{\lambda}\right)$$</div>
+<ul>
+<li>הפס המרכזי ($m=0$): הרוחב בין שני המינימומים השכנים $=\Delta y=\frac{\lambda L}{d}$.</li>
+<li>המרחק בין המקסימומים מסדר $m$ משני צידי הציר: $2y_m$.</li>
+<li>שני אורכי גל: המקסימום מסדר $m_2$ של $\lambda_2$ חופף לסדר $m_1$ של $\lambda_1$ אם $m_1\lambda_1=m_2\lambda_2$.</li>
+<li>הסדר המקסימלי הנראה: $|m|\le d/\lambda$ (כי $|\sin\theta|\le1$).</li>
+</ul>
+
+<h3>3. פגיעה בזווית</h3>
+<p>אם הגל מגיע בזווית $\alpha$ ביחס לנורמל, הוא מגיע לסדקים בהפרש דרך $d\sin\alpha$ זה מזה. הפרש הדרכים הכולל:</p>
+<div class="box">$$\Delta=d(\sin\theta-\sin\alpha)\qquad\Rightarrow\qquad d(\sin\theta-\sin\alpha)=m\lambda$$</div>
+<p>התמונה מוזזת: המקסימום המרכזי נמצא ב-$\theta=\alpha$ (בכיוון הגל הפוגע). לשים לב לזווית הנתונה: אם נתונה הזווית עם <b>הקו המחבר את הסדקים</b> (ולא עם הנורמל), משתמשים בקוסינוס: $\Delta_{\text{כניסה}}=d\cos\beta$.</p>
+
+<h3>4. שכבה דקה לפני סדק</h3>
+<p>שכבה בעובי $e$ ובמקדם שבירה $n$ מאריכה את הדרך האופטית ב-$(n-1)e$. התמונה מוזזת ב-$\Delta y=\frac{(n-1)eL}{d}$, לכיוון הסדק המכוסה.</p>
+
+<h3>5. כמה מקורות נקודתיים קוהרנטיים (2 או 3)</h3>
+<p>שיטה: לכל מקור, המרחק $r_i$ לנקודה, הפאזה $kr_i$, ואז סכום האמפליטודות (עם סימנים):</p>
+<div class="box">$$E_{\text{tot}}=\sum_iE_i\cos(kr_i-\omega t)\ \Rightarrow\ \text{אם כל ה-}kr_i\text{ שונים בכפולות של }2\pi:\ E_{\max}=\sum E_i$$</div>
+<p>כדי לדעת אם ההתאבכות בונה, בודקים את $\Delta r_{ij}/\lambda$: שלם, כלומר באותה פאזה; חצי שלם, כלומר בפאזה הפוכה.</p>
+<p class="muted small">לא בחומר: סריג של N סדקים (נוסחת העוצמה של הסריג) ועקיפה מסדק יחיד.</p>
+
+<h3>6. מלכודות</h3>
+<div class="trap">הקירוב $\sin\theta\approx\tan\theta\approx y/L$ תקף רק לזוויות קטנות ($y\ll L$). אם הזווית גדולה, יש לחשב את $\theta$ במדויק.</div>
+<div class="trap">"בין המקסימום השני לשלישי" הוא מרווח פסים אחד $\Delta y=\lambda L/d$, ולא $3\Delta y$.</div>
+<div class="trap">יחידות: nm ($10^{-9}$), µm ($10^{-6}$), mm ($10^{-3}$). רוב הטעויות המספריות באות משם.</div>
+</section>
