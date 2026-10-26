@@ -27,6 +27,7 @@ fetch(`data/chapters.json?v=${Date.now()>>20}`).then(r => r.json()).then(data =>
   document.getElementById('global-detail').textContent =
     `${g.done} / ${data.N} questions done · score ${g.good} / ${g.done} correct`;
   document.getElementById('motivation').textContent = motivation(p);
+  if (p >= 100) track('all-done');
   const ol = document.getElementById('chapters');
   data.chapters.forEach(c => {
     const s = P2MM.stats(c.ids);

@@ -144,6 +144,11 @@ function renderQuestion(q, idx, data) {
     show(pos, first);
     el.classList.add('done');
     refreshHeader(data);
+    if (first) {
+      track(`answer/${q.id}/${pos === correctPos ? 'correct' : 'wrong'}`);
+      const s = P2MM.stats(data.questions.map(x => x.id));
+      if (s.done === s.total) track(`chapter-complete/${C}`);
+    }
   }
   const saved = P2MM.get(q.id);
   if (saved) { el.classList.add('done'); setTimeout(() => show(saved.pick, false), 0); }
@@ -177,4 +182,4 @@ Promise.all([
 });
 
 setLang(P2MM.lang());
-document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => { setLang(b.dataset.lang); track(`lang-${b.dataset.lang}`); }));

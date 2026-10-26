@@ -20,4 +20,9 @@ const P2MM = (() => {
   };
 })();
 
+// Anonymous event counter (GoatCounter); silently does nothing if the script is blocked
+function track(name) {
+  try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: name, event: true }); } catch (e) { /* ignore */ }
+}
+
 const pct = (a, b) => (b ? Math.round(1000 * a / b) / 10 : 0);
