@@ -1,0 +1,79 @@
+<section lang="fr">
+<h2>Ondes mécaniques : cordes et ondes stationnaires</h2>
+
+<h3>1. Qu'est-ce qu'une onde ?</h3>
+<p>Une onde transporte une <b>perturbation</b> (et de l'énergie) sans transporter de matière : chaque point de la corde oscille sur place (verticalement), tandis que la forme se déplace (horizontalement). Toute fonction de la forme $f(x-vt)$ est une forme qui avance vers $+x$ à la vitesse $v$ ; $f(x+vt)$ avance vers $-x$.</p>
+<div class="box">$$\frac{\partial^2y}{\partial t^2}=v^2\frac{\partial^2y}{\partial x^2},\qquad v=\sqrt{\frac{T}{\mu}}\quad(\text{tension }T,\ \text{masse linéique }\mu)$$</div>
+<p>Image : une corde plus tendue « répond » plus vite ; une corde plus lourde a plus d'inertie.</p>
+
+<h3>2. Onde harmonique</h3>
+<div class="box">$$y(x,t)=A\sin(kx-\omega t+\phi),\qquad k=\frac{2\pi}{\lambda},\quad \omega=2\pi f=\frac{2\pi}{T_p},\quad v=\frac{\omega}{k}=\lambda f$$</div>
+<ul>
+<li>Signe : $kx-\omega t$ va vers $+x$ ; $kx+\omega t$ va vers $-x$. Pour $y=A\sin(ax+by-ct)$ (2D), la direction est $\vec k=(a,b)$ et $|\vec k|=\sqrt{a^2+b^2}$, d'où $\lambda=2\pi/|\vec k|$ et $v=c/|\vec k|$.</li>
+<li><b>Vitesse transversale</b> d'un point de la corde : $v_y=\dfrac{\partial y}{\partial t}$. Ne pas la confondre avec la vitesse de l'onde $v$. Son maximum vaut $A\omega$.</li>
+<li>Construire $y(x,t)$ à partir de la photo $y(x,0)=A\sin(kx)$ et de la vitesse $v$ vers $+x$ : on remplace $x$ par $x-vt$, donc $y=A\sin(k(x-vt))=A\sin(kx-\omega t)$ avec $\omega=kv$.</li>
+</ul>
+
+<h3>3. Superposition et ondes stationnaires</h3>
+<p>Deux ondes identiques qui se propagent en sens opposés donnent une onde <b>stationnaire</b> :</p>
+<div class="box">$$A\sin(kx-\omega t)+A\sin(kx+\omega t)=2A\sin(kx)\cos(\omega t)$$</div>
+<ul>
+<li>La forme ne se déplace plus. Chaque point oscille avec une amplitude $2A|\sin kx|$ qui dépend de sa position.</li>
+<li><b>Nœuds</b> (amplitude toujours nulle) en $\sin kx=0$, espacés de $\lambda/2$. <b>Ventres</b> au milieu.</li>
+<li>Vitesse transversale maximale au point $x$ : $\omega\times$(amplitude locale).</li>
+</ul>
+<p><b>Corde fixée aux deux bouts</b> (longueur $L$) : les extrémités sont des nœuds, donc il faut un nombre entier de demi-longueurs d'onde :</p>
+<div class="box">$$L=n\frac{\lambda_n}{2},\qquad f_n=n\frac{v}{2L}=nf_1,\qquad y_n=A\sin\left(\frac{n\pi x}{L}\right)\cos(\omega_nt)$$
+Le mode $n$ a $n+1$ nœuds (extrémités comprises) et $n$ ventres.</div>
+<p><b>Somme d'un sinus et d'un cosinus</b> : $a\sin\theta+b\cos\theta=\sqrt{a^2+b^2}\sin(\theta+\delta)$. Deux ondes de même $k,\omega$ dans le même sens donnent toujours une onde harmonique. Son amplitude dépend du déphasage, et l'addition est la plus forte quand elles sont en phase.</p>
+
+<h3>4. Méthode pour les exercices de corde</h3>
+<ol>
+<li>Vitesse de l'onde : $v=\sqrt{T/\mu}$ (attention aux unités : g/m en kg/m).</li>
+<li>Mode : à partir de la fréquence ($f=nf_1$) ou du nombre de nœuds (nœuds $=n+1$).</li>
+<li>$\lambda=2L/n$, $k=2\pi/\lambda$, $\omega=2\pi f$.</li>
+<li>L'amplitude locale vient d'une donnée : $y_{\max}(x_0)=A_{\text{st}}|\sin kx_0|$ donne $A_{\text{st}}$.</li>
+<li>Vitesse transversale maximale en $x_1$ : $\omega A_{\text{st}}|\sin kx_1|$.</li>
+</ol>
+<div class="trap">Distinguer « nœuds en comptant les extrémités » et « nœuds intérieurs ». Distinguer aussi les vitesses : $v$ (onde), $v_y$ (transversale) et $v_{y,\max}=A\omega$.</div>
+</section>
+
+<section lang="he">
+<h2>גלים מכניים: מיתרים וגלים עומדים</h2>
+
+<h3>1. מהו גל?</h3>
+<p>גל מעביר <b>הפרעה</b> (ואנרגיה) בלי להעביר חומר: כל נקודה במיתר מתנודדת במקום (אנכית), בזמן שהצורה מתקדמת (אופקית). כל פונקציה מהצורה $f(x-vt)$ היא צורה שמתקדמת לכיוון $+x$ במהירות $v$; $f(x+vt)$ מתקדמת לכיוון $-x$.</p>
+<div class="box">$$\frac{\partial^2y}{\partial t^2}=v^2\frac{\partial^2y}{\partial x^2},\qquad v=\sqrt{\frac{T}{\mu}}\quad(\text{מתיחות }T,\ \text{צפיפות מסה אורכית }\mu)$$</div>
+<p>תמונה: מיתר מתוח יותר "מגיב" מהר יותר; מיתר כבד יותר בעל אינרציה גדולה יותר.</p>
+
+<h3>2. גל הרמוני</h3>
+<div class="box">$$y(x,t)=A\sin(kx-\omega t+\phi),\qquad k=\frac{2\pi}{\lambda},\quad \omega=2\pi f=\frac{2\pi}{T_p},\quad v=\frac{\omega}{k}=\lambda f$$</div>
+<ul>
+<li>סימן: $kx-\omega t$ מתקדם לכיוון $+x$; $kx+\omega t$ לכיוון $-x$. עבור $y=A\sin(ax+by-ct)$ (דו-ממד), הכיוון הוא $\vec k=(a,b)$ ו-$|\vec k|=\sqrt{a^2+b^2}$, ומכאן $\lambda=2\pi/|\vec k|$ ו-$v=c/|\vec k|$.</li>
+<li><b>המהירות האנכית</b> של נקודה במיתר: $v_y=\dfrac{\partial y}{\partial t}$. לא להתבלבל עם מהירות הגל $v$. המקסימום שלה הוא $A\omega$.</li>
+<li>בניית $y(x,t)$ מתוך ה"תמונה" $y(x,0)=A\sin(kx)$ והמהירות $v$ לכיוון $+x$: מחליפים את $x$ ב-$x-vt$, כלומר $y=A\sin(k(x-vt))=A\sin(kx-\omega t)$ עם $\omega=kv$.</li>
+</ul>
+
+<h3>3. סופרפוזיציה וגלים עומדים</h3>
+<p>שני גלים זהים שמתקדמים בכיוונים מנוגדים יוצרים גל <b>עומד</b>:</p>
+<div class="box">$$A\sin(kx-\omega t)+A\sin(kx+\omega t)=2A\sin(kx)\cos(\omega t)$$</div>
+<ul>
+<li>הצורה כבר לא מתקדמת. כל נקודה מתנודדת באמפליטודה $2A|\sin kx|$ שתלויה במיקומה.</li>
+<li><b>צמתים</b> (אמפליטודה תמיד אפס) ב-$\sin kx=0$, במרווחים של $\lambda/2$. <b>בטנים</b> באמצע.</li>
+<li>המהירות האנכית המקסימלית בנקודה $x$: $\omega\times$(האמפליטודה המקומית).</li>
+</ul>
+<p><b>מיתר קשור בשני קצותיו</b> (אורך $L$): הקצוות הם צמתים, ולכן צריך מספר שלם של חצאי אורך גל:</p>
+<div class="box">$$L=n\frac{\lambda_n}{2},\qquad f_n=n\frac{v}{2L}=nf_1,\qquad y_n=A\sin\left(\frac{n\pi x}{L}\right)\cos(\omega_nt)$$
+באופן $n$ יש $n+1$ צמתים (כולל הקצוות) ו-$n$ בטנים.</div>
+<p><b>סכום של סינוס וקוסינוס</b>: $a\sin\theta+b\cos\theta=\sqrt{a^2+b^2}\sin(\theta+\delta)$. שני גלים עם אותם $k,\omega$ באותו כיוון נותנים תמיד גל הרמוני. האמפליטודה שלו תלויה בהפרש הפאזה, והחיבור החזק ביותר מתקבל כשהם באותה פאזה.</p>
+
+<h3>4. שיטה לתרגילי מיתר</h3>
+<ol>
+<li>מהירות הגל: $v=\sqrt{T/\mu}$ (לשים לב ליחידות: g/m ל-kg/m).</li>
+<li>האופן: מתוך התדירות ($f=nf_1$) או ממספר הצמתים (צמתים $=n+1$).</li>
+<li>$\lambda=2L/n$, $k=2\pi/\lambda$, $\omega=2\pi f$.</li>
+<li>האמפליטודה המקומית נקבעת מנתון: $y_{\max}(x_0)=A_{\text{st}}|\sin kx_0|$ נותן את $A_{\text{st}}$.</li>
+<li>המהירות האנכית המקסימלית ב-$x_1$: $\omega A_{\text{st}}|\sin kx_1|$.</li>
+</ol>
+<div class="trap">להבחין בין "צמתים כולל הקצוות" ל"צמתים פנימיים". להבחין גם בין המהירויות: $v$ (גל), $v_y$ (אנכית) ו-$v_{y,\max}=A\omega$.</div>
+</section>

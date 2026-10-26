@@ -63,6 +63,10 @@ def page_lines(pdf):
         lines = [(l['top'], l['bottom'], clean(l['text'])) for l in raw]
         pagenos = [(l['x0'], l['top'], l['x1'], l['bottom']) for l in raw
                    if (l['top'] > p.height - 95 or l['top'] < 75) and re.fullmatch(r'[\d\s]{1,4}', clean(l['text']))]
+        for w in p.extract_words():  # page numbers merged with a formula line
+            if w['top'] > p.height - 75 and re.fullmatch(r'\d{1,3}', clean(w['text'])) \
+                    and 0.4 * p.width < (w['x0'] + w['x1']) / 2 < 0.6 * p.width:
+                pagenos.append((w['x0'], w['top'], w['x1'], w['bottom']))
         body, xs = [], []
         for i, (t, b, s) in enumerate(lines):
             if t < 75 and TITLE.search(s):
@@ -485,6 +489,11 @@ def extract(exam, q, debug_dir=None):
     else:
         nq = next((m for m in sms[j + 1:] if m[2] == 'Q'), None)
         stop = (nq[0], nq[1]) if nq else end_of(spages)
+        for pi in range(sms[j][0], stop[0] + 1):  # end-of-exam wishes ('בהצלחה!') are not part of the solution
+            for t, b, txt in spages[pi]['lines']:
+                if re.search(r'בהצלחה|החלצהב', txt) and (pi, t) > tuple(sms[j][:2]) and (pi, t) < tuple(stop):
+                    stop = (pi, t - 4)
+                    break
         if 'solStop' in ovr:
             stop = tuple(ovr['solStop'])
         start = sms[j][:2]
