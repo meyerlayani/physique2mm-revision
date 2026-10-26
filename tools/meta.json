@@ -9,6 +9,11 @@
   "sol": true,
   "split": true
  },
+ "22wnA-q12": {
+  "n": 6,
+  "sol": true,
+  "split": true
+ },
  "22wnB-q08": {
   "n": 6,
   "sol": true,
@@ -140,11 +145,6 @@
   "split": true
  },
  "25spB-q02": {
-  "n": 6,
-  "sol": true,
-  "split": true
- },
- "25spB-q11": {
   "n": 6,
   "sol": true,
   "split": true

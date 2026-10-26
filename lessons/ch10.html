@@ -1,0 +1,81 @@
+<section lang="fr">
+<h2>Ondes électromagnétiques et vecteur de Poynting</h2>
+
+<h3>1. D'où vient l'onde ?</h3>
+<p>Dans le vide, sans charges ni courants, les équations de Maxwell se nourrissent l'une l'autre : un $\vec B$ qui varie crée un $\vec E$ tourbillonnant (Faraday), et un $\vec E$ qui varie crée un $\vec B$ (Ampère-Maxwell). En prenant le rotationnel de Faraday et en utilisant Ampère-Maxwell, on obtient une équation d'onde pour chaque composante :</p>
+<div class="box">$$\nabla^2\vec E=\mu_0\varepsilon_0\frac{\partial^2\vec E}{\partial t^2},\qquad c=\frac{1}{\sqrt{\mu_0\varepsilon_0}}\approx3\cdot10^8\ \mathrm{m/s}$$</div>
+<p>La vitesse de la lumière sort des constantes de l'électricité et du magnétisme : c'est ce qui a fait comprendre que la lumière <b>est</b> une onde électromagnétique.</p>
+
+<h3>2. L'onde plane : la règle des trois vecteurs</h3>
+<div class="box">$$\vec E=\vec E_0\cos(\vec k\cdot\vec r-\omega t+\phi),\qquad \vec B=\frac1\omega\,\vec k\times\vec E=\frac1c\,\hat k\times\vec E$$
+$$\omega=c|\vec k|,\qquad \lambda=\frac{2\pi}{|\vec k|},\qquad |\vec B|=\frac{|\vec E|}{c},\qquad \vec E\perp\vec B\perp\vec k$$</div>
+<ul>
+<li><b>Direction de propagation</b> : on la lit dans la phase. $\cos(kz-\omega t)$ va vers $+z$, $\cos(kz+\omega t)$ va vers $-z$. Plus généralement, $\vec k\cdot\vec r-\omega t$ va vers $+\vec k$.</li>
+<li><b>Trièdre direct</b> : $(\vec E,\vec B,\hat k)$ dans cet ordre, comme $(\hat x,\hat y,\hat z)$. Donc $\vec E\times\vec B$ pointe dans le sens de propagation.</li>
+<li>Pour passer de $\vec B$ à $\vec E$ : $\vec E=c\,\vec B\times\hat k$.</li>
+<li><b>« Ce champ est-il une onde EM dans le vide ? »</b> : il faut $\vec E\perp\vec k$ (car $\nabla\cdot\vec E=0$) et $\omega=c|\vec k|$.</li>
+</ul>
+
+<h3>3. Énergie et vecteur de Poynting</h3>
+<div class="box">$$u=\frac{\varepsilon_0E^2}{2}+\frac{B^2}{2\mu_0}=\varepsilon_0E^2\ \ (\text{partagée à égalité}),\qquad \vec S=\frac{1}{\mu_0}\vec E\times\vec B$$
+$$\langle S\rangle=\frac{E_0^2}{2\mu_0c}=\frac{c\varepsilon_0E_0^2}{2}=\frac{cB_0^2}{2\mu_0},\qquad P=\langle S\rangle\,A\cos\theta,\qquad U=P\,\Delta t$$</div>
+<ul>
+<li>$\vec S$ est un <b>flux d'énergie</b> (W/m²) dans la direction de propagation. L'intensité est sa moyenne temporelle ; le facteur $\frac12$ vient de $\langle\cos^2\rangle=\frac12$.</li>
+<li>Puissance à travers une surface : seule compte la composante de $\vec S$ <b>normale</b> à la surface, d'où $\cos\theta$ entre $\hat n$ et $\hat k$. Une surface parallèle à la propagation ne reçoit rien.</li>
+<li>Deux polarisations (par exemple $E_x$ et $E_y$, de même $\vec k$) : les intensités s'additionnent, $\langle S\rangle\propto E_{0x}^2+E_{0y}^2$.</li>
+</ul>
+
+<h3>4. Force sur une charge</h3>
+<p>$\vec F=q(\vec E+\vec v\times\vec B)$, évalué au point et à l'instant. Pour une charge lente, la force magnétique est plus petite d'un facteur $v/c$.</p>
+
+<h3>5. Ondes stationnaires EM</h3>
+<p>Entre deux plans conducteurs parfaits, $\vec E_\parallel=0$ sur les plaques : il faut des nœuds de $\vec E$ aux deux bords, exactement comme une corde fixée aux deux bouts. On a $L=n\lambda/2$ et $E=E_0\sin(kx)\cos(\omega t)$. Les nœuds sont espacés de $\lambda/2$, et les ventres de $\vec B$ sont aux nœuds de $\vec E$.</p>
+<p>Somme de deux ondes opposées : $\cos(kx-\omega t)+\cos(kx+\omega t)=2\cos(kx)\cos(\omega t)$.</p>
+
+<h3>6. Pièges</h3>
+<div class="trap">Lire le sens de propagation dans la <b>phase</b>, et non dans la direction du champ. Avec $\cos(ky+\omega t)$, l'onde va vers $-y$.</div>
+<div class="trap">Unités : $|B|=|E|/c$. Un $B$ de l'ordre du µT correspond à un $E$ de l'ordre du kV/m. L'énergie en 5 minutes demande $\Delta t=300$ s.</div>
+<div class="trap">Moyenne temporelle : ne pas oublier le $\frac12$ pour $\langle S\rangle$. Pour la valeur instantanée, $S=\frac{E_0^2}{\mu_0c}\cos^2(\dots)$.</div>
+<p class="muted small">Hors programme : le rayonnement d'une charge accélérée (champ en $1/r$, formule de Larmor).</p>
+</section>
+
+<section lang="he">
+<h2>גלים אלקטרומגנטיים ווקטור פוינטינג</h2>
+
+<h3>1. מאיפה מגיע הגל?</h3>
+<p>בריק, בלי מטענים וזרמים, משוואות מקסוול מזינות זו את זו: $\vec B$ משתנה יוצר $\vec E$ מסתחרר (פאראדיי), ו-$\vec E$ משתנה יוצר $\vec B$ (אמפר-מקסוול). כשלוקחים רוטור של פאראדיי ומציבים את אמפר-מקסוול, מקבלים משוואת גלים לכל רכיב:</p>
+<div class="box">$$\nabla^2\vec E=\mu_0\varepsilon_0\frac{\partial^2\vec E}{\partial t^2},\qquad c=\frac{1}{\sqrt{\mu_0\varepsilon_0}}\approx3\cdot10^8\ \mathrm{m/s}$$</div>
+<p>מהירות האור יוצאת מהקבועים של החשמל והמגנטיות: כך הבינו שהאור <b>הוא</b> גל אלקטרומגנטי.</p>
+
+<h3>2. הגל המישורי: כלל שלושת הווקטורים</h3>
+<div class="box">$$\vec E=\vec E_0\cos(\vec k\cdot\vec r-\omega t+\phi),\qquad \vec B=\frac1\omega\,\vec k\times\vec E=\frac1c\,\hat k\times\vec E$$
+$$\omega=c|\vec k|,\qquad \lambda=\frac{2\pi}{|\vec k|},\qquad |\vec B|=\frac{|\vec E|}{c},\qquad \vec E\perp\vec B\perp\vec k$$</div>
+<ul>
+<li><b>כיוון ההתקדמות</b>: קוראים אותו בפאזה. $\cos(kz-\omega t)$ מתקדם לכיוון $+z$, ו-$\cos(kz+\omega t)$ לכיוון $-z$. באופן כללי, $\vec k\cdot\vec r-\omega t$ מתקדם לכיוון $+\vec k$.</li>
+<li><b>שלישייה ימנית</b>: $(\vec E,\vec B,\hat k)$ בסדר הזה, כמו $(\hat x,\hat y,\hat z)$. לכן $\vec E\times\vec B$ מצביע בכיוון ההתקדמות.</li>
+<li>מעבר מ-$\vec B$ ל-$\vec E$: $\vec E=c\,\vec B\times\hat k$.</li>
+<li><b>"האם השדה הוא גל אלקטרומגנטי בריק?"</b>: צריך $\vec E\perp\vec k$ (כי $\nabla\cdot\vec E=0$) ו-$\omega=c|\vec k|$.</li>
+</ul>
+
+<h3>3. אנרגיה ווקטור פוינטינג</h3>
+<div class="box">$$u=\frac{\varepsilon_0E^2}{2}+\frac{B^2}{2\mu_0}=\varepsilon_0E^2\ \ (\text{מתחלקת שווה בשווה}),\qquad \vec S=\frac{1}{\mu_0}\vec E\times\vec B$$
+$$\langle S\rangle=\frac{E_0^2}{2\mu_0c}=\frac{c\varepsilon_0E_0^2}{2}=\frac{cB_0^2}{2\mu_0},\qquad P=\langle S\rangle\,A\cos\theta,\qquad U=P\,\Delta t$$</div>
+<ul>
+<li>$\vec S$ הוא <b>שטף אנרגיה</b> (W/m²) בכיוון ההתקדמות. העוצמה היא הממוצע שלו בזמן; הגורם $\frac12$ מגיע מ-$\langle\cos^2\rangle=\frac12$.</li>
+<li>הספק דרך משטח: רק הרכיב של $\vec S$ <b>הניצב</b> למשטח נחשב, ומכאן $\cos\theta$ בין $\hat n$ ל-$\hat k$. משטח מקביל לכיוון ההתקדמות אינו מקבל דבר.</li>
+<li>שני קיטובים (למשל $E_x$ ו-$E_y$, עם אותו $\vec k$): העוצמות מתחברות, $\langle S\rangle\propto E_{0x}^2+E_{0y}^2$.</li>
+</ul>
+
+<h3>4. כוח על מטען</h3>
+<p>$\vec F=q(\vec E+\vec v\times\vec B)$, בנקודה וברגע הנתונים. למטען איטי, הכוח המגנטי קטן יותר בגורם $v/c$.</p>
+
+<h3>5. גלים אלקטרומגנטיים עומדים</h3>
+<p>בין שני מישורים מוליכים אידיאליים $\vec E_\parallel=0$ על הלוחות: צריך צמתים של $\vec E$ בשני הקצוות, בדיוק כמו מיתר קשור בשני קצותיו. יש $L=n\lambda/2$ ו-$E=E_0\sin(kx)\cos(\omega t)$. הצמתים במרווחים של $\lambda/2$, והבטנים של $\vec B$ נמצאים בצמתים של $\vec E$.</p>
+<p>סכום שני גלים מנוגדים: $\cos(kx-\omega t)+\cos(kx+\omega t)=2\cos(kx)\cos(\omega t)$.</p>
+
+<h3>6. מלכודות</h3>
+<div class="trap">לקרוא את כיוון ההתקדמות ב<b>פאזה</b>, ולא בכיוון השדה. עם $\cos(ky+\omega t)$ הגל מתקדם לכיוון $-y$.</div>
+<div class="trap">יחידות: $|B|=|E|/c$. $B$ מסדר גודל של µT מתאים ל-$E$ מסדר גודל של kV/m. אנרגיה ב-5 דקות דורשת $\Delta t=300$ s.</div>
+<div class="trap">ממוצע בזמן: לא לשכוח את ה-$\frac12$ ב-$\langle S\rangle$. לערך הרגעי, $S=\frac{E_0^2}{\mu_0c}\cos^2(\dots)$.</div>
+<p class="muted small">לא בחומר: קרינה של מטען מואץ (שדה ב-$1/r$, נוסחת לרמור).</p>
+</section>
