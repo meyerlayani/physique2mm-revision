@@ -17,7 +17,7 @@ function motivation(p) {
   return 'Everything done. You are ready! בהצלחה';
 }
 
-fetch('data/chapters.json').then(r => r.json()).then(data => {
+fetch(`data/chapters.json?v=${Date.now()>>20}`).then(r => r.json()).then(data => {
   const all = data.chapters.flatMap(c => c.ids);
   const g = P2MM.stats(all);
   const p = pct(g.done, data.N);

@@ -151,10 +151,10 @@ function renderQuestion(q, idx, data) {
 }
 
 Promise.all([
-  fetch(`data/ch${pad(C)}.json`).then(r => r.json()),
-  fetch(`lessons/ch${pad(C)}.html`).then(r => (r.ok ? r.text() : '')),
-  fetch(`corrections/ch${pad(C)}.html`).then(r => (r.ok ? r.text() : '')),
-  fetch('data/chapters.json').then(r => r.json()),
+  fetch(`data/ch${pad(C)}.json?v=${Date.now()>>20}`).then(r => r.json()),
+  fetch(`lessons/ch${pad(C)}.html?v=${Date.now()>>20}`).then(r => (r.ok ? r.text() : '')),
+  fetch(`corrections/ch${pad(C)}.html?v=${Date.now()>>20}`).then(r => (r.ok ? r.text() : '')),
+  fetch(`data/chapters.json?v=${Date.now()>>20}`).then(r => r.json()),
 ]).then(([data, lesson, corr, chapters]) => {
   document.title = `${C}. ${data.title} · פיזיקה 2ממ`;
   document.getElementById('title').textContent = data.title;
