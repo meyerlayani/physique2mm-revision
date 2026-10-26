@@ -359,6 +359,19 @@ def drop_bottom_specks(a, gap=40, max_ink=300):
         a[start:] = 255
 
 
+def collapse_gaps(im, maxgap=70):
+    """Shrink long blank vertical runs (left where options were removed) to maxgap pixels."""
+    import numpy as np
+    a = np.asarray(im)
+    ink = _ink(a).any(1)
+    keep, run = [], 0
+    for y, v in enumerate(ink):
+        run = 0 if v else run + 1
+        if run <= maxgap:
+            keep.append(y)
+    return Image.fromarray(a[keep])
+
+
 def save_trim(a, path):
     im = trim(Image.fromarray(a))
     im = pad(im, 16)
@@ -450,7 +463,7 @@ def extract(exam, q, debug_dir=None):
     canvas = Image.new('RGB', (W, H), 'white'); y = 0
     for im in stem:
         canvas.paste(im, (W - im.width, y)); y += im.height + 20
-    pad(canvas).save(os.path.join(ROOT, f'img/q/{qid}.png'), optimize=True)
+    pad(collapse_gaps(canvas)).save(os.path.join(ROOT, f'img/q/{qid}.png'), optimize=True)
     if debug_dir:
         os.makedirs(debug_dir, exist_ok=True)
         ims = [Image.fromarray(d) for d in dbg]

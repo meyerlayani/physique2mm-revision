@@ -1,0 +1,235 @@
+<article data-id="26wnB-q08">
+<div lang="fr">
+<p><b>Idée.</b> L'anneau est petit ($a\ll b$) : le champ du cadre y est presque uniforme et égal au champ <b>au centre</b> du carré. Flux $=B_{\text{centre}}\pi a^2$, puis Faraday.</p>
+<ol>
+<li>Champ au centre d'un carré de côté $b$ : 4 segments à la distance $b/2$, chacun vu sous $\pm45°$ : $B=4\cdot\dfrac{\mu_0I}{4\pi(b/2)}\cdot2\sin45°=\dfrac{2\sqrt2\mu_0I}{\pi b}$.</li>
+<li>$\Phi=\pi a^2B=\dfrac{2\sqrt2\mu_0a^2}{b}I(t)$, d'où $\mathcal E=\dfrac{2\sqrt2\mu_0a^2}{b}\cdot2A_0t$ (le $B_0$ constant ne contribue pas).</li>
+<li>$I_{\text{anneau}}=\dfrac{4\sqrt2\mu_0a^2A_0t}{bR}$.</li>
+<li>Sens (Lenz) : le courant anti-horaire du cadre crée un champ sortant au centre, qui augmente ; l'anneau s'y oppose avec un courant <b>horaire</b>.</li>
+</ol>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> הטבעת קטנה ($a\ll b$): השדה של המסגרת עליה כמעט אחיד ושווה לשדה <b>במרכז</b> הריבוע. שטף $=B_{\text{מרכז}}\pi a^2$, ואז פאראדיי.</p>
+<ol>
+<li>השדה במרכז ריבוע בצלע $b$: 4 קטעים במרחק $b/2$, כל אחד נראה בזווית $\pm45°$: $B=4\cdot\dfrac{\mu_0I}{4\pi(b/2)}\cdot2\sin45°=\dfrac{2\sqrt2\mu_0I}{\pi b}$.</li>
+<li>$\Phi=\pi a^2B=\dfrac{2\sqrt2\mu_0a^2}{b}I(t)$, ולכן $\mathcal E=\dfrac{2\sqrt2\mu_0a^2}{b}\cdot2A_0t$ (ה-$B_0$ הקבוע לא תורם).</li>
+<li>$I_{\text{טבעת}}=\dfrac{4\sqrt2\mu_0a^2A_0t}{bR}$.</li>
+<li>כיוון (לנץ): הזרם נגד כיוון השעון במסגרת יוצר במרכז שדה יוצא מהדף שהולך וגדל; הטבעת מתנגדת בזרם <b>עם כיוון השעון</b>.</li>
+</ol>
+</div>
+</article>
+
+<article data-id="26spA-q10">
+<div lang="fr">
+<p><b>Idée (point faible : cadre tournant dans un solénoïde).</b> Le cadre est entièrement à l'intérieur, où $B=\mu_0nI$ est uniforme. Seule l'orientation change.</p>
+<ol>
+<li>$\Phi(t)=\mu_0nI\,b^2\cos\omega t$ (vecteur surface parallèle à $\vec B$ à $t=0$).</li>
+<li>$\mathcal E=-\dfrac{d\Phi}{dt}=\mu_0nIb^2\omega\sin\omega t$.</li>
+<li>$i=\dfrac{\omega\mu_0Inb^2}{R}\sin\omega t$.</li>
+</ol>
+<div class="trap">Le rayon $a$ du solénoïde n'intervient pas : seule compte l'aire <b>du cadre</b>, puisqu'il est tout entier dans le champ. Et c'est un sinus, pas un cosinus : la f.é.m. est la dérivée du flux, et elle est nulle quand le flux est maximal.</div>
+</div>
+<div lang="he">
+<p><b>רעיון (נקודת חולשה: מסגרת מסתובבת בתוך סליל).</b> המסגרת כולה בפנים, שם $B=\mu_0nI$ אחיד. רק הכיוון משתנה.</p>
+<ol>
+<li>$\Phi(t)=\mu_0nI\,b^2\cos\omega t$ (וקטור השטח מקביל ל-$\vec B$ ב-$t=0$).</li>
+<li>$\mathcal E=-\dfrac{d\Phi}{dt}=\mu_0nIb^2\omega\sin\omega t$.</li>
+<li>$i=\dfrac{\omega\mu_0Inb^2}{R}\sin\omega t$.</li>
+</ol>
+<div class="trap">רדיוס הסליל $a$ לא משחק תפקיד: רק שטח <b>המסגרת</b> חשוב, כי היא כולה בתוך השדה. וזה סינוס, לא קוסינוס: הכא"מ הוא נגזרת השטף, והוא אפס כשהשטף מקסימלי.</div>
+</div>
+</article>
+
+<article data-id="26spB-q08">
+<div lang="fr">
+<p><b>Idée (point faible : f.é.m. de mouvement).</b> Deux façons équivalentes.</p>
+<ol>
+<li><b>Flux</b> : le côté proche est à $r_1=d+vt$, le côté lointain à $r_1+a$ : $\Phi=\dfrac{\mu_0I_0b}{2\pi}\ln\dfrac{d+vt+a}{d+vt}$. Puis $\mathcal E=-\dfrac{d\Phi}{dt}=\dfrac{\mu_0I_0b}{2\pi}v\left(\dfrac1{d+vt}-\dfrac1{d+vt+a}\right)$.</li>
+<li><b>Force de Lorentz</b> : seuls les côtés de longueur $b$ (parallèles au fil) ont $\vec v\times\vec B$ le long du fil, avec $\mathcal E_i=vB(r_i)b$. Les deux s'opposent dans la boucle : $\mathcal E=vb\,[B(r_1)-B(r_1+a)]$. Même résultat ✔.</li>
+<li>$I=\mathcal E/R$. Sens : le flux (entrant) diminue, donc le courant le renforce : sens <b>horaire</b>.</li>
+</ol>
+<div class="trap">Les options en $\ln$ donnent le <i>flux</i> divisé par $R$, pas le courant. Le courant fait intervenir la dérivée.</div>
+</div>
+<div lang="he">
+<p><b>רעיון (נקודת חולשה: כא"מ תנועתי).</b> שתי דרכים שקולות.</p>
+<ol>
+<li><b>שטף</b>: הצלע הקרובה ב-$r_1=d+vt$, הרחוקה ב-$r_1+a$: $\Phi=\dfrac{\mu_0I_0b}{2\pi}\ln\dfrac{d+vt+a}{d+vt}$. ואז $\mathcal E=-\dfrac{d\Phi}{dt}=\dfrac{\mu_0I_0b}{2\pi}v\left(\dfrac1{d+vt}-\dfrac1{d+vt+a}\right)$.</li>
+<li><b>כוח לורנץ</b>: רק לצלעות באורך $b$ (המקבילות לתיל) יש $\vec v\times\vec B$ לאורך התיל, עם $\mathcal E_i=vB(r_i)b$. שתיהן מנוגדות בלולאה: $\mathcal E=vb\,[B(r_1)-B(r_1+a)]$. אותה תוצאה ✔.</li>
+<li>$I=\mathcal E/R$. כיוון: השטף (הנכנס) קטן, ולכן הזרם מחזק אותו: <b>עם כיוון השעון</b>.</li>
+</ol>
+<div class="trap">האפשרויות עם $\ln$ נותנות את <i>השטף</i> חלקי $R$, לא את הזרם. בזרם מופיעה הנגזרת.</div>
+</div>
+</article>
+
+<article data-id="26spB-q09">
+<div lang="fr">
+<p><b>Idée.</b> On trouve les deux bornes : le courant final et la constante de temps « vue » par la bobine.</p>
+<ol>
+<li>$t=0^+$ : $I_L=0$ (la bobine empêche le saut). $t\to\infty$ : la bobine est un fil et court-circuite $R_2$, donc $I_L(\infty)=\varepsilon/R_1$.</li>
+<li>Sources éteintes, la bobine voit $R_1\parallel R_2$ : $\tau=\dfrac{L(R_1+R_2)}{R_1R_2}$.</li>
+<li>$I_L(t)=\dfrac{\varepsilon}{R_1}\left(1-e^{-\frac{R_1R_2}{L(R_1+R_2)}t}\right)$.</li>
+</ol>
+<p>La solution officielle le vérifie par Kirchhoff (équation différentielle complète), et remarque que seule l'option א satisfait les deux conditions limites.</p>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> מוצאים את שני הקצוות: הזרם הסופי וקבוע הזמן ש"רואה" הסליל.</p>
+<ol>
+<li>$t=0^+$: $I_L=0$ (הסליל מונע קפיצה). $t\to\infty$: הסליל הוא תיל ומקצר את $R_2$, ולכן $I_L(\infty)=\varepsilon/R_1$.</li>
+<li>כשהמקורות מכובים, הסליל רואה $R_1\parallel R_2$: $\tau=\dfrac{L(R_1+R_2)}{R_1R_2}$.</li>
+<li>$I_L(t)=\dfrac{\varepsilon}{R_1}\left(1-e^{-\frac{R_1R_2}{L(R_1+R_2)}t}\right)$.</li>
+</ol>
+<p>הפתרון הרשמי מאמת זאת עם קירכהוף (משוואה דיפרנציאלית מלאה), ומציין שרק אפשרות א' מקיימת את שני תנאי הקצה.</p>
+</div>
+</article>
+
+<article data-id="26wnB-q09">
+<div lang="fr">
+<p><b>Idée (piège RL).</b> Le <b>courant</b> décroît en $e^{-t/\tau}$, mais l'<b>énergie</b> $\frac12LI^2$ décroît en $e^{-2t/\tau}$.</p>
+<ol>
+<li>$U(t)=U_0e^{-2t/\tau_L}=0{,}1\,U_0$.</li>
+<li>$t=\dfrac{\tau_L}{2}\ln10\approx1{,}151\,\tau_L$.</li>
+</ol>
+<div class="trap">$2{,}3\tau_L$ est le temps pour que le <i>courant</i> tombe à 10 %. C'est le piège principal de la question.</div>
+</div>
+<div lang="he">
+<p><b>רעיון (מלכודת RL).</b> ה<b>זרם</b> דועך כ-$e^{-t/\tau}$, אבל ה<b>אנרגיה</b> $\frac12LI^2$ דועכת כ-$e^{-2t/\tau}$.</p>
+<ol>
+<li>$U(t)=U_0e^{-2t/\tau_L}=0.1\,U_0$.</li>
+<li>$t=\dfrac{\tau_L}{2}\ln10\approx1.151\,\tau_L$.</li>
+</ol>
+<div class="trap">$2.3\tau_L$ הוא הזמן שבו ה<i>זרם</i> יורד ל-10%. זו המלכודת העיקרית של השאלה.</div>
+</div>
+</article>
+
+<article data-id="25wnB-q09">
+<div lang="fr">
+<p><b>Idée.</b> Le circuit est le secteur entre les deux tiges. Son aire diminue au rythme de la tige qui tourne : $S=\frac{a^2}{2}\theta(t)$ avec $\theta=\theta_0-\omega t$.</p>
+<ol>
+<li>$|\mathcal E|=B\left|\dfrac{dS}{dt}\right|=\dfrac{Ba^2\omega}{2}$, constante. On retrouve la tige tournante : $\int_0^a\omega rB\,dr$.</li>
+<li>$I=\dfrac{Ba^2\omega}{2R}$.</li>
+<li>Sens : le flux sortant diminue, donc le courant le renforce (champ sortant) : sens <b>anti-horaire</b>.</li>
+</ol>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> המעגל הוא הגזרה שבין שני המוטות. השטח שלה קטן בקצב של המוט המסתובב: $S=\frac{a^2}{2}\theta(t)$ עם $\theta=\theta_0-\omega t$.</p>
+<ol>
+<li>$|\mathcal E|=B\left|\dfrac{dS}{dt}\right|=\dfrac{Ba^2\omega}{2}$, קבוע. זו בדיוק התוצאה של מוט מסתובב: $\int_0^a\omega rB\,dr$.</li>
+<li>$I=\dfrac{Ba^2\omega}{2R}$.</li>
+<li>כיוון: השטף היוצא קטן, ולכן הזרם מחזק אותו (שדה יוצא): <b>נגד כיוון השעון</b>.</li>
+</ol>
+</div>
+</article>
+
+<article data-id="25wnA-q05">
+<div lang="fr">
+<p><b>Idée.</b> Au bout d'un temps long, la bobine est un simple fil. On résout un circuit de résistances.</p>
+<ol>
+<li>La branche de la bobine contient $R$ (haut) + $R$ (bas) : $2R$, en parallèle avec la résistance verticale $R$. On obtient $R^*=\dfrac{2R\cdot R}{3R}=\dfrac23R$.</li>
+<li>En série avec la résistance de droite : $R_T=\dfrac53R$, d'où $I_T=\dfrac{3\varepsilon}{5R}$.</li>
+<li>Division du courant : la branche $2R$ reçoit $\frac13$ de $I_T$, donc $I_L=\dfrac{\varepsilon}{5R}$.</li>
+</ol>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> אחרי זמן רב הסליל הוא פשוט תיל. פותרים מעגל נגדים.</p>
+<ol>
+<li>הענף של הסליל מכיל $R$ (עליון) + $R$ (תחתון): $2R$, במקביל לנגד האנכי $R$. מקבלים $R^*=\dfrac{2R\cdot R}{3R}=\dfrac23R$.</li>
+<li>בטור עם הנגד הימני: $R_T=\dfrac53R$, ולכן $I_T=\dfrac{3\varepsilon}{5R}$.</li>
+<li>חלוקת זרם: הענף $2R$ מקבל $\frac13$ מ-$I_T$, ולכן $I_L=\dfrac{\varepsilon}{5R}$.</li>
+</ol>
+</div>
+</article>
+
+<article data-id="25spA-q09">
+<div lang="fr">
+<p><b>Idée (cas frontière, résolu par conservation, sans dynamique RLC).</b> Il suffit de comparer deux états d'équilibre. En régime permanent, aucun courant ne circule, donc la tension sur $C$ est $\varepsilon$.</p>
+<ol>
+<li>Avant : $Q_1=C\varepsilon$. Après avoir divisé $d$ par 2 : $C'=2C$, donc $Q_2=2C\varepsilon$.</li>
+<li>La charge supplémentaire $Q_2-Q_1=\varepsilon C$ a dû traverser la bobine (tout est en série).</li>
+</ol>
+<p>On ne demande pas <i>comment</i> le courant évolue (oscillations amorties), seulement le total. Il est fixé par les états initial et final.</p>
+</div>
+<div lang="he">
+<p><b>רעיון (מקרה גבולי, נפתר בשימור, בלי דינמיקת RLC).</b> מספיק להשוות בין שני מצבי שיווי משקל. במצב יציב לא זורם זרם, ולכן המתח על $C$ הוא $\varepsilon$.</p>
+<ol>
+<li>לפני: $Q_1=C\varepsilon$. אחרי שמקטינים את $d$ פי 2: $C'=2C$, ולכן $Q_2=2C\varepsilon$.</li>
+<li>המטען הנוסף $Q_2-Q_1=\varepsilon C$ חייב לעבור דרך הסליל (הכול בטור).</li>
+</ol>
+<p>לא שואלים <i>איך</i> הזרם מתפתח (תנודות מרוסנות), רק את הסך הכולל. הוא נקבע על ידי המצב ההתחלתי והסופי.</p>
+</div>
+</article>
+
+<article data-id="25spA-q10">
+<div lang="fr">
+<p><b>Idée.</b> Le champ du fil change de sens de part et d'autre (sortant au-dessus, entrant en dessous). Seul compte le flux <b>net</b>, et $dI/dt=\alpha$ est le même pour les trois cadres : $|\mathcal E|\propto|\Phi_{\text{net}}|$.</p>
+<ol>
+<li>C, symétrique : les deux moitiés se compensent, donc $\Phi=0$ et $I_C=0$.</li>
+<li>B : la partie sous le fil compense une partie égale au-dessus. Il reste la bande entre $0{,}5b$ et $b$.</li>
+<li>A : tout au-dessus, sans compensation. Comme le champ est le plus fort près du fil, c'est le plus grand flux.</li>
+<li>$I_A>I_B>I_C$.</li>
+</ol>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> השדה של התיל מחליף כיוון משני צדדיו (יוצא מעל, נכנס מתחת). רק השטף <b>הנטו</b> חשוב, ו-$dI/dt=\alpha$ זהה לשלוש המסגרות: $|\mathcal E|\propto|\Phi_{\text{נטו}}|$.</p>
+<ol>
+<li>C, סימטרית: שני החצאים מתבטלים, ולכן $\Phi=0$ ו-$I_C=0$.</li>
+<li>B: החלק שמתחת לתיל מבטל חלק שווה שמעליו. נשארת הרצועה בין $0.5b$ ל-$b$.</li>
+<li>A: כולה מעל, בלי ביטול. מכיוון שהשדה הכי חזק ליד התיל, זה השטף הגדול ביותר.</li>
+<li>$I_A>I_B>I_C$.</li>
+</ol>
+</div>
+</article>
+
+<article data-id="24wnB-q09">
+<div lang="fr">
+<p><b>Idée.</b> Au bout d'un temps long, la bobine est un fil. Elle court-circuite $R_2$ (en parallèle), donc $I_L=\varepsilon/R_1$.</p>
+<p>$U=\frac12LI_L^2=\dfrac{L\varepsilon^2}{2R_1^2}$.</p>
+<div class="trap">Une bobine en régime permanent n'a pas de tension, mais elle stocke de l'énergie (son courant n'est pas nul). L'option « 0 » confond les deux.</div>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> אחרי זמן רב הסליל הוא תיל. הוא מקצר את $R_2$ (שבמקביל אליו), ולכן $I_L=\varepsilon/R_1$.</p>
+<p>$U=\frac12LI_L^2=\dfrac{L\varepsilon^2}{2R_1^2}$.</p>
+<div class="trap">לסליל במצב יציב אין מתח, אבל הוא אוגר אנרגיה (הזרם בו אינו אפס). האפשרות "0" מבלבלת בין השניים.</div>
+</div>
+</article>
+
+<article data-id="24wnA-q08">
+<div lang="fr">
+<p><b>Idée.</b> Générateur alternatif : $\mathcal E_{\max}=BS\omega$. On calcule à part la résistance du fil (loi d'Ohm en volume).</p>
+<ol>
+<li>Aire du triangle équilatéral : $S=\dfrac{\sqrt3}{4}a^2$. Comme $\vec B\perp$ axe de rotation, $\Phi=BS\sin\omega t$.</li>
+<li>$\mathcal E_{\max}=\dfrac{\sqrt3}{4}a^2\omega B$.</li>
+<li>Fil : longueur $3a$, section $\pi r^2$, donc $R=\dfrac{3\rho a}{\pi r^2}$.</li>
+<li>$I_{\max}=\dfrac{\mathcal E_{\max}}{R}=\dfrac{\sqrt3}{12}\dfrac{\pi Ba\omega r^2}{\rho}$.</li>
+</ol>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> גנרטור זרם חילופין: $\mathcal E_{\max}=BS\omega$. את התנגדות התיל מחשבים בנפרד (חוק אוהם בנפח).</p>
+<ol>
+<li>שטח משולש שווה צלעות: $S=\dfrac{\sqrt3}{4}a^2$. מכיוון ש-$\vec B\perp$ ציר הסיבוב, $\Phi=BS\sin\omega t$.</li>
+<li>$\mathcal E_{\max}=\dfrac{\sqrt3}{4}a^2\omega B$.</li>
+<li>התיל: אורך $3a$, חתך $\pi r^2$, ולכן $R=\dfrac{3\rho a}{\pi r^2}$.</li>
+<li>$I_{\max}=\dfrac{\mathcal E_{\max}}{R}=\dfrac{\sqrt3}{12}\dfrac{\pi Ba\omega r^2}{\rho}$.</li>
+</ol>
+</div>
+</article>
+
+<article data-id="24spC-q09">
+<div lang="fr">
+<p><b>Idée.</b> Seule compte l'aire déjà <b>dans</b> la zone de champ. Le triangle entre par son sommet à $45°$ : la partie immergée est un triangle rectangle isocèle de côté $x=Vt$.</p>
+<ol>
+<li>$S(t)=\dfrac12(Vt)^2$ (tant que $t&lt;L/V$).</li>
+<li>$\mathcal E=B_0\dfrac{dS}{dt}=B_0V^2t$, qui croît linéairement.</li>
+<li>$I=\dfrac{B_0V^2t}{R}$, en sens <b>horaire</b> : le flux sortant augmente, donc le courant crée un champ entrant.</li>
+</ol>
+<p><b>Vérification par $vBL_{\text{eff}}$ :</b> la longueur de conducteur coupée par la frontière vaut $Vt$ (hauteur de la partie immergée). On a donc $\mathcal E=B_0V\cdot Vt$ ✔.</p>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> רק השטח שכבר <b>בתוך</b> אזור השדה חשוב. המשולש נכנס עם הקודקוד שבזווית $45°$: החלק הטבול הוא משולש ישר זווית ושווה שוקיים בניצב $x=Vt$.</p>
+<ol>
+<li>$S(t)=\dfrac12(Vt)^2$ (כל עוד $t&lt;L/V$).</li>
+<li>$\mathcal E=B_0\dfrac{dS}{dt}=B_0V^2t$, שגדל ליניארית.</li>
+<li>$I=\dfrac{B_0V^2t}{R}$, <b>עם כיוון השעון</b>: השטף היוצא גדל, ולכן הזרם יוצר שדה נכנס.</li>
+</ol>
+<p><b>בדיקה עם $vBL_{\text{eff}}$:</b> אורך המוליך שהגבול חותך הוא $Vt$ (גובה החלק הטבול). לכן $\mathcal E=B_0V\cdot Vt$ ✔.</p>
+</div>
+</article>

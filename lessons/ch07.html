@@ -1,0 +1,87 @@
+<section lang="fr">
+<h2>Induction électromagnétique</h2>
+
+<h3>1. Une seule loi, deux mécanismes</h3>
+<div class="box">$$\mathcal E=-\frac{d\Phi_B}{dt},\qquad \Phi_B=\int_S\vec B\cdot d\vec A,\qquad I=\frac{\mathcal E}{R},\qquad Q_{\text{passée}}=\frac{|\Delta\Phi|}{R}$$</div>
+<p>Le flux peut changer pour deux raisons physiquement différentes :</p>
+<ul>
+<li><b>Le circuit bouge</b> dans un $\vec B$ constant : la force de Lorentz $q\vec v\times\vec B$ pousse les charges le long du fil. C'est la <b>f.é.m. de mouvement</b> : $\mathcal E=\oint(\vec v\times\vec B)\cdot d\vec l$, et pour une tige droite $\mathcal E=vBL$ (quand $\vec v$, $\vec B$ et la tige sont perpendiculaires deux à deux).</li>
+<li><b>$\vec B$ change</b> avec le temps : il apparaît un <b>champ électrique induit</b> (non conservatif), $\oint\vec E\cdot d\vec l=-\dfrac{d\Phi_B}{dt}$. Ses lignes forment des boucles fermées.</li>
+</ul>
+<p>Les deux sont décrits par $\mathcal E=-d\Phi/dt$. La distinction dépend du <b>référentiel</b> : dans le référentiel du circuit qui bouge, le champ magnétique « vu » change, et c'est un champ électrique ($\vec E'=\vec v\times\vec B$) qui pousse les charges.</p>
+
+<h3>2. Le signe : la loi de Lenz</h3>
+<p>Le courant induit circule de façon à <b>s'opposer à la variation</b> du flux : il crée son propre champ, qui freine le changement. Par exemple, une spire qui s'éloigne d'un fil voit son flux diminuer, donc le courant induit renforce le champ du fil à l'intérieur de la spire. Pour une tige mobile, la force magnétique sur le courant induit freine toujours le mouvement.</p>
+
+<h3>3. Calculer le flux</h3>
+<ul>
+<li>$\vec B$ uniforme, surface plane : $\Phi=BA\cos\theta$. Spire qui tourne à $\omega$ : $\theta=\omega t$, donc $\mathcal E=BA\omega\sin\omega t$.</li>
+<li><b>Spire (ou cadre) dans un solénoïde</b> : $B=\mu_0nI$ seulement <b>à l'intérieur</b> du solénoïde. Le flux est $B\times$(aire de la partie de la spire qui est dans le solénoïde). Une spire plus grande que le solénoïde n'a que $\mu_0nI\cdot\pi a^2$, une spire plus petite a $\mu_0nI\cdot A_{\text{spire}}$.</li>
+<li>Fil infini et cadre rectangulaire (côté $b$ parallèle au fil, de $r_1$ à $r_2$) : $\displaystyle\Phi=\int_{r_1}^{r_2}\frac{\mu_0I}{2\pi r}b\,dr=\frac{\mu_0Ib}{2\pi}\ln\frac{r_2}{r_1}$.</li>
+<li>Petite spire au centre d'une grande boucle (ou d'un grand cadre) : le champ de la grande boucle est à peu près uniforme sur la petite, donc $\Phi\approx B_{\text{centre}}\,\pi a^2$. Champ au centre d'un carré de côté $L$ : $B=\dfrac{2\sqrt2\mu_0I}{\pi L}$.</li>
+<li>Cadre qui entre dans une zone de champ : seule l'aire déjà <b>dans</b> la zone compte, et elle varie avec la position.</li>
+</ul>
+
+<h3>4. Inductance propre</h3>
+<div class="box">$$\Phi_{\text{propre}}=LI,\qquad \mathcal E_L=-L\frac{dI}{dt},\qquad U=\frac12LI^2,\qquad L_{\text{sol}}=\mu_0n^2A\ell=\frac{\mu_0N^2A}{\ell}$$</div>
+<p>Analogie hydraulique : une bobine est une <b>turbine lourde</b> (un volant d'inertie) placée dans le tuyau. Elle s'oppose aux <i>variations</i> du débit, pas au débit lui-même. Au démarrage, elle bloque le courant ; en régime permanent, c'est un simple fil.</p>
+<p>Calcul de $L$ : supposer $I$, trouver $B$ (Ampère), calculer le flux à travers <b>toutes</b> les spires, puis $L=N\Phi_1/I$. Ou par l'énergie : $L=2U_B/I^2$ avec $U_B=\int\frac{B^2}{2\mu_0}dV$. Tore à section rectangulaire : $L=\dfrac{\mu_0N^2h}{2\pi}\ln\dfrac{b}{a}$.</p>
+
+<h3>5. Circuit RL</h3>
+<div class="box">$$\text{Établissement : }I(t)=\frac{\varepsilon}{R}\left(1-e^{-t/\tau}\right),\qquad\text{Coupure : }I(t)=I_0e^{-t/\tau},\qquad\tau=\frac{L}{R}$$</div>
+<ul>
+<li>À $t=0^+$, $I_L$ ne peut pas sauter : la bobine se comporte comme un <b>circuit ouvert</b> si elle était sans courant. Au bout d'un temps long : <b>fil</b>.</li>
+<li>Plusieurs résistances : $\tau=L/R_{\text{éq}}$, où $R_{\text{éq}}$ est la résistance « vue » par la bobine (sources éteintes). Exemple : $\varepsilon$ en série avec $R_1$, puis $L$ en parallèle avec $R_2$ : $R_{\text{éq}}=\dfrac{R_1R_2}{R_1+R_2}$ et $I_L(\infty)=\varepsilon/R_1$.</li>
+</ul>
+<div class="trap"><b>Énergie en décharge RL :</b> $U=\frac12LI^2\propto e^{-2t/\tau}$, et non $e^{-t/\tau}$. « Énergie tombée à 10 % » donne $e^{-2t/\tau}=0{,}1$, soit $t=\dfrac{\tau}{2}\ln10=\dfrac{L}{2R}\ln10$.</div>
+
+<h3>6. Points faibles : méthodes</h3>
+<div class="trap"><b>Référentiel tournant dans un solénoïde :</b> un cadre de côté $b$ tourne à $\omega$ <i>à l'intérieur</i> d'un solénoïde. Le flux vaut $\mu_0nI\,b^2\cos\omega t$, donc $\mathcal E=\mu_0nIb^2\omega\sin\omega t$ et $i=\mathcal E/R$. Le rayon du solénoïde n'intervient pas, puisque le cadre est entièrement dedans.</div>
+<div class="trap"><b>F.é.m. de mouvement avec un champ non uniforme</b> (cadre qui s'éloigne d'un fil) : $\mathcal E=vb\,[B(r_{\text{proche}})-B(r_{\text{loin}})]$. Les deux côtés parallèles au fil ont des f.é.m. opposées, et seule la différence reste. C'est identique à $-d\Phi/dt$.</div>
+<div class="trap"><b>Tige qui tourne</b> (rayon $L$, $\omega$) dans $\vec B$ uniforme : $\mathcal E=\int_0^L\omega rB\,dr=\frac12B\omega L^2$.</div>
+<p class="muted small">Hors programme : l'inductance mutuelle (transformateur) et les circuits RLC/LC. Les questions « une boucle crée un flux dans une autre » se traitent ici par calcul direct du flux et Faraday.</p>
+</section>
+
+<section lang="he">
+<h2>השראה אלקטרומגנטית</h2>
+
+<h3>1. חוק אחד, שני מנגנונים</h3>
+<div class="box">$$\mathcal E=-\frac{d\Phi_B}{dt},\qquad \Phi_B=\int_S\vec B\cdot d\vec A,\qquad I=\frac{\mathcal E}{R},\qquad Q_{\text{שעבר}}=\frac{|\Delta\Phi|}{R}$$</div>
+<p>השטף יכול להשתנות משתי סיבות שונות פיזיקלית:</p>
+<ul>
+<li><b>המעגל זז</b> ב-$\vec B$ קבוע: כוח לורנץ $q\vec v\times\vec B$ דוחף את המטענים לאורך התיל. זהו <b>כא"מ תנועתי</b>: $\mathcal E=\oint(\vec v\times\vec B)\cdot d\vec l$, ולמוט ישר $\mathcal E=vBL$ (כש-$\vec v$, $\vec B$ והמוט ניצבים זה לזה).</li>
+<li><b>$\vec B$ משתנה</b> בזמן: נוצר <b>שדה חשמלי מושרה</b> (לא משמר), $\oint\vec E\cdot d\vec l=-\dfrac{d\Phi_B}{dt}$. קווי השדה שלו הם לולאות סגורות.</li>
+</ul>
+<p>שניהם מתוארים על ידי $\mathcal E=-d\Phi/dt$. ההבחנה תלויה ב<b>מערכת הייחוס</b>: במערכת של המעגל הנע, השדה המגנטי ה"נראה" משתנה, ושדה חשמלי ($\vec E'=\vec v\times\vec B$) הוא שדוחף את המטענים.</p>
+
+<h3>2. הסימן: חוק לנץ</h3>
+<p>הזרם המושרה זורם כך ש<b>יתנגד לשינוי</b> בשטף: הוא יוצר שדה משלו שמאט את השינוי. למשל, כריכה שמתרחקת מתיל רואה את השטף שלה יורד, ולכן הזרם המושרה מחזק את שדה התיל בתוך הכריכה. במוט נע, הכוח המגנטי על הזרם המושרה תמיד בולם את התנועה.</p>
+
+<h3>3. חישוב השטף</h3>
+<ul>
+<li>$\vec B$ אחיד, משטח מישורי: $\Phi=BA\cos\theta$. כריכה שמסתובבת ב-$\omega$: $\theta=\omega t$, ולכן $\mathcal E=BA\omega\sin\omega t$.</li>
+<li><b>כריכה (או מסגרת) בתוך סליל</b>: $B=\mu_0nI$ רק <b>בתוך</b> הסליל. השטף הוא $B\times$(שטח החלק של הכריכה שבתוך הסליל). לכריכה גדולה מהסליל יש רק $\mu_0nI\cdot\pi a^2$, ולכריכה קטנה ממנו $\mu_0nI\cdot A_{\text{כריכה}}$.</li>
+<li>תיל אינסופי ומסגרת מלבנית (צלע $b$ מקבילה לתיל, מ-$r_1$ עד $r_2$): $\displaystyle\Phi=\int_{r_1}^{r_2}\frac{\mu_0I}{2\pi r}b\,dr=\frac{\mu_0Ib}{2\pi}\ln\frac{r_2}{r_1}$.</li>
+<li>טבעת קטנה במרכז לולאה (או מסגרת) גדולה: השדה של הגדולה בקירוב אחיד על הקטנה, ולכן $\Phi\approx B_{\text{מרכז}}\,\pi a^2$. השדה במרכז ריבוע בצלע $L$: $B=\dfrac{2\sqrt2\mu_0I}{\pi L}$.</li>
+<li>מסגרת שנכנסת לאזור עם שדה: רק השטח שכבר <b>בתוך</b> האזור נחשב, והוא משתנה עם המיקום.</li>
+</ul>
+
+<h3>4. השראות עצמית</h3>
+<div class="box">$$\Phi_{\text{עצמי}}=LI,\qquad \mathcal E_L=-L\frac{dI}{dt},\qquad U=\frac12LI^2,\qquad L_{\text{סליל}}=\mu_0n^2A\ell=\frac{\mu_0N^2A}{\ell}$$</div>
+<p>אנלוגיה הידראולית: סליל הוא <b>טורבינה כבדה</b> (גלגל תנופה) שמונחת בצינור. היא מתנגדת ל<i>שינויים</i> בספיקה, לא לספיקה עצמה. בהתחלה היא חוסמת את הזרם; במצב יציב היא פשוט תיל.</p>
+<p>חישוב $L$: מניחים $I$, מוצאים $B$ (אמפר), מחשבים את השטף דרך <b>כל</b> הכריכות, ואז $L=N\Phi_1/I$. או דרך האנרגיה: $L=2U_B/I^2$ עם $U_B=\int\frac{B^2}{2\mu_0}dV$. טורוס עם חתך מלבני: $L=\dfrac{\mu_0N^2h}{2\pi}\ln\dfrac{b}{a}$.</p>
+
+<h3>5. מעגל RL</h3>
+<div class="box">$$\text{טעינה: }I(t)=\frac{\varepsilon}{R}\left(1-e^{-t/\tau}\right),\qquad\text{פריקה: }I(t)=I_0e^{-t/\tau},\qquad\tau=\frac{L}{R}$$</div>
+<ul>
+<li>ב-$t=0^+$ הזרם $I_L$ לא יכול לקפוץ: הסליל מתנהג כמו <b>נתק</b> אם לא זרם בו זרם. אחרי זמן רב: <b>תיל</b>.</li>
+<li>כמה נגדים: $\tau=L/R_{\text{שקול}}$, כאשר $R_{\text{שקול}}$ היא ההתנגדות ש"רואה" הסליל (מקורות מכובים). דוגמה: $\varepsilon$ בטור עם $R_1$, ואחר כך $L$ במקביל ל-$R_2$: $R_{\text{שקול}}=\dfrac{R_1R_2}{R_1+R_2}$ ו-$I_L(\infty)=\varepsilon/R_1$.</li>
+</ul>
+<div class="trap"><b>אנרגיה בפריקת RL:</b> $U=\frac12LI^2\propto e^{-2t/\tau}$, ולא $e^{-t/\tau}$. "האנרגיה ירדה ל-10%" נותן $e^{-2t/\tau}=0.1$, כלומר $t=\dfrac{\tau}{2}\ln10=\dfrac{L}{2R}\ln10$.</div>
+
+<h3>6. נקודות חולשה: שיטות</h3>
+<div class="trap"><b>מערכת מסתובבת בתוך סליל:</b> מסגרת בצלע $b$ מסתובבת ב-$\omega$ <i>בתוך</i> סליל. השטף $\mu_0nI\,b^2\cos\omega t$, ולכן $\mathcal E=\mu_0nIb^2\omega\sin\omega t$ ו-$i=\mathcal E/R$. רדיוס הסליל לא משחק תפקיד, כי המסגרת כולה בפנים.</div>
+<div class="trap"><b>כא"מ תנועתי בשדה לא אחיד</b> (מסגרת שמתרחקת מתיל): $\mathcal E=vb\,[B(r_{\text{קרוב}})-B(r_{\text{רחוק}})]$. לשתי הצלעות המקבילות לתיל יש כא"מ מנוגדים, ונשאר רק ההפרש. זה זהה ל-$-d\Phi/dt$.</div>
+<div class="trap"><b>מוט מסתובב</b> (רדיוס $L$, $\omega$) ב-$\vec B$ אחיד: $\mathcal E=\int_0^L\omega rB\,dr=\frac12B\omega L^2$.</div>
+<p class="muted small">לא בחומר: השראות הדדית (שנאי) ומעגלי RLC/LC. שאלות מסוג "לולאה אחת יוצרת שטף בלולאה אחרת" נפתרות כאן בחישוב ישיר של השטף ובחוק פאראדיי.</p>
+</section>
