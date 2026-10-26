@@ -11,12 +11,12 @@
    "split": true,
    "answer": 0,
    "order": [
-    1,
-    5,
-    0,
     3,
     4,
-    2
+    0,
+    2,
+    1,
+    5
    ],
    "officialSol": true,
    "alsoIn": [
@@ -39,11 +39,11 @@
    "answer": 0,
    "order": [
     2,
-    3,
-    0,
-    4,
+    5,
     1,
-    5
+    0,
+    3,
+    4
    ],
    "officialSol": true,
    "alsoIn": [],
@@ -59,12 +59,12 @@
    "split": true,
    "answer": 0,
    "order": [
-    0,
-    3,
-    4,
-    2,
     1,
-    5
+    0,
+    2,
+    5,
+    3,
+    4
    ],
    "officialSol": true,
    "alsoIn": [],
@@ -80,12 +80,12 @@
    "split": true,
    "answer": 0,
    "order": [
-    2,
-    5,
-    0,
     1,
+    4,
+    2,
     3,
-    4
+    0,
+    5
    ],
    "officialSol": true,
    "alsoIn": [],
@@ -97,48 +97,6 @@
    "exam": "26wnC",
    "examLabel": "Winter 2026 · Moed C",
    "num": 6,
-   "n": 6,
-   "split": true,
-   "answer": 0,
-   "order": [
-    1,
-    0,
-    2,
-    5,
-    3,
-    4
-   ],
-   "officialSol": true,
-   "alsoIn": [],
-   "toVerify": false,
-   "differs": false
-  },
-  {
-   "id": "26wnC-q07",
-   "exam": "26wnC",
-   "examLabel": "Winter 2026 · Moed C",
-   "num": 7,
-   "n": 6,
-   "split": true,
-   "answer": 0,
-   "order": [
-    1,
-    4,
-    2,
-    3,
-    5,
-    0
-   ],
-   "officialSol": true,
-   "alsoIn": [],
-   "toVerify": false,
-   "differs": false
-  },
-  {
-   "id": "26wnA-q05",
-   "exam": "26wnA",
-   "examLabel": "Winter 2026 · Moed A",
-   "num": 5,
    "n": 6,
    "split": true,
    "answer": 0,
@@ -156,6 +114,48 @@
    "differs": false
   },
   {
+   "id": "26wnC-q07",
+   "exam": "26wnC",
+   "examLabel": "Winter 2026 · Moed C",
+   "num": 7,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    5,
+    0,
+    3,
+    2,
+    1,
+    4
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "26wnA-q05",
+   "exam": "26wnA",
+   "examLabel": "Winter 2026 · Moed A",
+   "num": 5,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    0,
+    3,
+    2,
+    1,
+    4,
+    5
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  },
+  {
    "id": "25wnA-q04",
    "exam": "25wnA",
    "examLabel": "Winter 2025 · Moed A",
@@ -164,12 +164,12 @@
    "split": true,
    "answer": 0,
    "order": [
+    0,
+    1,
+    2,
     5,
     3,
-    2,
-    1,
-    4,
-    0
+    4
    ],
    "officialSol": true,
    "alsoIn": [],
@@ -185,12 +185,12 @@
    "split": true,
    "answer": 0,
    "order": [
-    3,
     2,
-    1,
-    4,
+    5,
     0,
-    5
+    3,
+    4,
+    1
    ],
    "officialSol": true,
    "alsoIn": [],
@@ -206,12 +206,12 @@
    "split": true,
    "answer": 0,
    "order": [
-    1,
-    2,
-    5,
-    0,
     3,
-    4
+    5,
+    1,
+    4,
+    2,
+    0
    ],
    "officialSol": true,
    "alsoIn": [],

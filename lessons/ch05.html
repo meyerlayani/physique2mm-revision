@@ -1,0 +1,95 @@
+<section lang="fr">
+<h2>Charges en mouvement et relativité des champs</h2>
+
+<h3>1. Rappel de relativité restreinte</h3>
+<p>Référentiel $S'$ en mouvement à la vitesse $v\hat x$ par rapport à $S$ ; $\beta=v/c$, $\gamma=1/\sqrt{1-\beta^2}$.</p>
+<div class="box">$$x'=\gamma(x-vt),\quad t'=\gamma\left(t-\frac{vx}{c^2}\right),\qquad \text{contraction : }L=\frac{L_0}{\gamma},\qquad\text{dilatation : }\Delta t=\gamma\Delta\tau$$
+$$\text{Addition des vitesses (colinéaires) : }u'=\frac{u-v}{1-uv/c^2}$$</div>
+<p><b>Invariance de la charge</b> : la charge d'une particule est la même dans tous les référentiels. En revanche une <b>densité</b> change, car les longueurs se contractent : $\lambda=\gamma\lambda_0$, $\sigma=\gamma\sigma_0$ (indice 0 : référentiel propre de la distribution).</p>
+
+<h3>2. Champ d'une charge en mouvement uniforme</h3>
+<p>Le champ est toujours <b>radial depuis la position actuelle</b> de la charge (pas la position « retardée »), mais il est écrasé dans la direction du mouvement : plus fort sur les côtés, plus faible devant et derrière.</p>
+<div class="box">$$\vec E=\frac{kq}{r^2}\,\frac{1-\beta^2}{\left(1-\beta^2\sin^2\theta\right)^{3/2}}\,\hat r,\qquad \vec B=\frac{1}{c^2}\vec v\times\vec E$$
+$\theta$ : angle entre $\vec v$ et le vecteur qui va de la position actuelle de la charge au point d'observation. Devant ou derrière : $E=\dfrac{kq}{\gamma^2r^2}$ ; sur le côté : $E=\dfrac{\gamma kq}{r^2}$.</div>
+
+<h3>3. Charge accélérée : la sphère d'information</h3>
+<p><b>L'idée clé</b> : la nouvelle qu'une charge a changé de vitesse se propage à la vitesse $c$. Si la charge change brusquement de vitesse à l'instant $t_0$ au point $P_0$, alors à l'instant $t$ :</p>
+<ul>
+<li>à l'<b>extérieur</b> de la sphère de centre $P_0$ et de rayon $c(t-t_0)$, on voit encore le champ de l'<b>ancien</b> mouvement (comme si la charge avait continué : position extrapolée) ;</li>
+<li>à l'<b>intérieur</b>, on voit le champ du <b>nouveau</b> mouvement (position actuelle réelle) ;</li>
+<li>sur la coquille de raccord, les lignes de champ font un « coude » transverse. C'est la radiation, dont on ne calcule pas l'intensité (hors programme).</li>
+</ul>
+<p><b>Méthode pour les questions « que mesure le capteur ? »</b> :</p>
+<ol>
+<li>Lister les événements de changement (départ, arrêt, création…), avec lieu et instant.</li>
+<li>Pour chaque capteur, comparer sa distance à l'événement avec $c(t-t_{\text{év}})$ : l'information est-elle arrivée ?</li>
+<li>Le champ mesuré est celui du dernier mouvement dont l'information est arrivée.</li>
+</ol>
+<p>Charges créées à partir de rien (par exemple un électron émis d'un atome neutre) : la conservation de la charge impose que l'atome devienne un ion $+e$. Au-delà de la sphère d'information, on voit la charge totale d'avant, c'est-à-dire zéro.</p>
+
+<h3>4. Transformation de Lorentz des champs</h3>
+<p>Boost de vitesse $\vec v=v\hat x$ : on décompose en composantes parallèles et perpendiculaires à $\vec v$.</p>
+<div class="box">$$E'_\parallel=E_\parallel,\qquad B'_\parallel=B_\parallel$$
+$$\vec E'_\perp=\gamma\left(\vec E+\vec v\times\vec B\right)_\perp,\qquad \vec B'_\perp=\gamma\left(\vec B-\frac{\vec v\times\vec E}{c^2}\right)_\perp$$</div>
+<p><b>Plan infini</b> de densité propre $\sigma_0$ se déplaçant à $\vec u$ parallèlement à son plan : densité $\sigma=\gamma_u\sigma_0$, courant de surface $\vec K=\sigma\vec u$, $E=\dfrac{\sigma}{2\varepsilon_0}$, $B=\dfrac{\mu_0K}{2}=\dfrac{\mu_0\sigma u}{2}$, donc $B=\dfrac{u}{c^2}E$.</p>
+<p><b>Fil infini</b> de densité $\lambda$ et de courant $I$ : $E=\dfrac{2k\lambda}{r}$, $B=\dfrac{\mu_0I}{2\pi r}$.</p>
+
+<h3>5. Invariants et rapport $\beta^2$</h3>
+<div class="box">$$\vec E\cdot\vec B\quad\text{et}\quad E^2-c^2B^2\quad\text{sont les mêmes dans tous les référentiels inertiels.}$$</div>
+<ul>
+<li>Si $E^2-c^2B^2>0$ et $\vec E\cdot\vec B=0$ : il existe un référentiel où $B'=0$ (champ « purement électrique »).</li>
+<li>Si $E^2-c^2B^2&lt;0$ et $\vec E\cdot\vec B=0$ : il existe un référentiel où $E'=0$.</li>
+<li>Si $\vec E\cdot\vec B\neq0$ : impossible d'annuler l'un des deux, dans aucun référentiel.</li>
+<li>Si $\vec E=0$ dans un référentiel : alors $\vec E'\cdot\vec B'=0$ partout, donc $\vec E'\perp\vec B'$ dans <b>tous</b> les référentiels, et $|E'|&lt;c|B'|$.</li>
+</ul>
+<div class="trap"><b>Rapport universel $f_B/f_E=\beta^2$</b> : pour deux distributions (fils, plans) qui se déplacent <b>ensemble</b> à la vitesse $v$, la force magnétique entre elles vaut $\beta^2$ fois la force électrique (et elle est opposée pour des charges de même signe). Exemple : « $f_B=f_E/2$ » donne $\beta=1/\sqrt2$.</div>
+<div class="trap">Pour une charge test qui bouge dans le champ d'un fil, le résultat (la trajectoire est-elle déviée ?) ne dépend pas du référentiel. Mais la nature de la force change : purement magnétique dans l'un, électrique dans l'autre. Calculer dans le référentiel le plus simple, puis transformer.</div>
+</section>
+
+<section lang="he">
+<h2>מטענים נעים ויחסות של השדות</h2>
+
+<h3>1. תזכורת: יחסות פרטית</h3>
+<p>מערכת $S'$ נעה במהירות $v\hat x$ ביחס ל-$S$; $\beta=v/c$, $\gamma=1/\sqrt{1-\beta^2}$.</p>
+<div class="box">$$x'=\gamma(x-vt),\quad t'=\gamma\left(t-\frac{vx}{c^2}\right),\qquad \text{התכווצות: }L=\frac{L_0}{\gamma},\qquad\text{התארכות: }\Delta t=\gamma\Delta\tau$$
+$$\text{חיבור מהירויות (באותו כיוון): }u'=\frac{u-v}{1-uv/c^2}$$</div>
+<p><b>אינווריאנטיות המטען</b>: המטען של חלקיק זהה בכל מערכות הייחוס. לעומת זאת <b>צפיפות</b> משתנה, כי אורכים מתכווצים: $\lambda=\gamma\lambda_0$, $\sigma=\gamma\sigma_0$ (אינדקס 0: המערכת העצמית של ההתפלגות).</p>
+
+<h3>2. השדה של מטען במהירות קבועה</h3>
+<p>השדה תמיד <b>רדיאלי מהמיקום הנוכחי</b> של המטען (לא מהמיקום ה"מאוחר"), אבל הוא מכווץ בכיוון התנועה: חזק יותר בצדדים, חלש יותר מלפנים ומאחור.</p>
+<div class="box">$$\vec E=\frac{kq}{r^2}\,\frac{1-\beta^2}{\left(1-\beta^2\sin^2\theta\right)^{3/2}}\,\hat r,\qquad \vec B=\frac{1}{c^2}\vec v\times\vec E$$
+$\theta$: הזווית בין $\vec v$ לבין הווקטור מהמיקום הנוכחי של המטען לנקודת המדידה. מלפנים או מאחור: $E=\dfrac{kq}{\gamma^2r^2}$; בצד: $E=\dfrac{\gamma kq}{r^2}$.</div>
+
+<h3>3. מטען מואץ: כדור האינפורמציה</h3>
+<p><b>הרעיון המרכזי</b>: הידיעה שמטען שינה את מהירותו מתפשטת במהירות $c$. אם המטען משנה מהירות בבת אחת ברגע $t_0$ בנקודה $P_0$, אז ברגע $t$:</p>
+<ul>
+<li><b>מחוץ</b> לכדור שמרכזו $P_0$ ורדיוסו $c(t-t_0)$ רואים עדיין את השדה של התנועה <b>הישנה</b> (כאילו המטען המשיך: מיקום מוחצן);</li>
+<li><b>בפנים</b> רואים את השדה של התנועה <b>החדשה</b> (המיקום האמיתי הנוכחי);</li>
+<li>על הקליפה המחברת, קווי השדה עושים "ברך" רוחבית. זו הקרינה, שאת עוצמתה לא מחשבים (לא בחומר).</li>
+</ul>
+<p><b>שיטה לשאלות "מה מודד החיישן?"</b>:</p>
+<ol>
+<li>לרשום את אירועי השינוי (התחלת תנועה, עצירה, יצירה…), עם מקום וזמן.</li>
+<li>לכל חיישן, להשוות את מרחקו מהאירוע ל-$c(t-t_{\text{אירוע}})$: האם האינפורמציה הגיעה?</li>
+<li>השדה הנמדד הוא של התנועה האחרונה שהאינפורמציה עליה הגיעה.</li>
+</ol>
+<p>מטענים שנוצרים "יש מאין" (למשל אלקטרון שנפלט מאטום ניטרלי): שימור המטען מחייב שהאטום יהפוך ליון $+e$. מעבר לכדור האינפורמציה רואים את המטען הכולל הקודם, כלומר אפס.</p>
+
+<h3>4. טרנספורמציית לורנץ של השדות</h3>
+<p>מעבר למערכת במהירות $\vec v=v\hat x$: מפרקים לרכיבים מקבילים וניצבים ל-$\vec v$.</p>
+<div class="box">$$E'_\parallel=E_\parallel,\qquad B'_\parallel=B_\parallel$$
+$$\vec E'_\perp=\gamma\left(\vec E+\vec v\times\vec B\right)_\perp,\qquad \vec B'_\perp=\gamma\left(\vec B-\frac{\vec v\times\vec E}{c^2}\right)_\perp$$</div>
+<p><b>מישור אינסופי</b> עם צפיפות עצמית $\sigma_0$ שנע במהירות $\vec u$ במקביל למישורו: צפיפות $\sigma=\gamma_u\sigma_0$, זרם משטחי $\vec K=\sigma\vec u$, $E=\dfrac{\sigma}{2\varepsilon_0}$, $B=\dfrac{\mu_0K}{2}=\dfrac{\mu_0\sigma u}{2}$, ולכן $B=\dfrac{u}{c^2}E$.</p>
+<p><b>תיל אינסופי</b> עם צפיפות $\lambda$ וזרם $I$: $E=\dfrac{2k\lambda}{r}$, $B=\dfrac{\mu_0I}{2\pi r}$.</p>
+
+<h3>5. אינווריאנטים והיחס $\beta^2$</h3>
+<div class="box">$$\vec E\cdot\vec B\quad\text{ו-}\quad E^2-c^2B^2\quad\text{זהים בכל מערכות הייחוס האינרציאליות.}$$</div>
+<ul>
+<li>אם $E^2-c^2B^2>0$ ו-$\vec E\cdot\vec B=0$: קיימת מערכת שבה $B'=0$ (שדה "חשמלי טהור").</li>
+<li>אם $E^2-c^2B^2&lt;0$ ו-$\vec E\cdot\vec B=0$: קיימת מערכת שבה $E'=0$.</li>
+<li>אם $\vec E\cdot\vec B\neq0$: אי אפשר לאפס אף אחד מהשדות, בשום מערכת.</li>
+<li>אם $\vec E=0$ במערכת אחת: אז $\vec E'\cdot\vec B'=0$ בכל מקום, כלומר $\vec E'\perp\vec B'$ ב<b>כל</b> המערכות, ו-$|E'|&lt;c|B'|$.</li>
+</ul>
+<div class="trap"><b>היחס האוניברסלי $f_B/f_E=\beta^2$</b>: עבור שתי התפלגויות (תילים, מישורים) שנעות <b>יחד</b> במהירות $v$, הכוח המגנטי ביניהן שווה ל-$\beta^2$ כפול הכוח החשמלי (ומנוגד לו עבור מטענים באותו סימן). דוגמה: "$f_B=f_E/2$" נותן $\beta=1/\sqrt2$.</div>
+<div class="trap">עבור מטען בוחן שנע בשדה של תיל, התוצאה (האם המסלול מוסט?) אינה תלויה במערכת הייחוס. אבל אופי הכוח משתנה: מגנטי טהור באחת, חשמלי באחרת. מחשבים במערכת הפשוטה ביותר ואז ממירים.</div>
+</section>

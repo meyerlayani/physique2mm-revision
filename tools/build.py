@@ -41,15 +41,20 @@ def main():
         if not ready:
             continue
         rng = random.Random(f'p2mm-{n}')
+        # balanced target positions for the correct answer within the chapter
+        targets = [i % 6 for i in range(len(items))]
+        rng.shuffle(targets)
         qs = []
-        for it, qid in zip(items, ids):
+        for it, qid, tgt in zip(items, ids, targets):
             m, a = meta[qid], ans[qid]
             nopt = a.get('n', m['n'])
             orig = LETTERS.index(a['ans'])
             order = list(range(nopt))
             if m['split']:
-                # place the correct option at a random position (uniform over the chapter)
                 rng.shuffle(order)
+                tgt = tgt % nopt
+                order.remove(orig)
+                order.insert(tgt, orig)
             qs.append(dict(id=qid, exam=it['exam'], examLabel=label(it['exam']), num=it['q'], n=nopt,
                            split=m['split'], answer=orig, order=order, officialSol=m['sol'],
                            alsoIn=[dict(exam=x['exam'], q=x['q'], label=f"{label(x['exam'])} Q{x['q']}"
