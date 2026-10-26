@@ -1,0 +1,107 @@
+<section lang="fr">
+<h2>Potentiel électrique et énergie</h2>
+
+<h3>1. Pourquoi un potentiel ?</h3>
+<p>Le champ électrostatique est <b>conservatif</b> : le travail de la force électrique entre deux points ne dépend pas du chemin suivi. On peut donc attacher à chaque point un nombre, le potentiel $\varphi$, comme une <b>altitude</b> : la charge positive « descend » les pentes de potentiel, de même qu'une bille descend une colline. Le champ est la pente, $\vec E=-\vec\nabla\varphi$. Il pointe vers les potentiels décroissants et il est perpendiculaire aux équipotentielles (les courbes de niveau).</p>
+<p>L'avantage est énorme : un <b>scalaire</b> au lieu d'un vecteur. On additionne des nombres, sans projections.</p>
+
+<h3>2. Les formules</h3>
+<div class="box">
+$$\varphi(\vec r)=\sum_i\frac{kq_i}{|\vec r-\vec r_i|}=\int\frac{k\,dq}{|\vec r-\vec r\,{}'|}\qquad(\varphi(\infty)=0)$$
+$$\varphi(B)-\varphi(A)=-\int_A^B\vec E\cdot d\vec l,\qquad \vec E=-\vec\nabla\varphi=-\left(\frac{\partial\varphi}{\partial x},\frac{\partial\varphi}{\partial y},\frac{\partial\varphi}{\partial z}\right)$$
+</div>
+<ul>
+<li>Champ radial : $E_r=-\dfrac{d\varphi}{dr}$, et inversement $\varphi(r)=\displaystyle\int_r^\infty E(r')\,dr'$ (référence à l'infini).</li>
+<li>Énergie potentielle d'une charge $q$ : $U=q\varphi$. Travail de la force électrique de $A$ à $B$ : $W_{\text{él}}=q(\varphi_A-\varphi_B)=-\Delta U$. Travail d'un opérateur qui déplace lentement la charge : $W_{\text{op}}=+\Delta U=q(\varphi_B-\varphi_A)$.</li>
+<li>Conservation de l'énergie (charge libre) : $\tfrac12mv_A^2+q\varphi_A=\tfrac12mv_B^2+q\varphi_B$.</li>
+</ul>
+
+<h3>3. Énergie d'une configuration</h3>
+<p>C'est le travail qu'il a fallu fournir pour amener les charges une à une depuis l'infini.</p>
+<div class="box">
+$$U=\sum_{\text{paires }i<j}\frac{kq_iq_j}{r_{ij}}=\frac12\sum_iq_i\varphi_i=\frac12\int\varphi\,dq=\frac{\varepsilon_0}{2}\int_{\text{espace}}E^2\,dV$$
+</div>
+<ul>
+<li>Point par paires : chaque paire comptée <b>une seule fois</b>. Le $\frac12$ de la deuxième forme sert justement à ne pas compter deux fois.</li>
+<li>Coquille (ou conducteur sphérique) de rayon $R$ et de charge $Q$ : $U=\dfrac{kQ^2}{2R}$. Boule uniforme : $U=\dfrac35\dfrac{kQ^2}{R}$.</li>
+<li>La forme $\frac{\varepsilon_0}{2}\int E^2dV$ dit que l'énergie est « stockée dans le champ ». Pour un conducteur épais, $E=0$ dans le métal et dans la cavité : seule compte la région $r>b$.</li>
+</ul>
+
+<h3>4. Gradient, divergence, rotationnel : trois questions sur un champ</h3>
+<table>
+<tr><th>Opérateur</th><th>Question posée</th><th>En électrostatique</th></tr>
+<tr><td>$\vec\nabla\varphi$</td><td>Dans quelle direction le potentiel monte-t-il le plus vite ?</td><td>$\vec E=-\vec\nabla\varphi$</td></tr>
+<tr><td>$\vec\nabla\cdot\vec E$</td><td>Le champ « jaillit-il » d'un point ? (sources)</td><td>$\rho/\varepsilon_0$</td></tr>
+<tr><td>$\vec\nabla\times\vec E$</td><td>Le champ « tourbillonne-t-il » ?</td><td>$\vec 0$ : c'est la condition pour qu'un potentiel existe</td></tr>
+</table>
+<p><b>Test « ce champ peut-il être électrostatique ? »</b> : calculer $\vec\nabla\times\vec E$. En cartésien, $(\nabla\times\vec E)_z=\partial_xE_y-\partial_yE_x$, etc. Les trois composantes doivent être nulles. En pratique, il faut que les dérivées croisées soient égales : $\partial_yE_x=\partial_xE_y$, $\partial_zE_x=\partial_xE_z$, $\partial_zE_y=\partial_yE_z$.</p>
+<p><b>Retrouver la charge à partir du potentiel</b> : $\rho=-\varepsilon_0\nabla^2\varphi$ (équation de Poisson ; Laplace $\nabla^2\varphi=0$ là où il n'y a pas de charge). En sphérique : $\nabla^2\varphi=\dfrac1{r^2}\dfrac{d}{dr}\left(r^2\dfrac{d\varphi}{dr}\right)$. Attention : une charge ponctuelle à l'origine n'apparaît pas dans $\rho(r>0)$, il faut la chercher avec le comportement en $r\to0$.</p>
+
+<h3>5. Potentiels utiles</h3>
+<table>
+<tr><th>Source</th><th>$\varphi$</th></tr>
+<tr><td>Coquille $Q$, rayon $R$</td><td>$kQ/r$ dehors, $kQ/R$ (constant) dedans</td></tr>
+<tr><td>Boule uniforme $Q$, rayon $R$</td><td>$\dfrac{kQ}{2R}\left(3-\dfrac{r^2}{R^2}\right)$ dedans</td></tr>
+<tr><td>Anneau $Q$, rayon $R$, sur l'axe</td><td>$\dfrac{kQ}{\sqrt{R^2+z^2}}$</td></tr>
+<tr><td>Plan infini $\sigma$</td><td>$-\dfrac{\sigma}{2\varepsilon_0}|z|+C$ (pas de référence à l'infini !)</td></tr>
+</table>
+
+<h3>6. Pièges</h3>
+<div class="trap"><b>Distributions infinies</b> (plans, fils) : on ne peut pas poser $\varphi(\infty)=0$. On choisit une autre référence (ici souvent $\varphi(0)=0$) et on intègre $-\int\vec E\cdot d\vec l$ morceau par morceau, en gardant la continuité de $\varphi$.</div>
+<div class="trap"><b>Signe du travail.</b> « Travail nécessaire » = travail de l'opérateur = $+\Delta U$. Le travail de la force électrique est l'opposé.</div>
+<div class="trap"><b>Potentiel de plusieurs coquilles en un point intérieur</b> : chaque coquille contribue $kQ_i/\max(r,R_i)$. À l'intérieur d'une coquille, sa contribution est constante, mais elle n'est <b>pas nulle</b>.</div>
+</section>
+
+<section lang="he">
+<h2>פוטנציאל חשמלי ואנרגיה</h2>
+
+<h3>1. למה פוטנציאל?</h3>
+<p>השדה האלקטרוסטטי הוא <b>משמר</b>: העבודה של הכוח החשמלי בין שתי נקודות אינה תלויה במסלול. לכן אפשר להצמיד לכל נקודה מספר, הפוטנציאל $\varphi$, כמו <b>גובה</b>: מטען חיובי "יורד" במדרונות הפוטנציאל, כמו כדור שמתגלגל במורד גבעה. השדה הוא השיפוע, $\vec E=-\vec\nabla\varphi$. הוא מכוון לעבר פוטנציאלים יורדים וניצב למשטחים שווי הפוטנציאל (קווי הגובה).</p>
+<p>היתרון עצום: <b>סקלר</b> במקום וקטור. מחברים מספרים, בלי הטלות.</p>
+
+<h3>2. הנוסחאות</h3>
+<div class="box">
+$$\varphi(\vec r)=\sum_i\frac{kq_i}{|\vec r-\vec r_i|}=\int\frac{k\,dq}{|\vec r-\vec r\,{}'|}\qquad(\varphi(\infty)=0)$$
+$$\varphi(B)-\varphi(A)=-\int_A^B\vec E\cdot d\vec l,\qquad \vec E=-\vec\nabla\varphi=-\left(\frac{\partial\varphi}{\partial x},\frac{\partial\varphi}{\partial y},\frac{\partial\varphi}{\partial z}\right)$$
+</div>
+<ul>
+<li>שדה רדיאלי: $E_r=-\dfrac{d\varphi}{dr}$, ולהפך $\varphi(r)=\displaystyle\int_r^\infty E(r')\,dr'$ (ייחוס באינסוף).</li>
+<li>אנרגיה פוטנציאלית של מטען $q$: $U=q\varphi$. העבודה של הכוח החשמלי מ-$A$ ל-$B$: $W_{\text{חשמלי}}=q(\varphi_A-\varphi_B)=-\Delta U$. העבודה של גורם חיצוני שמזיז את המטען לאט: $W_{\text{חיצוני}}=+\Delta U=q(\varphi_B-\varphi_A)$.</li>
+<li>שימור אנרגיה (מטען חופשי): $\tfrac12mv_A^2+q\varphi_A=\tfrac12mv_B^2+q\varphi_B$.</li>
+</ul>
+
+<h3>3. האנרגיה של מערכת</h3>
+<p>זוהי העבודה שנדרשה כדי להביא את המטענים אחד אחד מהאינסוף.</p>
+<div class="box">
+$$U=\sum_{\text{זוגות }i<j}\frac{kq_iq_j}{r_{ij}}=\frac12\sum_iq_i\varphi_i=\frac12\int\varphi\,dq=\frac{\varepsilon_0}{2}\int_{\text{המרחב}}E^2\,dV$$
+</div>
+<ul>
+<li>בסכום על זוגות, כל זוג נספר <b>פעם אחת בלבד</b>. ה-$\frac12$ בצורה השנייה נועד בדיוק כדי לא לספור פעמיים.</li>
+<li>קליפה (או מוליך כדורי) ברדיוס $R$ ובמטען $Q$: $U=\dfrac{kQ^2}{2R}$. כדור אחיד: $U=\dfrac35\dfrac{kQ^2}{R}$.</li>
+<li>הצורה $\frac{\varepsilon_0}{2}\int E^2dV$ אומרת שהאנרגיה "אגורה בשדה". במוליך עבה $E=0$ בתוך המתכת ובחלל, ולכן רק התחום $r>b$ תורם.</li>
+</ul>
+
+<h3>4. גרדיאנט, דיברגנץ, רוטור: שלוש שאלות על שדה</h3>
+<table>
+<tr><th>אופרטור</th><th>השאלה</th><th>באלקטרוסטטיקה</th></tr>
+<tr><td>$\vec\nabla\varphi$</td><td>לאיזה כיוון הפוטנציאל עולה הכי מהר?</td><td>$\vec E=-\vec\nabla\varphi$</td></tr>
+<tr><td>$\vec\nabla\cdot\vec E$</td><td>האם השדה "נובע" מנקודה? (מקורות)</td><td>$\rho/\varepsilon_0$</td></tr>
+<tr><td>$\vec\nabla\times\vec E$</td><td>האם השדה "מסתחרר"?</td><td>$\vec 0$: זה התנאי לקיום פוטנציאל</td></tr>
+</table>
+<p><b>מבחן "האם השדה יכול להיות אלקטרוסטטי?"</b>: מחשבים $\vec\nabla\times\vec E$. בקרטזיות $(\nabla\times\vec E)_z=\partial_xE_y-\partial_yE_x$ וכו'. שלושת הרכיבים חייבים להתאפס. בפועל, הנגזרות המוצלבות צריכות להיות שוות: $\partial_yE_x=\partial_xE_y$, $\partial_zE_x=\partial_xE_z$, $\partial_zE_y=\partial_yE_z$.</p>
+<p><b>מציאת המטען מתוך הפוטנציאל</b>: $\rho=-\varepsilon_0\nabla^2\varphi$ (משוואת פואסון; לפלס $\nabla^2\varphi=0$ במקום שאין בו מטען). בקואורדינטות כדוריות: $\nabla^2\varphi=\dfrac1{r^2}\dfrac{d}{dr}\left(r^2\dfrac{d\varphi}{dr}\right)$. שימו לב: מטען נקודתי בראשית אינו מופיע ב-$\rho(r>0)$, ויש לזהות אותו מההתנהגות כאשר $r\to0$.</p>
+
+<h3>5. פוטנציאלים שימושיים</h3>
+<table>
+<tr><th>מקור</th><th>$\varphi$</th></tr>
+<tr><td>קליפה $Q$ ברדיוס $R$</td><td>$kQ/r$ בחוץ, $kQ/R$ (קבוע) בפנים</td></tr>
+<tr><td>כדור אחיד $Q$ ברדיוס $R$</td><td>$\dfrac{kQ}{2R}\left(3-\dfrac{r^2}{R^2}\right)$ בפנים</td></tr>
+<tr><td>טבעת $Q$ ברדיוס $R$, על הציר</td><td>$\dfrac{kQ}{\sqrt{R^2+z^2}}$</td></tr>
+<tr><td>מישור אינסופי $\sigma$</td><td>$-\dfrac{\sigma}{2\varepsilon_0}|z|+C$ (אין ייחוס באינסוף!)</td></tr>
+</table>
+
+<h3>6. מלכודות</h3>
+<div class="trap"><b>התפלגויות אינסופיות</b> (מישורים, תילים): אי אפשר לקבוע $\varphi(\infty)=0$. בוחרים ייחוס אחר (כאן לרוב $\varphi(0)=0$) ומבצעים את האינטגרל $-\int\vec E\cdot d\vec l$ קטע אחר קטע, תוך שמירה על רציפות $\varphi$.</div>
+<div class="trap"><b>סימן העבודה.</b> "העבודה הנדרשת" היא העבודה של הגורם החיצוני, $+\Delta U$. העבודה של הכוח החשמלי היא הנגדית לה.</div>
+<div class="trap"><b>פוטנציאל של כמה קליפות בנקודה פנימית</b>: כל קליפה תורמת $kQ_i/\max(r,R_i)$. בתוך קליפה התרומה שלה קבועה, אבל היא <b>לא אפס</b>.</div>
+</section>

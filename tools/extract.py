@@ -59,26 +59,29 @@ def page_lines(pdf):
     plus the vertical extent of the page content (text + graphics)."""
     out = []
     for p in pdf.pages:
-        lines = [(l['top'], l['bottom'], clean(l['text'])) for l in p.extract_text_lines()]
+        raw = p.extract_text_lines()
+        lines = [(l['top'], l['bottom'], clean(l['text'])) for l in raw]
+        pagenos = [(l['x0'], l['top'], l['x1'], l['bottom']) for l in raw
+                   if (l['top'] > p.height - 95 or l['top'] < 75) and re.fullmatch(r'[\d\s]{1,4}', clean(l['text']))]
         body = []
         for i, (t, b, s) in enumerate(lines):
             if t < 75 and TITLE.search(s):
                 continue  # running title
-            if t > p.height - 70 and re.fullmatch(r'[\d\s]+', s):
-                continue  # page number
+            if (t > p.height - 95 or t < 75) and re.fullmatch(r'[\d\s]{1,4}', s):
+                continue  # page number (bottom or top of page)
             body.append((t, b, s))
         tops = [t for t, b, s in body]
         bots = [b for t, b, s in body]
         hi = min(tops) if tops else p.height
         lo = max(bots) if bots else 0
-        pageno_top = min([t for t, b, s in lines if t > p.height - 70 and re.fullmatch(r'[\d\s]+', s)] or [p.height])
+        pageno_top = min([t for t, b, s in lines if t > p.height - 95 and re.fullmatch(r'[\d\s]{1,4}', s)] or [p.height])
         title_bot = max([b for t, b, s in lines if t < 75 and TITLE.search(s)] or [0])
         for o in p.images + p.rects + p.curves + p.lines:
             if o['height'] > p.height * 0.9:
                 continue
             if o['top'] > title_bot and o['bottom'] < pageno_top:
                 hi, lo = min(hi, o['top']), max(lo, o['bottom'])
-        out.append(dict(lines=body, lo=lo, hi=hi, w=p.width, h=p.height, pageno_top=pageno_top))
+        out.append(dict(lines=body, lo=lo, hi=hi, w=p.width, h=p.height, pageno_top=pageno_top, pagenos=pagenos))
     return out
 
 
@@ -107,6 +110,14 @@ def region(pages, start, end):
     return segs
 
 
+def blank_pagenos(a, page, x_org, y_org):
+    s = DPI / 72
+    for x0, t, x1, b in page['pagenos']:
+        a[max(0, int((t - 1 - y_org) * s)):max(0, int((b + 1 - y_org) * s)),
+          max(0, int((x0 - 1 - x_org) * s)):max(0, int((x1 + 1 - x_org) * s))] = 255
+    return a
+
+
 def unhighlight(im):
     """Solution PDFs highlight the correct option with a yellow marker: turn it back into
     black-on-white (a black/yellow blend has R = G, B ~ 0, so gray = min(R, G))."""
@@ -130,7 +141,9 @@ def render(pdf_path, segs, out_png, pages, clean=False):
             subprocess.run(['pdftoppm', '-r', str(DPI), '-f', str(p + 1), '-l', str(p + 1), '-png', '-singlefile',
                             '-x', str(x), '-y', str(int(y0 * s)), '-W', str(w), '-H', str(int((y1 - y0) * s)),
                             pdf_path, base], check=True)
-            imgs.append(trim(Image.open(base + '.png').convert('RGB')))
+            import numpy as np
+            a = np.asarray(Image.open(base + '.png').convert('RGB')).copy()
+            imgs.append(trim(Image.fromarray(blank_pagenos(a, pages[p], 25.0, y0))))
     W = max(i.width for i in imgs)
     H = sum(i.height for i in imgs) + 20 * (len(imgs) - 1)
     canvas = Image.new('RGB', (W, H), 'white')
@@ -214,7 +227,8 @@ def render_segments(pdf_path, segs, pages):
             subprocess.run(['pdftoppm', '-r', str(DPI), '-f', str(p + 1), '-l', str(p + 1), '-png', '-singlefile',
                             '-x', str(int(25 * s)), '-y', str(int(y0 * s)), '-W', str(int((pages[p]['w'] - 50) * s)),
                             '-H', str(int((y1 - y0) * s)), pdf_path, base], check=True)
-            out.append((np.asarray(Image.open(base + '.png').convert('RGB')).copy(), 25.0, y0))
+            a = np.asarray(Image.open(base + '.png').convert('RGB')).copy()
+            out.append((blank_pagenos(a, pages[p], 25.0, y0), 25.0, y0))
     return out
 
 
@@ -268,14 +282,24 @@ def option_cells(labels, rends, gap_pt=32, vgap_pt=22):
         return min(xl_of[l['letter']] for l in row), max(xr_of[l['letter']] for l in row)
 
     def white_above(seg, row, lo):
-        """Lowest ink-free row at or above the label top (not above `lo`)."""
+        """Boundary above a row of labels: among the white bands between `lo` and the label top,
+        take the longest one, favouring bands close to the label (exponents may sit above it)."""
         ink = _ink(rends[seg][0]); x0, x1 = row_x(row)
         top = min(px(l, seg)[1] for l in row)
         rowink = ink[:, x0:x1].any(1)
-        for y in range(top, max(lo, 0) - 1, -1):
+        lo = max(lo, 0)
+        runs, start = [], None
+        for y in range(lo, top + 1):
             if not rowink[y]:
-                return y
-        return max(lo, 0)
+                start = y if start is None else start
+            elif start is not None:
+                runs.append((start, y - 1)); start = None
+        if start is not None:
+            runs.append((start, top))
+        if not runs:
+            return lo
+        best = max(runs, key=lambda r: (r[1] - r[0]) - 0.3 * (top - r[1]))
+        return (best[0] + best[1]) // 2
 
     cells = {}
     for ri, row in enumerate(rows):
@@ -300,6 +324,23 @@ def option_cells(labels, rends, gap_pt=32, vgap_pt=22):
         for l in row:
             cells[l['letter']] = (seg, xl_of[l['letter']], y0, xr_of[l['letter']], y1, l)
     return [cells[L] for L in LETTERS[:len(labels)]]
+
+
+def drop_bottom_specks(a, gap=40, max_ink=300):
+    """Remove tiny ink blocks at the bottom, separated from the content above by a white gap."""
+    import numpy as np
+    a = a.copy()
+    while True:
+        rows = np.where(_ink(a).any(1))[0]
+        if len(rows) < 2:
+            return a
+        breaks = np.where(np.diff(rows) > gap)[0]
+        if not len(breaks):
+            return a
+        start = rows[breaks[-1] + 1]
+        if _ink(a[start:]).sum() > max_ink:
+            return a
+        a[start:] = 255
 
 
 def save_trim(a, path):
@@ -373,7 +414,7 @@ def extract(exam, q, debug_dir=None):
         meta['split'] = False
         if debug_dir:
             dbg = [r[0].copy() for r in rends]
-    stem = [trim(Image.fromarray(r[0])) for r in rends]
+    stem = [trim(Image.fromarray(drop_bottom_specks(r[0]))) for r in rends]
     stem = [im for im in stem if im.height > 8]
     W = max(im.width for im in stem); H = sum(im.height for im in stem) + 20 * (len(stem) - 1)
     canvas = Image.new('RGB', (W, H), 'white'); y = 0
