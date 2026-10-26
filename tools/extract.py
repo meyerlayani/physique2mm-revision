@@ -63,25 +63,28 @@ def page_lines(pdf):
         lines = [(l['top'], l['bottom'], clean(l['text'])) for l in raw]
         pagenos = [(l['x0'], l['top'], l['x1'], l['bottom']) for l in raw
                    if (l['top'] > p.height - 95 or l['top'] < 75) and re.fullmatch(r'[\d\s]{1,4}', clean(l['text']))]
-        body = []
+        body, xs = [], []
         for i, (t, b, s) in enumerate(lines):
             if t < 75 and TITLE.search(s):
                 continue  # running title
             if (t > p.height - 95 or t < 75) and re.fullmatch(r'[\d\s]{1,4}', s):
                 continue  # page number (bottom or top of page)
             body.append((t, b, s))
+            xs.append((raw[i]['x0'], raw[i]['x1']))
         tops = [t for t, b, s in body]
         bots = [b for t, b, s in body]
         hi = min(tops) if tops else p.height
         lo = max(bots) if bots else 0
         pageno_top = min([t for t, b, s in lines if t > p.height - 95 and re.fullmatch(r'[\d\s]{1,4}', s)] or [p.height])
         title_bot = max([b for t, b, s in lines if t < 75 and TITLE.search(s)] or [0])
+        graphics = []
         for o in p.images + p.rects + p.curves + p.lines:
             if o['height'] > p.height * 0.9:
                 continue
+            graphics.append((o['x0'], o['top'], o['x1'], o['bottom']))
             if o['top'] > title_bot and o['bottom'] < pageno_top:
                 hi, lo = min(hi, o['top']), max(lo, o['bottom'])
-        out.append(dict(lines=body, lo=lo, hi=hi, w=p.width, h=p.height, pageno_top=pageno_top, pagenos=pagenos))
+        out.append(dict(lines=body, lo=lo, hi=hi, w=p.width, h=p.height, pageno_top=pageno_top, pagenos=pagenos, graphics=graphics, xs=xs))
     return out
 
 
@@ -89,12 +92,12 @@ def markers(pages):
     """Ordered list of (page, top, kind, q). kind = 'Q' (question header) or 'S' (solution)."""
     ms = []
     for pi, pg in enumerate(pages):
-        for t, b, s in pg['lines']:
+        for (t, b, s), (x0, x1) in zip(pg['lines'], pg['xs']):
             m = HDR.search(s)
             if m and len(s) < 40:
                 ms.append((pi, t, 'Q', int(m.group(1) or m.group(2))))
             elif SOL.search(s) and len(s) < 45 and not re.search(r'\d{1,2}\s*הלאש', s):
-                ms.append((pi, t, 'S', None))
+                ms.append((pi, t, 'S', None, x0, x1, b))
     return ms
 
 
@@ -131,7 +134,7 @@ def unhighlight(im):
     return Image.fromarray(a.astype('uint8'))
 
 
-def render(pdf_path, segs, out_png, pages, clean=False):
+def render(pdf_path, segs, out_png, pages, clean=False, blank=None):
     imgs = []
     with tempfile.TemporaryDirectory() as td:
         for i, (p, y0, y1) in enumerate(segs):
@@ -143,6 +146,10 @@ def render(pdf_path, segs, out_png, pages, clean=False):
                             pdf_path, base], check=True)
             import numpy as np
             a = np.asarray(Image.open(base + '.png').convert('RGB')).copy()
+            if blank and blank[0] == p:  # graphics of the previous statement reaching into this crop
+                sc = DPI / 72
+                for x0, t, x1, b in blank[1]:
+                    a[:max(0, int((b + 2 - y0) * sc)), max(0, int((x0 - 2 - 25) * sc)):max(0, int((x1 + 2 - 25) * sc))] = 255
             imgs.append(trim(Image.fromarray(blank_pagenos(a, pages[p], 25.0, y0))))
     W = max(i.width for i in imgs)
     H = sum(i.height for i in imgs) + 20 * (len(imgs) - 1)
@@ -236,7 +243,7 @@ def _ink(a):
     return (a.min(-1) < 200)
 
 
-def option_cells(labels, rends, gap_pt=32, vgap_pt=22):
+def option_cells(labels, rends, gap_pt=32, vgap_pt=22, xmin_pt=None):
     """Pixel boxes (seg, x0, y0, x1, y1, label) of each option, in original order."""
     import numpy as np
     s = DPI / 72
@@ -277,6 +284,11 @@ def option_cells(labels, rends, gap_pt=32, vgap_pt=22):
         xl_c = min(xl_of.values()); xr_c = max(xr_of.values())
         for k in xl_of:
             xl_of[k], xr_of[k] = xl_c, xr_c
+    for row in rows:  # manual left bound (figures beside the options)
+        for l in row:
+            xm = xmin_pt.get(l['letter']) if isinstance(xmin_pt, dict) else xmin_pt
+            if xm is not None:
+                xl_of[l['letter']] = max(xl_of[l['letter']], int((xm - rends[l['seg']][1]) * s))
 
     def row_x(row):
         return min(xl_of[l['letter']] for l in row), max(xr_of[l['letter']] for l in row)
@@ -366,6 +378,13 @@ def extract(exam, q, debug_dir=None):
     i = idx[0]
     nxt = next((m for m in ms[i + 1:]), None)
     stop = (nxt[0], nxt[1]) if nxt else end_of(pages)
+    pages = [dict(pg) for pg in pages]  # local copy: per-question masks must not leak into the cache
+    if nxt and nxt[2] == 'S':
+        # a figure drawn across the 'פתרון' line belongs to the statement
+        cross = [g[3] for g in pages[stop[0]]['graphics'] if g[1] < stop[1] - 2 < g[3] < stop[1] + 40]
+        if cross:
+            stop = (stop[0], max(cross) + 6)
+            pages[stop[0]]['pagenos'] = pages[stop[0]]['pagenos'] + [(nxt[4], nxt[1], nxt[5], nxt[6])]  # hide 'פתרון:'
     if 'stop' in ovr:
         stop = tuple(ovr['stop'])
     if st_pdf == so_pdf and (not nxt or nxt[2] != 'S'):
@@ -386,7 +405,7 @@ def extract(exam, q, debug_dir=None):
     if 'n' in ovr:
         meta['n'] = ovr['n']
     if meta['split'] and len(labels) >= 2:
-        cells = option_cells(labels, rends, ovr.get('gap', 32), ovr.get('vgap', 22))
+        cells = option_cells(labels, rends, ovr.get('gap', 32), ovr.get('vgap', 22), ovr.get('xmin'))
         for k, (seg, x0, y0, x1, y1, l) in enumerate(cells):
             a = rends[seg][0][y0:y1, x0:x1].copy()
             # mask the original letter + dot
@@ -444,7 +463,10 @@ def extract(exam, q, debug_dir=None):
         stop = (nq[0], nq[1]) if nq else end_of(spages)
         if 'solStop' in ovr:
             stop = tuple(ovr['solStop'])
-        render(so_pdf, region(spages, sms[j][:2], stop), os.path.join(ROOT, f'img/sol/{qid}.png'), spages)
+        start = sms[j][:2]
+        blank = [g for g in spages[start[0]]['graphics'] if g[1] < start[1] - 2 < g[3]]
+        render(so_pdf, region(spages, start, stop), os.path.join(ROOT, f'img/sol/{qid}.png'), spages,
+               blank=(start[0], blank))
     allmeta = json.load(open(META_PATH)) if os.path.exists(META_PATH) else {}
     allmeta[qid] = meta
     json.dump(allmeta, open(META_PATH, 'w'), indent=1, sort_keys=True)

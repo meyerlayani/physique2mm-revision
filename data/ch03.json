@@ -1,0 +1,270 @@
+{
+ "chapter": 3,
+ "title": "Conductors, images, capacitors",
+ "questions": [
+  {
+   "id": "26wnC-q02",
+   "exam": "26wnC",
+   "examLabel": "Winter 2026 · Moed C",
+   "num": 2,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    5,
+    4,
+    3,
+    1,
+    0,
+    2
+   ],
+   "officialSol": true,
+   "alsoIn": [
+    {
+     "exam": "24spB",
+     "q": 2,
+     "label": "Spring 2024 · Moed B Q2"
+    }
+   ],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "25wnB-q03",
+   "exam": "25wnB",
+   "examLabel": "Winter 2025 · Moed B",
+   "num": 3,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    2,
+    3,
+    0,
+    5,
+    4,
+    1
+   ],
+   "officialSol": true,
+   "alsoIn": [
+    {
+     "exam": "25spB",
+     "q": 5,
+     "label": "Spring 2025 · Moed B Q5 (same statement, other answer choices)"
+    }
+   ],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "26spM-q03",
+   "exam": "26spM",
+   "examLabel": "Spring 2026 · Reserve-duty Moed",
+   "num": 3,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    0,
+    1,
+    2,
+    5,
+    4,
+    3
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "26spA-q03",
+   "exam": "26spA",
+   "examLabel": "Spring 2026 · Moed A",
+   "num": 3,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    1,
+    0,
+    4,
+    2,
+    3,
+    5
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "26spA-q04",
+   "exam": "26spA",
+   "examLabel": "Spring 2026 · Moed A",
+   "num": 4,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    3,
+    2,
+    0,
+    5,
+    1,
+    4
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "26wnA-q04",
+   "exam": "26wnA",
+   "examLabel": "Winter 2026 · Moed A",
+   "num": 4,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    5,
+    3,
+    2,
+    0,
+    1,
+    4
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "26spB-q03",
+   "exam": "26spB",
+   "examLabel": "Spring 2026 · Moed B",
+   "num": 3,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    5,
+    4,
+    1,
+    3,
+    2,
+    0
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "26spA-q05",
+   "exam": "26spA",
+   "examLabel": "Spring 2026 · Moed A",
+   "num": 5,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    0,
+    5,
+    4,
+    2,
+    3,
+    1
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "26wnA-q02",
+   "exam": "26wnA",
+   "examLabel": "Winter 2026 · Moed A",
+   "num": 2,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    4,
+    1,
+    5,
+    2,
+    0,
+    3
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "26wnC-q01",
+   "exam": "26wnC",
+   "examLabel": "Winter 2026 · Moed C",
+   "num": 1,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    3,
+    4,
+    0,
+    5,
+    1,
+    2
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "25wnB-q05",
+   "exam": "25wnB",
+   "examLabel": "Winter 2025 · Moed B",
+   "num": 5,
+   "n": 6,
+   "split": true,
+   "answer": 0,
+   "order": [
+    3,
+    0,
+    2,
+    1,
+    5,
+    4
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": false
+  },
+  {
+   "id": "23wnA-q04",
+   "exam": "23wnA",
+   "examLabel": "Winter 2023 · Moed A",
+   "num": 4,
+   "n": 6,
+   "split": true,
+   "answer": 2,
+   "order": [
+    3,
+    4,
+    0,
+    1,
+    2,
+    5
+   ],
+   "officialSol": true,
+   "alsoIn": [],
+   "toVerify": false,
+   "differs": true
+  }
+ ]
+}

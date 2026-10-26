@@ -6,7 +6,8 @@
    "alsoIn": [
     {
      "exam": "26spM",
-     "q": 1
+     "q": 1,
+     "sameOptions": true
     }
    ]
   },
@@ -115,7 +116,8 @@
    "alsoIn": [
     {
      "exam": "24spB",
-     "q": 2
+     "q": 2,
+     "sameOptions": true
     }
    ]
   },
@@ -125,7 +127,8 @@
    "alsoIn": [
     {
      "exam": "25spB",
-     "q": 5
+     "q": 5,
+     "sameOptions": false
     }
    ]
   },
@@ -187,7 +190,8 @@
    "alsoIn": [
     {
      "exam": "23wnB",
-     "q": 4
+     "q": 4,
+     "sameOptions": true
     }
    ]
   },
@@ -244,7 +248,8 @@
    "alsoIn": [
     {
      "exam": "26wnB",
-     "q": 3
+     "q": 3,
+     "sameOptions": true
     }
    ]
   },
@@ -254,7 +259,8 @@
    "alsoIn": [
     {
      "exam": "24spB",
-     "q": 9
+     "q": 9,
+     "sameOptions": false
     }
    ]
   },
@@ -264,7 +270,8 @@
    "alsoIn": [
     {
      "exam": "22spB",
-     "q": 6
+     "q": 6,
+     "sameOptions": true
     }
    ]
   },
@@ -316,7 +323,8 @@
    "alsoIn": [
     {
      "exam": "22spB",
-     "q": 8
+     "q": 8,
+     "sameOptions": true
     }
    ]
   },
@@ -326,7 +334,8 @@
    "alsoIn": [
     {
      "exam": "25wnA",
-     "q": 9
+     "q": 9,
+     "sameOptions": false
     }
    ]
   },
@@ -519,7 +528,8 @@
    "alsoIn": [
     {
      "exam": "24spB",
-     "q": 11
+     "q": 11,
+     "sameOptions": true
     }
    ]
   },
@@ -529,7 +539,8 @@
    "alsoIn": [
     {
      "exam": "24wnB",
-     "q": 10
+     "q": 10,
+     "sameOptions": true
     }
    ]
   },
@@ -581,7 +592,8 @@
    "alsoIn": [
     {
      "exam": "24spC",
-     "q": 12
+     "q": 12,
+     "sameOptions": true
     }
    ]
   },
@@ -591,7 +603,8 @@
    "alsoIn": [
     {
      "exam": "23wnB",
-     "q": 12
+     "q": 12,
+     "sameOptions": true
     }
    ]
   },
@@ -601,7 +614,8 @@
    "alsoIn": [
     {
      "exam": "22spB",
-     "q": 12
+     "q": 12,
+     "sameOptions": false
     }
    ]
   },

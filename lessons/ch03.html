@@ -1,0 +1,99 @@
+<section lang="fr">
+<h2>Conducteurs, méthode des images, condensateurs</h2>
+
+<h3>1. Ce que fait un conducteur à l'équilibre</h3>
+<p>Un conducteur contient des charges libres. Tant qu'il reste un champ à l'intérieur, elles bougent. À l'équilibre, elles se sont donc placées exactement de façon à l'annuler. Toutes les propriétés en découlent :</p>
+<ul>
+<li>$\vec E=0$ dans le métal, et le conducteur entier est une <b>équipotentielle</b>.</li>
+<li>Pas de charge volumique : toute la charge est en <b>surface</b>.</li>
+<li>Juste à l'extérieur, $\vec E$ est perpendiculaire à la surface et $E=\sigma/\varepsilon_0$.</li>
+<li><b>Cavité vide</b> dans un conducteur : $E=0$ dedans, aucune charge sur la paroi interne. <b>Charge $q$ dans la cavité</b> : la paroi interne porte exactement $-q$ (Gauss sur une surface dans le métal), et la paroi externe porte $Q_{\text{tot}}+q$, répartie comme si la cavité n'existait pas (écrantage).</li>
+<li><b>Relié à la terre</b> : son potentiel est $0$ (même potentiel que l'infini). Sa charge est <b>inconnue</b> : elle s'ajuste pour que $\varphi=0$.</li>
+</ul>
+
+<h3>2. Coquilles concentriques : la méthode systématique</h3>
+<p>Point faible classique. On note $q_1,q_2,q_3$ les charges des coquilles de rayons $R_1&lt;R_2&lt;R_3$. Le potentiel d'une coquille $i$ en un point à distance $r$ du centre vaut $kq_i/r$ si on est dehors, et $kq_i/R_i$ (constant) si on est dedans. D'où :</p>
+<div class="box">$$\varphi(R_j)=\sum_i\frac{kq_i}{\max(R_i,R_j)}$$</div>
+<ol>
+<li>Écrire les inconnues (charges des coquilles reliées à la terre ou à une batterie).</li>
+<li>Écrire une équation par contrainte : « coquille à la terre » donne $\varphi(R_j)=0$ ; « batterie $V$ entre $i$ et $j$ » donne $\varphi(R_i)-\varphi(R_j)=V$ ; « deux coquilles reliées » donne même potentiel et charge totale conservée ; « isolée » donne une charge connue.</li>
+<li>Résoudre le système linéaire.</li>
+</ol>
+<p>Astuce : la coquille <b>extérieure</b> à la terre impose $\varphi(R_3)=\dfrac{k(q_1+q_2+q_3)}{R_3}=0$, donc une charge totale nulle. C'est la façon la plus rapide d'écrire une équation.</p>
+<p>Pour les charges réparties sur les faces d'une coquille épaisse : face interne $=-$(charge totale à l'intérieur) ; face externe $=$ le reste.</p>
+
+<h3>3. La méthode des images</h3>
+<p><b>Idée :</b> le théorème d'unicité dit que si on trouve un potentiel qui satisfait l'équation de Poisson dans la région étudiée et les bonnes conditions au bord, c'est <b>le</b> potentiel. On remplace donc le conducteur par des charges fictives, placées <b>hors</b> de la région étudiée, qui reproduisent les conditions au bord ($\varphi=0$ sur le conducteur à la terre). La solution ne vaut que dans la région physique.</p>
+<table>
+<tr><th>Configuration</th><th>Image(s)</th></tr>
+<tr><td>Plan à la terre $z=0$, charge $q$ en $(x_0,y_0,d)$</td><td>$-q$ en $(x_0,y_0,-d)$</td></tr>
+<tr><td>Deux plans à la terre perpendiculaires (coin), $q$ en $(a,b)$</td><td>$-q$ en $(-a,b)$ et $(a,-b)$, $+q$ en $(-a,-b)$</td></tr>
+<tr><td>Deux plans parallèles à la terre</td><td>Infinité d'images (comme deux miroirs face à face), alternance de signes</td></tr>
+<tr><td>Sphère à la terre de rayon $R$, $q$ à la distance $d$ du centre</td><td>$q'=-\dfrac{R}{d}q$ à la distance $d'=\dfrac{R^2}{d}$ du centre (même rayon). Vaut pour $d>R$ (image dedans) comme pour $d&lt;R$ (image dehors).</td></tr>
+<tr><td>Sphère <b>isolée neutre</b></td><td>Image précédente + $q''=+\dfrac Rdq$ au centre (charge totale nulle)</td></tr>
+<tr><td>Sphère à potentiel imposé $\varphi_0$</td><td>Image précédente + $q_0=\dfrac{\varphi_0R}{k}$ au centre</td></tr>
+</table>
+<div class="trap"><b>Piège (absent du formulaire officiel) :</b> pour une sphère conductrice maintenue à un potentiel $\varphi_0\neq0$, il faut ajouter au centre la charge $q_0=\varphi_0R/k$. Une charge au centre crée un potentiel constant $kq_0/R=\varphi_0$ sur la sphère, sans perturber la condition déjà réalisée par les autres images.</div>
+<p><b>Densité induite</b> sur un conducteur : $\sigma=\varepsilon_0E_n$ (champ normal juste à l'extérieur, calculé avec charges + images). Pour le plan : $\sigma=-\dfrac{qd}{2\pi(\rho^2+d^2)^{3/2}}$. Charge induite totale : $-q$ pour le plan ; $-\frac Rd q$ pour la sphère à la terre.</p>
+<p><b>Force sur la charge réelle</b> = force exercée par les images seules (Coulomb).</p>
+<div class="trap">Les images servent <b>uniquement</b> dans la région physique. On ne calcule jamais le champ « dans » le conducteur ou derrière le plan avec les images. Et une charge déjà enfermée dans une coquille conductrice à la terre n'agit pas sur l'extérieur.</div>
+
+<h3>4. Condensateurs</h3>
+<div class="box">$$C=\frac{Q}{V},\qquad C_{\text{plan}}=\frac{\varepsilon_0A}{d},\qquad C_{\text{sph}}=\frac{R_1R_2}{k(R_2-R_1)},\qquad C_{\text{cyl}}=\frac{2\pi\varepsilon_0L}{\ln(b/a)},\qquad C_{\text{sphère seule}}=\frac Rk$$
+$$U=\frac12CV^2=\frac{Q^2}{2C}=\frac12QV,\qquad \text{parallèle: }C=\sum C_i,\qquad\text{série: }\frac1C=\sum\frac1{C_i}$$</div>
+<ul>
+<li>Méthode générale pour $C$ : supposer $\pm Q$, trouver $E$ (Gauss), intégrer pour avoir $V$, puis $C=Q/V$.</li>
+<li>Plaque <b>conductrice</b> d'épaisseur $D$ glissée dans un condensateur plan : dans cette zone, l'espace vide est réduit à $d-D$. La partie occupée se comporte comme un condensateur d'écartement $d-D$, en parallèle avec la partie vide.</li>
+<li><b>À tension constante</b> (batterie branchée) : si $C$ augmente, $U=\frac12CV^2$ augmente. <b>À charge constante</b> (débranché) : $U=Q^2/(2C)$ diminue quand $C$ augmente.</li>
+</ul>
+</section>
+
+<section lang="he">
+<h2>מוליכים, שיטת הדמויות, קבלים</h2>
+
+<h3>1. מה עושה מוליך בשיווי משקל</h3>
+<p>במוליך יש מטענים חופשיים. כל עוד יש בתוכו שדה, הם זזים. בשיווי משקל, אם כן, הם מסודרים בדיוק כך שהשדה בפנים מתאפס. מכאן נובעות כל התכונות:</p>
+<ul>
+<li>$\vec E=0$ בתוך המתכת, וכל המוליך <b>שווה פוטנציאל</b>.</li>
+<li>אין מטען נפחי: כל המטען על <b>השפה</b>.</li>
+<li>ממש מחוץ למוליך, $\vec E$ ניצב לשפה ו-$E=\sigma/\varepsilon_0$.</li>
+<li><b>חלל ריק</b> במוליך: $E=0$ בפנים, ואין מטען על הדופן הפנימית. <b>מטען $q$ בחלל</b>: הדופן הפנימית נושאת בדיוק $-q$ (גאוס על משטח בתוך המתכת), והדופן החיצונית נושאת $Q_{\text{tot}}+q$, מפולג כאילו החלל לא קיים (מיסוך).</li>
+<li><b>מוארק</b>: הפוטנציאל שלו $0$ (כמו באינסוף). המטען שלו <b>לא ידוע</b>: הוא מסתדר כך ש-$\varphi=0$.</li>
+</ul>
+
+<h3>2. קליפות קונצנטריות: השיטה השיטתית</h3>
+<p>נקודת חולשה קלאסית. מסמנים $q_1,q_2,q_3$ את המטענים על הקליפות ברדיוסים $R_1&lt;R_2&lt;R_3$. הפוטנציאל של קליפה $i$ בנקודה במרחק $r$ מהמרכז הוא $kq_i/r$ אם אנחנו בחוץ, ו-$kq_i/R_i$ (קבוע) אם אנחנו בפנים. לכן:</p>
+<div class="box">$$\varphi(R_j)=\sum_i\frac{kq_i}{\max(R_i,R_j)}$$</div>
+<ol>
+<li>לרשום את הנעלמים (מטענים של קליפות מוארקות או מחוברות לסוללה).</li>
+<li>לרשום משוואה לכל אילוץ: "קליפה מוארקת" נותן $\varphi(R_j)=0$; "סוללה $V$ בין $i$ ל-$j$" נותן $\varphi(R_i)-\varphi(R_j)=V$; "שתי קליפות מחוברות" נותן פוטנציאל שווה ומטען כולל נשמר; "מבודדת" נותן מטען ידוע.</li>
+<li>לפתור את המערכת הליניארית.</li>
+</ol>
+<p>טיפ: קליפה <b>חיצונית</b> מוארקת מחייבת $\varphi(R_3)=\dfrac{k(q_1+q_2+q_3)}{R_3}=0$, כלומר מטען כולל אפס. זו הדרך המהירה ביותר לרשום משוואה.</p>
+<p>לחלוקת המטען בין שתי השפות של קליפה עבה: שפה פנימית $=-$(המטען הכולל שבפנים); שפה חיצונית $=$ השאר.</p>
+
+<h3>3. שיטת הדמויות</h3>
+<p><b>הרעיון:</b> משפט היחידות אומר שאם מצאנו פוטנציאל שמקיים את משוואת פואסון בתחום הנחקר ואת תנאי השפה הנכונים, זהו <b>ה</b>פוטנציאל. לכן מחליפים את המוליך במטענים פיקטיביים, הממוקמים <b>מחוץ</b> לתחום הנחקר, שמשחזרים את תנאי השפה ($\varphi=0$ על מוליך מוארק). הפתרון תקף רק בתחום הפיזיקלי.</p>
+<table>
+<tr><th>מערכת</th><th>דמות/דמויות</th></tr>
+<tr><td>מישור מוארק $z=0$, מטען $q$ ב-$(x_0,y_0,d)$</td><td>$-q$ ב-$(x_0,y_0,-d)$</td></tr>
+<tr><td>שני מישורים מוארקים ניצבים (פינה), $q$ ב-$(a,b)$</td><td>$-q$ ב-$(-a,b)$ וב-$(a,-b)$, $+q$ ב-$(-a,-b)$</td></tr>
+<tr><td>שני מישורים מוארקים מקבילים</td><td>אינסוף דמויות (כמו שתי מראות זו מול זו), בסימנים מתחלפים</td></tr>
+<tr><td>כדור מוארק ברדיוס $R$, $q$ במרחק $d$ מהמרכז</td><td>$q'=-\dfrac{R}{d}q$ במרחק $d'=\dfrac{R^2}{d}$ מהמרכז (על אותו רדיוס). תקף גם ל-$d>R$ (דמות בפנים) וגם ל-$d&lt;R$ (דמות בחוץ).</td></tr>
+<tr><td>כדור <b>מבודד ניטרלי</b></td><td>הדמות הקודמת ועוד $q''=+\dfrac Rdq$ במרכז (מטען כולל אפס)</td></tr>
+<tr><td>כדור בפוטנציאל נתון $\varphi_0$</td><td>הדמות הקודמת ועוד $q_0=\dfrac{\varphi_0R}{k}$ במרכז</td></tr>
+</table>
+<div class="trap"><b>מלכודת (לא מופיעה בנוסחאון הרשמי):</b> לכדור מוליך המוחזק בפוטנציאל $\varphi_0\neq0$ צריך להוסיף במרכז את המטען $q_0=\varphi_0R/k$. מטען במרכז יוצר פוטנציאל קבוע $kq_0/R=\varphi_0$ על הכדור, בלי לקלקל את התנאי שהדמויות האחרות כבר מקיימות.</div>
+<p><b>צפיפות מושרית</b> על מוליך: $\sigma=\varepsilon_0E_n$ (השדה הניצב ממש מחוץ למוליך, מחושב עם המטענים והדמויות). למישור: $\sigma=-\dfrac{qd}{2\pi(\rho^2+d^2)^{3/2}}$. מטען מושרה כולל: $-q$ למישור; $-\frac Rd q$ לכדור מוארק.</p>
+<p><b>הכוח על המטען האמיתי</b> = הכוח שמפעילות הדמויות בלבד (קולון).</p>
+<div class="trap">הדמויות משמשות <b>רק</b> בתחום הפיזיקלי. לעולם לא מחשבים בעזרתן את השדה "בתוך" המוליך או מאחורי המישור. ומטען שכבר סגור בתוך קליפה מוליכה מוארקת אינו משפיע על החוץ.</div>
+
+<h3>4. קבלים</h3>
+<div class="box">$$C=\frac{Q}{V},\qquad C_{\text{לוחות}}=\frac{\varepsilon_0A}{d},\qquad C_{\text{כדורי}}=\frac{R_1R_2}{k(R_2-R_1)},\qquad C_{\text{גלילי}}=\frac{2\pi\varepsilon_0L}{\ln(b/a)},\qquad C_{\text{כדור בודד}}=\frac Rk$$
+$$U=\frac12CV^2=\frac{Q^2}{2C}=\frac12QV,\qquad \text{מקביל: }C=\sum C_i,\qquad\text{טור: }\frac1C=\sum\frac1{C_i}$$</div>
+<ul>
+<li>שיטה כללית למציאת $C$: מניחים $\pm Q$, מוצאים את $E$ (גאוס), מבצעים אינטגרל לקבלת $V$, ואז $C=Q/V$.</li>
+<li>טבלה <b>מוליכה</b> בעובי $D$ שמוכנסת לקבל לוחות: באזור הזה הרווח הריק מצטמצם ל-$d-D$. החלק התפוס מתנהג כקבל עם מרווח $d-D$, במקביל לחלק הריק.</li>
+<li><b>במתח קבוע</b> (סוללה מחוברת): אם $C$ גדל, $U=\frac12CV^2$ גדל. <b>במטען קבוע</b> (מנותק): $U=Q^2/(2C)$ קטן כש-$C$ גדל.</li>
+</ul>
+</section>

@@ -52,7 +52,9 @@ def main():
                 rng.shuffle(order)
             qs.append(dict(id=qid, exam=it['exam'], examLabel=label(it['exam']), num=it['q'], n=nopt,
                            split=m['split'], answer=orig, order=order, officialSol=m['sol'],
-                           alsoIn=[dict(exam=x['exam'], q=x['q'], label=f"{label(x['exam'])} Q{x['q']}") for x in it['alsoIn']],
+                           alsoIn=[dict(exam=x['exam'], q=x['q'], label=f"{label(x['exam'])} Q{x['q']}"
+                                       + ('' if x.get('sameOptions', True) else ' (same statement, other answer choices)'))
+                                  for x in it['alsoIn']],
                            toVerify=a.get('toVerify', False), differs=a.get('differs', False)))
         json.dump(dict(chapter=n, title=title, questions=qs), open(os.path.join(ROOT, f'data/ch{n:02d}.json'), 'w'),
                   ensure_ascii=False, indent=1)
