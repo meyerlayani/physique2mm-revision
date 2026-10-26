@@ -1,0 +1,97 @@
+<section lang="fr">
+<h2>Le champ magnétique</h2>
+
+<h3>1. Définition par la force</h3>
+<div class="box">$$\vec F=q\left(\vec E+\vec v\times\vec B\right),\qquad d\vec F=I\,d\vec l\times\vec B$$</div>
+<ul>
+<li>La force magnétique est perpendiculaire à $\vec v$ : elle <b>ne travaille pas</b>. Elle change la direction de la vitesse, pas son module.</li>
+<li>Dans $\vec B$ uniforme, avec $\vec v\perp\vec B$ : mouvement circulaire, $r=\dfrac{mv}{|q|B}$, $\omega=\dfrac{|q|B}{m}$ (indépendante de $v$ : principe du cyclotron). Si $\vec v$ a une composante parallèle à $\vec B$ : hélice.</li>
+<li>Avec $\vec E\perp\vec B$ : la particule « dérive » à la vitesse $v_d=E/B$, dans la direction de $\vec E\times\vec B$ (filtre de vitesse : la particule n'est pas déviée si $v=E/B$).</li>
+<li>Effet Hall : dans un conducteur parcouru par un courant dans $\vec B$, les porteurs sont déviés et s'accumulent sur un bord jusqu'à ce que $qE_H=qvB$.</li>
+<li>Force sur un fil : $\vec F=I\vec L\times\vec B$ pour un segment droit dans $\vec B$ uniforme. Pour un fil courbe dans un champ uniforme, seul compte le vecteur qui relie les extrémités, et une boucle fermée dans un champ uniforme subit une force totale nulle.</li>
+</ul>
+
+<h3>2. Les deux équations de la magnétostatique</h3>
+<div class="box">$$\oint_S\vec B\cdot d\vec A=0\ \ (\nabla\cdot\vec B=0)\qquad\qquad \oint_C\vec B\cdot d\vec l=\mu_0I_{\text{enl}}\ \ (\nabla\times\vec B=\mu_0\vec J)$$</div>
+<p><b>Gauss magnétique</b> : il n'existe pas de « charge magnétique ». Les lignes de $\vec B$ se referment toujours sur elles-mêmes, donc le flux de $\vec B$ à travers <b>toute</b> surface fermée est nul, quelle que soit la source (spire, disque tournant, aimant…). Pour qu'un champ donné soit un champ magnétique possible, il faut $\nabla\cdot\vec B=0$.</p>
+<p><b>Ampère</b> : l'équivalent de Gauss pour $\vec B$. Utilisable pour calculer $B$ seulement s'il y a une symétrie (fil infini, cylindre, solénoïde, nappe/plaque infinie). Le courant enlacé se compte avec son signe (règle de la main droite).</p>
+<table>
+<tr><th>Source</th><th>Champ</th></tr>
+<tr><td>Fil infini $I$</td><td>$B=\dfrac{\mu_0I}{2\pi r}$, en cercles</td></tr>
+<tr><td>Cylindre plein, $J(r)$</td><td>dedans : $B\cdot2\pi r=\mu_0\int_0^rJ\,2\pi r'dr'$</td></tr>
+<tr><td>Solénoïde infini ($n$ spires/m)</td><td>$B=\mu_0nI$ dedans, $0$ dehors</td></tr>
+<tr><td>Nappe $\vec K$ (A/m)</td><td>$B=\dfrac{\mu_0K}{2}$ de chaque côté, en sens opposés</td></tr>
+<tr><td>Plaque épaisse avec $J(z)$</td><td>Ampère avec un rectangle symétrique par rapport au plan médian</td></tr>
+<tr><td>Coquille cylindrique chargée $\sigma$ tournant à $\omega$</td><td>C'est un solénoïde : $K=\sigma\omega R$, $B=\mu_0\sigma\omega R$ dedans</td></tr>
+</table>
+<p><b>Superposition avec une cavité</b> : cylindre creusé = cylindre plein ($+\vec J$) + cylindre plein à la place de la cavité ($-\vec J$). Dans un cylindre plein uniforme, $\vec B=\frac{\mu_0}{2}\vec J\times\vec r$ : dans la cavité, le champ est <b>uniforme</b>, $\vec B=\frac{\mu_0}{2}\vec J\times\vec d$.</p>
+
+<h3>3. Biot-Savart : quand il n'y a pas de symétrie</h3>
+<div class="box">$$d\vec B=\frac{\mu_0}{4\pi}\frac{I\,d\vec l\times\hat r}{r^2}$$
+<b>Segment fini</b> à la distance $d$ (pied de la perpendiculaire $H$) : $$B=\frac{\mu_0I}{4\pi d}\left(\sin\alpha_2-\sin\alpha_1\right)=\frac{\mu_0I}{4\pi d}\left(\cos\theta_1-\cos\theta_2\right)$$
+avec $\alpha$ mesurés depuis la perpendiculaire, ou $\theta$ mesurés depuis le fil.<br>
+<b>Arc</b> de rayon $R$ et d'angle $\phi$, au centre : $B=\dfrac{\mu_0I\phi}{4\pi R}$ (spire complète : $\dfrac{\mu_0I}{2R}$). <b>Spire sur l'axe</b> : $B=\dfrac{\mu_0IR^2}{2(R^2+z^2)^{3/2}}$.</div>
+<div class="trap"><b>Formes sinus et cosinus :</b> elles sont identiques, car $\theta=90°-\alpha$ (angles complémentaires). Si le pied de la perpendiculaire $H$ est <b>dans</b> le segment, les deux morceaux de part et d'autre de $H$ contribuent dans le même sens : $B=\frac{\mu_0I}{4\pi d}(\sin\alpha_1+\sin\alpha_2)$ avec les deux angles positifs. Si $H$ est <b>en dehors</b> du segment, on soustrait.</div>
+<p>Polygone régulier (côté vu depuis le centre sous un angle $2\alpha$, distance au centre $d$) : chaque côté donne $\frac{\mu_0I}{4\pi d}2\sin\alpha$, et on multiplie par le nombre de côtés.</p>
+
+<h3>4. Énergie magnétique</h3>
+<div class="box">$$u_B=\frac{B^2}{2\mu_0},\qquad U_B=\int\frac{B^2}{2\mu_0}dV=\frac12LI^2$$</div>
+
+<h3>5. Quand utiliser quoi ?</h3>
+<ul>
+<li>Symétrie cylindrique ou plane infinie, ou solénoïde : <b>Ampère</b>.</li>
+<li>Fils droits finis, arcs, polygones : <b>Biot-Savart</b> par morceaux, puis superposition (attention aux sens).</li>
+<li>Flux à travers une surface fermée, ou « ce champ est-il physique ? » : <b>Gauss magnétique</b>.</li>
+<li>Trajectoires : force de Lorentz et dynamique ($F=mv^2/r$).</li>
+</ul>
+<div class="trap">Hors programme : moment dipolaire magnétique, aimantation et potentiel vecteur. Les forces et couples sur une boucle se calculent directement, segment par segment.</div>
+</section>
+
+<section lang="he">
+<h2>השדה המגנטי</h2>
+
+<h3>1. הגדרה דרך הכוח</h3>
+<div class="box">$$\vec F=q\left(\vec E+\vec v\times\vec B\right),\qquad d\vec F=I\,d\vec l\times\vec B$$</div>
+<ul>
+<li>הכוח המגנטי ניצב ל-$\vec v$: הוא <b>לא מבצע עבודה</b>. הוא משנה את כיוון המהירות, לא את גודלה.</li>
+<li>ב-$\vec B$ אחיד, עם $\vec v\perp\vec B$: תנועה מעגלית, $r=\dfrac{mv}{|q|B}$, $\omega=\dfrac{|q|B}{m}$ (לא תלויה ב-$v$: עקרון הציקלוטרון). אם ל-$\vec v$ יש רכיב מקביל ל-$\vec B$: בורג (הליקס).</li>
+<li>עם $\vec E\perp\vec B$: החלקיק "נסחף" במהירות $v_d=E/B$, בכיוון $\vec E\times\vec B$ (בורר מהירויות: החלקיק לא מוסט אם $v=E/B$).</li>
+<li>אפקט הול: במוליך שזורם בו זרם בתוך $\vec B$, נושאי המטען מוסטים ומצטברים בצד אחד עד ש-$qE_H=qvB$.</li>
+<li>כוח על תיל: $\vec F=I\vec L\times\vec B$ לקטע ישר ב-$\vec B$ אחיד. לתיל מעוקל בשדה אחיד, רק הווקטור שמחבר את הקצוות חשוב, ולולאה סגורה בשדה אחיד חווה כוח כולל אפס.</li>
+</ul>
+
+<h3>2. שתי המשוואות של המגנטוסטטיקה</h3>
+<div class="box">$$\oint_S\vec B\cdot d\vec A=0\ \ (\nabla\cdot\vec B=0)\qquad\qquad \oint_C\vec B\cdot d\vec l=\mu_0I_{\text{enc}}\ \ (\nabla\times\vec B=\mu_0\vec J)$$</div>
+<p><b>חוק גאוס המגנטי</b>: אין "מטען מגנטי". קווי $\vec B$ תמיד נסגרים על עצמם, ולכן השטף של $\vec B$ דרך <b>כל</b> משטח סגור הוא אפס, יהיה המקור אשר יהיה (כריכה, דסקה מסתובבת, מגנט…). כדי ששדה נתון יהיה שדה מגנטי אפשרי, צריך $\nabla\cdot\vec B=0$.</p>
+<p><b>חוק אמפר</b>: המקבילה לגאוס עבור $\vec B$. שימושי לחישוב $B$ רק כשיש סימטריה (תיל אינסופי, גליל, סליל, יריעה/טבלה אינסופית). הזרם הכלוא נספר עם סימן (כלל יד ימין).</p>
+<table>
+<tr><th>מקור</th><th>שדה</th></tr>
+<tr><td>תיל אינסופי $I$</td><td>$B=\dfrac{\mu_0I}{2\pi r}$, במעגלים</td></tr>
+<tr><td>גליל מלא, $J(r)$</td><td>בפנים: $B\cdot2\pi r=\mu_0\int_0^rJ\,2\pi r'dr'$</td></tr>
+<tr><td>סליל אינסופי ($n$ כריכות למטר)</td><td>$B=\mu_0nI$ בפנים, $0$ בחוץ</td></tr>
+<tr><td>יריעה $\vec K$ (A/m)</td><td>$B=\dfrac{\mu_0K}{2}$ בכל צד, בכיוונים הפוכים</td></tr>
+<tr><td>טבלה עבה עם $J(z)$</td><td>אמפר עם מלבן סימטרי ביחס למישור האמצע</td></tr>
+<tr><td>קליפה גלילית טעונה $\sigma$ שמסתובבת ב-$\omega$</td><td>זהו סליל: $K=\sigma\omega R$, $B=\mu_0\sigma\omega R$ בפנים</td></tr>
+</table>
+<p><b>סופרפוזיציה עם חלל</b>: גליל עם חלל = גליל מלא ($+\vec J$) + גליל מלא במקום החלל ($-\vec J$). בתוך גליל מלא אחיד $\vec B=\frac{\mu_0}{2}\vec J\times\vec r$: בתוך החלל השדה <b>אחיד</b>, $\vec B=\frac{\mu_0}{2}\vec J\times\vec d$.</p>
+
+<h3>3. ביו-סבר: כשאין סימטריה</h3>
+<div class="box">$$d\vec B=\frac{\mu_0}{4\pi}\frac{I\,d\vec l\times\hat r}{r^2}$$
+<b>קטע סופי</b> במרחק $d$ (עקב האנך $H$): $$B=\frac{\mu_0I}{4\pi d}\left(\sin\alpha_2-\sin\alpha_1\right)=\frac{\mu_0I}{4\pi d}\left(\cos\theta_1-\cos\theta_2\right)$$
+כאשר $\alpha$ נמדדות מהאנך, או $\theta$ נמדדות מהתיל.<br>
+<b>קשת</b> ברדיוס $R$ ובזווית $\phi$, במרכז: $B=\dfrac{\mu_0I\phi}{4\pi R}$ (כריכה שלמה: $\dfrac{\mu_0I}{2R}$). <b>כריכה, על הציר</b>: $B=\dfrac{\mu_0IR^2}{2(R^2+z^2)^{3/2}}$.</div>
+<div class="trap"><b>צורת הסינוס וצורת הקוסינוס</b> זהות, כי $\theta=90°-\alpha$ (זוויות משלימות). אם עקב האנך $H$ נמצא <b>בתוך</b> הקטע, שני החלקים משני צידי $H$ תורמים באותו כיוון: $B=\frac{\mu_0I}{4\pi d}(\sin\alpha_1+\sin\alpha_2)$ עם שתי הזוויות חיוביות. אם $H$ <b>מחוץ</b> לקטע, מחסרים.</div>
+<p>מצולע משוכלל (צלע נראית מהמרכז בזווית $2\alpha$, במרחק $d$ מהמרכז): כל צלע נותנת $\frac{\mu_0I}{4\pi d}2\sin\alpha$, ומכפילים במספר הצלעות.</p>
+
+<h3>4. אנרגיה מגנטית</h3>
+<div class="box">$$u_B=\frac{B^2}{2\mu_0},\qquad U_B=\int\frac{B^2}{2\mu_0}dV=\frac12LI^2$$</div>
+
+<h3>5. מתי להשתמש במה?</h3>
+<ul>
+<li>סימטריה גלילית או מישורית אינסופית, או סליל: <b>אמפר</b>.</li>
+<li>תילים ישרים סופיים, קשתות, מצולעים: <b>ביו-סבר</b> לפי חלקים, ואחר כך סופרפוזיציה (לשים לב לכיוונים).</li>
+<li>שטף דרך משטח סגור, או "האם השדה פיזיקלי?": <b>גאוס המגנטי</b>.</li>
+<li>מסלולים: כוח לורנץ ודינמיקה ($F=mv^2/r$).</li>
+</ul>
+<div class="trap">לא בחומר: מומנט דיפול מגנטי, מגנטיזציה ופוטנציאל וקטורי. כוחות ומומנטים על לולאה מחשבים ישירות, קטע אחר קטע.</div>
+</section>

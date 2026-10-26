@@ -385,10 +385,17 @@ def extract(exam, q, debug_dir=None):
     pages = [dict(pg) for pg in pages]  # local copy: per-question masks must not leak into the cache
     if nxt and nxt[2] == 'S':
         # a figure drawn across the 'פתרון' line belongs to the statement
-        cross = [g[3] for g in pages[stop[0]]['graphics'] if g[1] < stop[1] - 2 < g[3] < stop[1] + 40]
+        cross = [g for g in pages[stop[0]]['graphics'] if g[1] < stop[1] - 2 < g[3] < stop[1] + 40]
         if cross:
-            stop = (stop[0], max(cross) + 6)
-            pages[stop[0]]['pagenos'] = pages[stop[0]]['pagenos'] + [(nxt[4], nxt[1], nxt[5], nxt[6])]  # hide 'פתרון:'
+            old_stop = stop[1]
+            stop = (stop[0], max(g[3] for g in cross) + 6)
+            fig_x1 = max(g[2] for g in cross)
+            pg = pages[stop[0]]
+            hide = [(nxt[4], nxt[1], nxt[5], nxt[6])]  # the 'פתרון:' header
+            for (t, b, txt), (x0, x1) in zip(pg['lines'], pg['xs']):  # solution text beside the figure
+                if old_stop - 2 <= t < stop[1] + 20:  # lines of the solution beside or under the figure
+                    hide.append((x0, t, x1, b))
+            pg['pagenos'] = pg['pagenos'] + hide
     if 'stop' in ovr:
         stop = tuple(ovr['stop'])
     if st_pdf == so_pdf and (not nxt or nxt[2] != 'S'):
