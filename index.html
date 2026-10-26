@@ -3,33 +3,52 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Physics 2mm Revision</title>
+<title>פיזיקה 2ממ · Revision</title>
 <meta name="description" content="Revision site for Technion Physics 2mm (114075): lessons and past-exam questions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<header class="top">
+<body class="home">
+<div class="creditbar">
+  <span>Created by <b dir="rtl">מאיר ליאני</b></span>
+  <a href="https://instagram.com/meyer_layani" target="_blank" rel="noopener" class="ig">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" class="dot"/></svg>
+    @meyer_layani</a>
+</div>
+<header class="hero">
   <div class="wrap">
-    <h1>Physics 2mm <span class="muted">114075</span></h1>
-    <p class="sub">Summer 2026 exam · Friday 30/10/2026 · 12 multiple-choice questions · 3 hours</p>
+    <p class="kicker">Technion · 114075 · Summer 2026</p>
+    <h1 class="he-title" dir="rtl">פיזיקה 2ממ</h1>
+    <p class="hero-sub">Electromagnetism, from Coulomb to Young: 11 lessons and 110 past-exam questions.</p>
+    <div class="countdown" id="countdown"></div>
   </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C240,80 480,0 720,30 C960,60 1200,10 1440,40 L1440,80 L0,80 Z"/></svg>
 </header>
 <main class="wrap">
   <section class="card global">
     <div class="global-head">
-      <h2>Your progress</h2>
-      <span id="global-pct" class="big">0%</span>
+      <div>
+        <h2>Your progress</h2>
+        <p id="motivation" class="motivation"></p>
+      </div>
+      <div class="ring" id="ring"><span id="global-pct">0%</span></div>
     </div>
     <div class="bar"><div id="global-bar" class="fill" style="width:0%"></div></div>
-    <p id="global-detail" class="muted">0 / 0 questions done</p>
+    <p id="global-detail" class="muted small">0 / 0 questions done</p>
   </section>
   <ol id="chapters" class="chapters"></ol>
   <p class="foot">
     <button id="reset" class="btn ghost">Reset progress</button>
   </p>
-  <p class="muted small">Progress is saved in this browser only (no account). Statements and official solutions are taken
+  <p class="muted small center">Progress is saved in this browser only (no account). Statements and official solutions are taken
     unchanged from the Technion past exams; option order is shuffled so that the correct answer is not always the first one.</p>
 </main>
+<footer class="site-foot">
+  <p>Created by <b dir="rtl">מאיר ליאני</b> · <a href="https://instagram.com/meyer_layani" target="_blank" rel="noopener">Instagram @meyer_layani</a></p>
+  <p class="small">בהצלחה במבחן!</p>
+</footer>
 <script src="js/progress.js"></script>
 <script src="js/home.js"></script>
 </body>

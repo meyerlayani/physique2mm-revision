@@ -46,6 +46,12 @@ function refreshHeader(data) {
   document.getElementById('ch-bar').style.width = pct(s.done, s.total) + '%';
   document.getElementById('ch-detail').textContent =
     `${s.done} / ${s.total} questions done · score ${s.good} / ${s.done}`;
+  if (s.total && s.done === s.total && !document.querySelector('.cheer')) {
+    const c = document.createElement('div');
+    c.className = 'card cheer';
+    c.innerHTML = `🎉 <b>Chapter complete!</b> Score ${s.good} / ${s.total}. On to the next one.`;
+    document.getElementById('pager').before(c);
+  }
 }
 
 function renderQuestion(q, idx, data) {
@@ -150,8 +156,10 @@ Promise.all([
   fetch(`corrections/ch${pad(C)}.html`).then(r => (r.ok ? r.text() : '')),
   fetch('data/chapters.json').then(r => r.json()),
 ]).then(([data, lesson, corr, chapters]) => {
-  document.title = `${C}. ${data.title} · Physics 2mm`;
-  document.getElementById('title').textContent = `${C}. ${data.title}`;
+  document.title = `${C}. ${data.title} · פיזיקה 2ממ`;
+  document.getElementById('title').textContent = data.title;
+  document.getElementById('kicker').textContent = `Chapter ${C} of ${chapters.chapters.length}`;
+  document.documentElement.style.setProperty('--c', `var(--c${C})`);
   const L = document.getElementById('lesson');
   L.innerHTML = lesson ? fragment(lesson).body.innerHTML : '<p class="muted">Lesson coming soon.</p>';
   math(L);

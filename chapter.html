@@ -3,33 +3,47 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chapter · Physics 2mm</title>
+<title>Chapter · פיזיקה 2ממ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="vendor/katex/katex.min.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<header class="top">
-  <div class="wrap row">
-    <a href="index.html" class="back">← All chapters</a>
-    <div class="lang" role="group" aria-label="Language of lessons and corrections">
-      <button data-lang="fr">FR</button><button data-lang="he">HE</button>
-    </div>
-  </div>
+<body class="chap">
+<div class="creditbar">
+  <span>Created by <b dir="rtl">מאיר ליאני</b></span>
+  <a href="https://instagram.com/meyer_layani" target="_blank" rel="noopener" class="ig">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" class="dot"/></svg>
+    @meyer_layani</a>
+</div>
+<header class="hero small-hero">
   <div class="wrap">
+    <div class="row">
+      <a href="index.html" class="back">← <span dir="rtl">פיזיקה 2ממ</span></a>
+      <div class="lang" role="group" aria-label="Language of lessons and corrections">
+        <button data-lang="fr">FR</button><button data-lang="he">HE</button>
+      </div>
+    </div>
+    <p class="kicker" id="kicker">Chapter</p>
     <h1 id="title">…</h1>
-    <div class="bar thin"><div id="ch-bar" class="fill" style="width:0%"></div></div>
-    <p id="ch-detail" class="muted small"></p>
+    <div class="bar thin light"><div id="ch-bar" class="fill" style="width:0%"></div></div>
+    <p id="ch-detail" class="hero-sub small"></p>
   </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C240,80 480,0 720,30 C960,60 1200,10 1440,40 L1440,80 L0,80 Z"/></svg>
 </header>
 <main class="wrap">
   <nav class="tabs">
-    <a href="#lesson">Lesson</a><a href="#questions">Questions</a>
+    <a href="#lesson">📖 Lesson</a><a href="#questions">✏️ Questions</a>
   </nav>
   <section id="lesson" class="card lesson"><p class="muted">Loading lesson…</p></section>
   <h2 id="questions" class="section-title">Questions</h2>
   <div id="qlist"></div>
   <nav id="pager" class="pager"></nav>
 </main>
+<footer class="site-foot">
+  <p>Created by <b dir="rtl">מאיר ליאני</b> · <a href="https://instagram.com/meyer_layani" target="_blank" rel="noopener">Instagram @meyer_layani</a></p>
+</footer>
 <script src="vendor/katex/katex.min.js"></script>
 <script src="vendor/katex/contrib/auto-render.min.js"></script>
 <script src="js/progress.js"></script>
