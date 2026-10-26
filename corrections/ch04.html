@@ -1,0 +1,217 @@
+<article data-id="26spM-q06">
+<div lang="fr">
+<p><b>Idée.</b> Géométrie radiale : en régime permanent, le <b>même</b> courant $I$ traverse chaque cylindre de rayon $r$ (conservation de la charge). Donc $J(r)=\dfrac{I}{2\pi rL}$, puis $E=J/\sigma$, et la tension fixe $I$.</p>
+<ol>
+<li>$E(r)=\dfrac{J}{\sigma}=\dfrac{I}{2\pi rL\,\sigma_0(a/r)^2}=\dfrac{Ir}{2\pi L\sigma_0a^2}$ : le champ <b>croît</b> avec $r$, car la conductivité diminue plus vite que la surface n'augmente.</li>
+<li>$V=\displaystyle\int_a^bE\,dr=\frac{I(b^2-a^2)}{4\pi L\sigma_0a^2}$, d'où $I=\dfrac{4\pi L\sigma_0a^2V}{b^2-a^2}$.</li>
+<li>$\vec E(r)=\dfrac{2V}{b^2-a^2}\,r\,\hat r$.</li>
+</ol>
+<p><b>Contrôle :</b> $\int_a^b\frac{2Vr}{b^2-a^2}dr=V$ ✔. Le champ ne dépend ni de $\sigma_0$ ni de $L$ : seule la <i>forme</i> de $\sigma(r)$ compte.</p>
+<div class="trap">Erreur classique : croire que $E\propto1/r$ comme dans un coaxial vide. Ce serait le cas avec $\sigma$ constant. Ici $\sigma\propto1/r^2$ change tout.</div>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> גאומטריה רדיאלית: במצב יציב <b>אותו</b> זרם $I$ עובר דרך כל גליל ברדיוס $r$ (שימור מטען). לכן $J(r)=\dfrac{I}{2\pi rL}$, אחר כך $E=J/\sigma$, והמתח קובע את $I$.</p>
+<ol>
+<li>$E(r)=\dfrac{J}{\sigma}=\dfrac{I}{2\pi rL\,\sigma_0(a/r)^2}=\dfrac{Ir}{2\pi L\sigma_0a^2}$: השדה <b>גדל</b> עם $r$, כי המוליכות יורדת מהר יותר משהשטח גדל.</li>
+<li>$V=\displaystyle\int_a^bE\,dr=\frac{I(b^2-a^2)}{4\pi L\sigma_0a^2}$, ומכאן $I=\dfrac{4\pi L\sigma_0a^2V}{b^2-a^2}$.</li>
+<li>$\vec E(r)=\dfrac{2V}{b^2-a^2}\,r\,\hat r$.</li>
+</ol>
+<p><b>בדיקה:</b> $\int_a^b\frac{2Vr}{b^2-a^2}dr=V$ ✔. השדה אינו תלוי ב-$\sigma_0$ או ב-$L$: רק ה<i>צורה</i> של $\sigma(r)$ חשובה.</p>
+<div class="trap">טעות קלאסית: לחשוב ש-$E\propto1/r$ כמו בקואקסיאלי ריק. זה היה נכון עם $\sigma$ קבוע. כאן $\sigma\propto1/r^2$ משנה הכול.</div>
+</div>
+</article>
+
+<article data-id="26spB-q04">
+<div lang="fr">
+<p><b>Idée.</b> Pendant une décharge complète, <b>toute</b> l'énergie initiale du condensateur est dissipée dans la résistance. La valeur de $R$ ne joue aucun rôle (elle ne change que la durée).</p>
+<ol>
+<li>$U_0=\dfrac{Q_0^2}{2C}$ avec $C=\dfrac{\varepsilon_0A}{d}$, donc $U_0=\dfrac{Q_0^2d}{2\varepsilon_0A}$.</li>
+<li>$d=\dfrac{2\varepsilon_0AU_0}{Q_0^2}$.</li>
+</ol>
+<p><b>Vérification par l'intégrale</b> (méthode de la solution officielle) : $\displaystyle\int_0^\infty I^2R\,dt=\int_0^\infty\frac{Q_0^2}{R C^2}e^{-2t/RC}dt=\frac{Q_0^2}{2C}$ ✔. Remarquer le $e^{-2t/RC}$ : la puissance décroît deux fois plus vite que le courant.</p>
+<div class="trap">Les options contenant $R$ sont des pièges : l'énergie dissipée ne dépend pas de $R$.</div>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> בפריקה מלאה <b>כל</b> האנרגיה ההתחלתית של הקבל מתבזבזת בנגד. לערך של $R$ אין תפקיד (הוא משנה רק את משך הזמן).</p>
+<ol>
+<li>$U_0=\dfrac{Q_0^2}{2C}$ עם $C=\dfrac{\varepsilon_0A}{d}$, ולכן $U_0=\dfrac{Q_0^2d}{2\varepsilon_0A}$.</li>
+<li>$d=\dfrac{2\varepsilon_0AU_0}{Q_0^2}$.</li>
+</ol>
+<p><b>בדיקה עם האינטגרל</b> (השיטה של הפתרון הרשמי): $\displaystyle\int_0^\infty I^2R\,dt=\int_0^\infty\frac{Q_0^2}{R C^2}e^{-2t/RC}dt=\frac{Q_0^2}{2C}$ ✔. שימו לב ל-$e^{-2t/RC}$: ההספק דועך פי שניים מהר יותר מהזרם.</p>
+<div class="trap">האפשרויות שמכילות $R$ הן מלכודות: האנרגיה שמתבזבזת אינה תלויה ב-$R$.</div>
+</div>
+</article>
+
+<article data-id="26spA-q06">
+<div lang="fr">
+<p><b>Idée.</b> Une sphère conductrice isolée se comporte comme un condensateur de capacité $C_s=a/k$ (son potentiel vaut $kQ/a$). Le circuit est donc : $C_s$ (chargé), puis $R$, puis $C$ (vide), puis la terre. Ce sont deux condensateurs en série qui se rééquilibrent à travers $R$.</p>
+<ol>
+<li>Capacité équivalente « vue » par $R$ : $C_{\text{éq}}=\dfrac{C_sC}{C_s+C}=\dfrac{aC}{a+kC}$, d'où $\tau=RC_{\text{éq}}=\dfrac{RCa}{a+kC}$.</li>
+<li>Courant initial : $C$ est vide (tension nulle), donc toute la tension de la sphère, $\dfrac{kQ_0}{a}$, est sur $R$ : $I(0)=\dfrac{kQ_0}{aR}$.</li>
+<li>Le courant décroît exponentiellement : $I(t)=\dfrac{kQ_0}{aR}e^{-t/\tau}$.</li>
+<li>À $t=RC$ : $\dfrac{t}{\tau}=\dfrac{a+kC}{a}$, d'où $I=\dfrac{kQ_0}{aR}\,e^{-\frac{kC+a}{a}}$.</li>
+</ol>
+<p>La solution officielle obtient la même chose en résolvant l'équation différentielle de $Q(t)$. On y voit aussi l'état final : la charge se partage, $Q(\infty)=\frac{a}{a+kC}Q_0$ reste sur la sphère.</p>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> כדור מוליך בודד מתנהג כמו קבל עם קיבול $C_s=a/k$ (הפוטנציאל שלו $kQ/a$). המעגל הוא אפוא: $C_s$ (טעון), אחריו $R$, אחריו $C$ (ריק), ואחריו ההארקה. אלה שני קבלים בטור שמתאזנים דרך $R$.</p>
+<ol>
+<li>הקיבול השקול ש"רואה" $R$: $C_{\text{שקול}}=\dfrac{C_sC}{C_s+C}=\dfrac{aC}{a+kC}$, ולכן $\tau=RC_{\text{שקול}}=\dfrac{RCa}{a+kC}$.</li>
+<li>הזרם ההתחלתי: $C$ ריק (מתח אפס), ולכן כל המתח של הכדור, $\dfrac{kQ_0}{a}$, נופל על $R$: $I(0)=\dfrac{kQ_0}{aR}$.</li>
+<li>הזרם דועך מעריכית: $I(t)=\dfrac{kQ_0}{aR}e^{-t/\tau}$.</li>
+<li>ב-$t=RC$: $\dfrac{t}{\tau}=\dfrac{a+kC}{a}$, ולכן $I=\dfrac{kQ_0}{aR}\,e^{-\frac{kC+a}{a}}$.</li>
+</ol>
+<p>הפתרון הרשמי מקבל את אותה תוצאה בפתרון המשוואה הדיפרנציאלית ל-$Q(t)$. רואים בו גם את המצב הסופי: המטען מתחלק, ו-$Q(\infty)=\frac{a}{a+kC}Q_0$ נשאר על הכדור.</p>
+</div>
+</article>
+
+<article data-id="26spB-q05">
+<div lang="fr">
+<p><b>Idée.</b> La conductivité varie <b>perpendiculairement</b> au courant (selon $y,z$, alors que le courant va selon $x$). On découpe le bloc en filets parallèles de section $dy\,dz$ et de longueur $L$. Ils sont tous soumis à la même tension $V$ : ce sont des résistances <b>en parallèle</b>, et on additionne les conductances.</p>
+<ol>
+<li>Un filet : $dG=\dfrac{\sigma(y,z)\,dy\,dz}{L}$.</li>
+<li>$G=\dfrac{\sigma_0}{a^3L}\displaystyle\int_0^ay\,dy\int_0^az^2dz=\frac{\sigma_0}{a^3L}\cdot\frac{a^2}2\cdot\frac{a^3}3=\frac{\sigma_0a^2}{6L}$.</li>
+<li>$I=GV=\dfrac{V\sigma_0a^2}{6L}$.</li>
+</ol>
+<p><b>Autre vue :</b> $E=V/L$ est uniforme (tous les filets ont la même chute de tension), $J=\sigma E$, et $I=\int J\,dA$, ce qui revient au même.</p>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> המוליכות משתנה <b>בניצב</b> לזרם (לפי $y,z$, בעוד שהזרם בכיוון $x$). מחלקים את התיבה לסיבים מקבילים עם חתך $dy\,dz$ ובאורך $L$. על כולם אותו מתח $V$: אלה נגדים <b>במקביל</b>, ומחברים את המוליכויות.</p>
+<ol>
+<li>סיב אחד: $dG=\dfrac{\sigma(y,z)\,dy\,dz}{L}$.</li>
+<li>$G=\dfrac{\sigma_0}{a^3L}\displaystyle\int_0^ay\,dy\int_0^az^2dz=\frac{\sigma_0}{a^3L}\cdot\frac{a^2}2\cdot\frac{a^3}3=\frac{\sigma_0a^2}{6L}$.</li>
+<li>$I=GV=\dfrac{V\sigma_0a^2}{6L}$.</li>
+</ol>
+<p><b>מבט אחר:</b> $E=V/L$ אחיד (לכל הסיבים אותה נפילת מתח), $J=\sigma E$, ו-$I=\int J\,dA$, וזה בדיוק אותו דבר.</p>
+</div>
+</article>
+
+<article data-id="26wnC-q06">
+<div lang="fr">
+<p><b>Idée.</b> Bien lire le schéma : $C_1$ et $C_2$ sont tous deux branchés entre le fil du haut et le fil du bas, donc <b>en parallèle</b>. $R_1$ (en haut) et $R_2$ (en bas) sont en série avec la source. Le circuit se réduit à un RC série simple.</p>
+<ol>
+<li>$C_{\text{éq}}=2C$, $R_{\text{éq}}=2R$, donc $\tau=4RC$.</li>
+<li>Charge d'un condensateur vide : $I(t)=\dfrac{\varepsilon}{R_{\text{éq}}}e^{-t/\tau}=\dfrac{\varepsilon}{2R}e^{-t/4RC}$.</li>
+<li>$R_2$ est dans la branche principale (en série avec la source), donc $I_2=I$.</li>
+</ol>
+<div class="trap">Les options en $1-e^{-t/\tau}$ décrivent la <i>charge</i> du condensateur, pas le courant. Le courant de charge démarre à son maximum $\varepsilon/R_{\text{éq}}$ et tend vers 0.</div>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> לקרוא את התרשים בעיון: $C_1$ ו-$C_2$ מחוברים שניהם בין התיל העליון לתחתון, כלומר <b>במקביל</b>. $R_1$ (למעלה) ו-$R_2$ (למטה) בטור עם המקור. המעגל מצטמצם למעגל RC טורי פשוט.</p>
+<ol>
+<li>$C_{\text{שקול}}=2C$, $R_{\text{שקול}}=2R$, ולכן $\tau=4RC$.</li>
+<li>טעינה של קבל ריק: $I(t)=\dfrac{\varepsilon}{R_{\text{שקול}}}e^{-t/\tau}=\dfrac{\varepsilon}{2R}e^{-t/4RC}$.</li>
+<li>$R_2$ נמצא בענף הראשי (בטור עם המקור), ולכן $I_2=I$.</li>
+</ol>
+<div class="trap">האפשרויות עם $1-e^{-t/\tau}$ מתארות את <i>המטען</i> על הקבל, לא את הזרם. זרם הטעינה מתחיל במקסימום $\varepsilon/R_{\text{שקול}}$ ושואף ל-0.</div>
+</div>
+</article>
+
+<article data-id="26wnC-q07">
+<div lang="fr">
+<p><b>Idée.</b> Réduire le réseau pas à pas, en repérant les blocs série et parallèle.</p>
+<ol>
+<li>Branche de gauche : 4 résistances en série, $R_2=4R$.</li>
+<li>À droite, la boucle de 3 résistances (haut, côté droit, bas) est en série : $R_1=3R$. Elle est en parallèle avec la résistance verticale du haut : $R_3=\dfrac{R\cdot3R}{R+3R}=\dfrac34R$.</li>
+<li>Ce bloc est en série avec la résistance verticale du bas : $R_4=\dfrac34R+R=\dfrac74R$.</li>
+<li>$R_2$ et $R_4$ en parallèle entre A et B : $$R_{AB}=\frac{4R\cdot\frac74R}{4R+\frac74R}=\frac{7R^2}{\frac{23}{4}R}=\frac{28}{23}R.$$</li>
+</ol>
+<p><b>Contrôle :</b> le résultat doit être inférieur à la plus petite des deux branches parallèles ($\frac74R$) : $\frac{28}{23}\approx1{,}22&lt;1{,}75$ ✔.</p>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> לצמצם את הרשת צעד אחר צעד, תוך זיהוי חיבורים בטור ובמקביל.</p>
+<ol>
+<li>הענף השמאלי: 4 נגדים בטור, $R_2=4R$.</li>
+<li>מימין, הלולאה של 3 נגדים (עליון, צד ימני, תחתון) בטור: $R_1=3R$. היא במקביל לנגד האנכי העליון: $R_3=\dfrac{R\cdot3R}{R+3R}=\dfrac34R$.</li>
+<li>הגוש הזה בטור עם הנגד האנכי התחתון: $R_4=\dfrac34R+R=\dfrac74R$.</li>
+<li>$R_2$ ו-$R_4$ במקביל בין A ל-B: $$R_{AB}=\frac{4R\cdot\frac74R}{4R+\frac74R}=\frac{7R^2}{\frac{23}{4}R}=\frac{28}{23}R.$$</li>
+</ol>
+<p><b>בדיקה:</b> התוצאה חייבת להיות קטנה מהקטן מבין שני הענפים המקבילים ($\frac74R$): $\frac{28}{23}\approx1.22&lt;1.75$ ✔.</p>
+</div>
+</article>
+
+<article data-id="26wnA-q05">
+<div lang="fr">
+<p><b>Idée.</b> Le courant va le long de l'axe ($z$), mais la résistivité varie avec $r$, c'est-à-dire <b>perpendiculairement</b> au courant. On découpe en coquilles cylindriques minces de rayon $r$, d'épaisseur $dr$ et de longueur $L$. Elles sont toutes entre les deux bases (même tension), donc <b>en parallèle</b>.</p>
+<ol>
+<li>Une coquille : $dR=\dfrac{\rho(r)L}{2\pi r\,dr}=\dfrac{\rho_0L}{2\pi a\,dr}$ (le $r$ se simplifie).</li>
+<li>$\dfrac1R=\displaystyle\int_0^a\frac{2\pi a\,dr}{\rho_0L}=\frac{2\pi a^2}{\rho_0L}$.</li>
+<li>$R=\dfrac{\rho_0L}{2\pi a^2}$.</li>
+</ol>
+<p><b>Contrôle :</b> avec une résistivité moyenne « effective », on aurait $R=\rho_{\text{eff}}L/(\pi a^2)$ avec $\rho_{\text{eff}}=\rho_0/2$. Cela paraît raisonnable : le cœur, peu résistif, laisse passer l'essentiel du courant.</p>
+<div class="trap">Ne pas mettre les coquilles en <b>série</b> : ce serait le cas pour un courant radial (comme dans la question du coaxial).</div>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> הזרם זורם לאורך הציר ($z$), אבל ההתנגדות הסגולית משתנה עם $r$, כלומר <b>בניצב</b> לזרם. מחלקים לקליפות גליליות דקות ברדיוס $r$, בעובי $dr$ ובאורך $L$. כולן בין שני הבסיסים (אותו מתח), ולכן <b>במקביל</b>.</p>
+<ol>
+<li>קליפה אחת: $dR=\dfrac{\rho(r)L}{2\pi r\,dr}=\dfrac{\rho_0L}{2\pi a\,dr}$ (ה-$r$ מצטמצם).</li>
+<li>$\dfrac1R=\displaystyle\int_0^a\frac{2\pi a\,dr}{\rho_0L}=\frac{2\pi a^2}{\rho_0L}$.</li>
+<li>$R=\dfrac{\rho_0L}{2\pi a^2}$.</li>
+</ol>
+<p><b>בדיקה:</b> עם התנגדות סגולית ממוצעת "אפקטיבית" היינו מקבלים $R=\rho_{\text{eff}}L/(\pi a^2)$ עם $\rho_{\text{eff}}=\rho_0/2$. זה נראה סביר: הליבה, שהתנגדותה נמוכה, מעבירה את רוב הזרם.</p>
+<div class="trap">לא לחבר את הקליפות <b>בטור</b>: זה המקרה של זרם רדיאלי (כמו בשאלת הקואקסיאלי).</div>
+</div>
+</article>
+
+<article data-id="25wnA-q04">
+<div lang="fr">
+<p><b>Idée.</b> Deux condensateurs identiques en série avec $R$ et la source : un seul RC série, avec $C_{\text{éq}}=\frac{C_1C_2}{C_1+C_2}=0{,}25\ \mathrm F$.</p>
+<ol>
+<li>$\tau=RC_{\text{éq}}=10\times0{,}25=2{,}5\ \mathrm s$.</li>
+<li>Tension totale sur la paire : $\varepsilon(1-e^{-t/\tau})$. Comme ils sont en série et identiques, ils portent la même charge et donc la même tension : $V_1=\dfrac\varepsilon2(1-e^{-t/\tau})$.</li>
+<li>$V_1(2)=6\left(1-e^{-0{,}8}\right)=6\times0{,}5507\approx3{,}304\ \mathrm V$.</li>
+</ol>
+<div class="trap">Les options $6{,}608$ V (on oublie de partager la tension) et $2{,}175$ V (mauvais $\tau$, avec $C=0{,}5$ F) sont les pièges typiques.</div>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> שני קבלים זהים בטור עם $R$ והמקור: מעגל RC טורי אחד, עם $C_{\text{שקול}}=\frac{C_1C_2}{C_1+C_2}=0.25\ \mathrm F$.</p>
+<ol>
+<li>$\tau=RC_{\text{שקול}}=10\times0.25=2.5\ \mathrm s$.</li>
+<li>המתח הכולל על הזוג: $\varepsilon(1-e^{-t/\tau})$. מכיוון שהם בטור וזהים, יש עליהם אותו מטען ולכן אותו מתח: $V_1=\dfrac\varepsilon2(1-e^{-t/\tau})$.</li>
+<li>$V_1(2)=6\left(1-e^{-0.8}\right)=6\times0.5507\approx3.304\ \mathrm V$.</li>
+</ol>
+<div class="trap">האפשרויות $6.608$ V (שוכחים לחלק את המתח) ו-$2.175$ V ($\tau$ שגוי, עם $C=0.5$ F) הן המלכודות האופייניות.</div>
+</div>
+</article>
+
+<article data-id="24wnA-q05">
+<div lang="fr">
+<p><b>Idée.</b> Au bout d'un temps long, plus aucun courant ne passe dans la branche du condensateur (circuit ouvert). Les résistances en série avec $C$ n'ont alors pas de chute de tension, et $V_C$ égale la tension aux bornes de la résistance « en face ».</p>
+<ol>
+<li>La résistance verticale de droite est directement aux bornes de la source : elle ne change rien au reste.</li>
+<li>Chemin restant : $R$ (haut) + $R$ (verticale du milieu) + $R$ (bas), en série sur $\varepsilon$. Chacune reçoit $\varepsilon/3$.</li>
+<li>Les deux résistances de gauche sont sans courant, donc $V_C=$ tension sur la verticale du milieu $=\varepsilon/3$.</li>
+<li>$Q=CV_C=\dfrac13\varepsilon C$.</li>
+</ol>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> אחרי זמן רב לא זורם זרם בענף של הקבל (נתק). לנגדים שבטור עם $C$ אין אז נפילת מתח, ו-$V_C$ שווה למתח על הנגד שנמצא "מולו".</p>
+<ol>
+<li>הנגד האנכי הימני מחובר ישירות על הסוללה: הוא לא משנה את שאר המעגל.</li>
+<li>המסלול שנשאר: $R$ (עליון) + $R$ (האנכי האמצעי) + $R$ (תחתון), בטור על $\varepsilon$. על כל אחד $\varepsilon/3$.</li>
+<li>בשני הנגדים השמאליים אין זרם, ולכן $V_C=$ המתח על האנכי האמצעי $=\varepsilon/3$.</li>
+<li>$Q=CV_C=\dfrac13\varepsilon C$.</li>
+</ol>
+</div>
+</article>
+
+<article data-id="24wnB-q04">
+<div lang="fr">
+<p><b>Idée.</b> Équation de continuité : $\dfrac{\partial\rho}{\partial t}=-\nabla\cdot\vec J$. Le courant sortant d'une région la vide de sa charge.</p>
+<ol>
+<li>Densité de courant (radiale, répartie sur la sphère de rayon $r$) : $J=\dfrac{I}{4\pi r^2}=\dfrac{\rho(t)\,v\,r}{R}$.</li>
+<li>Divergence en sphérique : $\nabla\cdot\vec J=\dfrac{1}{r^2}\dfrac{\partial}{\partial r}\left(r^2\frac{\rho vr}{R}\right)=\dfrac{3\rho v}{R}$, indépendante de $r$. Cela confirme que $\rho$ reste uniforme.</li>
+<li>$\dfrac{d\rho}{dt}=-\dfrac{3v}{R}\rho$, d'où $\rho(t)=\rho_0e^{-3vt/R}$.</li>
+</ol>
+<p><b>Image :</b> chaque coquille perd sa charge à un taux proportionnel à ce qu'elle contient, d'où la décroissance exponentielle (et non linéaire).</p>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> משוואת הרציפות: $\dfrac{\partial\rho}{\partial t}=-\nabla\cdot\vec J$. הזרם שיוצא מאזור מרוקן אותו ממטען.</p>
+<ol>
+<li>צפיפות הזרם (רדיאלית, מפולגת על ספרה ברדיוס $r$): $J=\dfrac{I}{4\pi r^2}=\dfrac{\rho(t)\,v\,r}{R}$.</li>
+<li>דיברגנץ בקואורדינטות כדוריות: $\nabla\cdot\vec J=\dfrac{1}{r^2}\dfrac{\partial}{\partial r}\left(r^2\frac{\rho vr}{R}\right)=\dfrac{3\rho v}{R}$, ללא תלות ב-$r$. זה מאשר ש-$\rho$ נשארת אחידה.</li>
+<li>$\dfrac{d\rho}{dt}=-\dfrac{3v}{R}\rho$, ומכאן $\rho(t)=\rho_0e^{-3vt/R}$.</li>
+</ol>
+<p><b>תמונה:</b> כל קליפה מאבדת מטען בקצב שפרופורציוני למה שיש בה, ולכן הדעיכה מעריכית (ולא ליניארית).</p>
+</div>
+</article>

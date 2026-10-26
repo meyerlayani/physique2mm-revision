@@ -243,7 +243,7 @@ def _ink(a):
     return (a.min(-1) < 200)
 
 
-def option_cells(labels, rends, gap_pt=32, vgap_pt=22, xmin_pt=None):
+def option_cells(labels, rends, gap_pt=32, vgap_pt=22, xmin_pt=None, mid=False):
     """Pixel boxes (seg, x0, y0, x1, y1, label) of each option, in original order."""
     import numpy as np
     s = DPI / 72
@@ -310,6 +310,10 @@ def option_cells(labels, rends, gap_pt=32, vgap_pt=22, xmin_pt=None):
             runs.append((start, top))
         if not runs:
             return lo
+        if mid:  # single-line options with tall exponents: the white row nearest the midpoint
+            m = (lo + top) // 2
+            best = min(runs, key=lambda r: 0 if r[0] <= m <= r[1] else min(abs(r[0] - m), abs(r[1] - m)))
+            return min(max(m, best[0]), best[1])
         best = max(runs, key=lambda r: (r[1] - r[0]) - 0.3 * (top - r[1]))
         return (best[0] + best[1]) // 2
 
@@ -405,7 +409,7 @@ def extract(exam, q, debug_dir=None):
     if 'n' in ovr:
         meta['n'] = ovr['n']
     if meta['split'] and len(labels) >= 2:
-        cells = option_cells(labels, rends, ovr.get('gap', 32), ovr.get('vgap', 22), ovr.get('xmin'))
+        cells = option_cells(labels, rends, ovr.get('gap', 32), ovr.get('vgap', 22), ovr.get('xmin'), ovr.get('mid', False))
         for k, (seg, x0, y0, x1, y1, l) in enumerate(cells):
             a = rends[seg][0][y0:y1, x0:x1].copy()
             # mask the original letter + dot

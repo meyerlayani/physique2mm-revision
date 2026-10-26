@@ -1,0 +1,79 @@
+<section lang="fr">
+<h2>Courant électrique et circuits</h2>
+
+<h3>1. Le courant, un débit de charge</h3>
+<p>Image hydraulique : la charge est l'eau, le courant $I$ est le débit (en C/s = A), le potentiel est la pression (ou l'altitude), une résistance est un tuyau étroit, et une batterie est une pompe qui remonte l'eau. La <b>densité de courant</b> $\vec J$ (A/m²) décrit le débit en chaque point : $\vec J=\rho_{\text{mob}}\vec v=nq\vec v$ et $I=\int\vec J\cdot d\vec A$.</p>
+<div class="box">$$\text{Conservation de la charge : }\ \vec\nabla\cdot\vec J=-\frac{\partial\rho}{\partial t}\qquad\Longleftrightarrow\qquad \oint\vec J\cdot d\vec A=-\frac{dQ_{\text{in}}}{dt}$$</div>
+<p>Ce qui sort d'un volume fait diminuer la charge à l'intérieur. En régime stationnaire, $\nabla\cdot\vec J=0$ : le courant à travers toute section d'un même conducteur est le même. C'est cette contrainte qui détermine $J(r)$ dans les géométries radiales.</p>
+
+<h3>2. Loi d'Ohm locale et résistance</h3>
+<div class="box">$$\vec J=\sigma\vec E\quad(\sigma\text{ : conductivité},\ \rho_r=1/\sigma\text{ : résistivité}),\qquad V=RI,\qquad R=\frac{\rho_rL}{A}\ \text{(section constante)},\qquad P=VI=RI^2=\frac{V^2}{R}$$</div>
+<p><b>Résistance d'une géométrie non triviale</b> (σ variable, géométrie radiale) : deux stratégies.</p>
+<ul>
+<li><b>Tranches en série</b> (le courant traverse les tranches l'une après l'autre) : $dR=\dfrac{dx}{\sigma(x)A(x)}$, puis $R=\int dR$. Exemples : coaxial radial $dR=\dfrac{dr}{\sigma(r)\,2\pi rL}$, sphère radiale $dR=\dfrac{dr}{\sigma(r)4\pi r^2}$.</li>
+<li><b>Filets en parallèle</b> (σ varie <i>transversalement</i> au courant) : $dG=\dfrac{\sigma\,dA}{L}$, puis $G=1/R=\int dG$. Exemple : barreau avec $\sigma(y,z)$ et courant selon $x$ : $I=\dfrac VL\int\sigma\,dA$.</li>
+</ul>
+<p><b>Méthode « champ »</b> en géométrie radiale : $I$ est le même à travers chaque surface, donc $J(r)=I/A(r)$, $E=J/\sigma$, et $V=\int E\,dr$ relie $I$ à $V$. On obtient aussi $E(r)$ directement.</p>
+<div class="trap">Le modèle de Drude (dérivation microscopique de $\sigma$) est hors programme. Seule la loi d'Ohm, locale et macroscopique, est au programme.</div>
+
+<h3>3. Lois de Kirchhoff</h3>
+<ul>
+<li><b>Nœuds</b> (conservation de la charge) : $\sum I_{\text{entrant}}=\sum I_{\text{sortant}}$.</li>
+<li><b>Mailles</b> (le potentiel revient à sa valeur) : $\sum\Delta V=0$ le long d'une boucle. Résistance parcourue dans le sens de $I$ : $-RI$ ; batterie de $-$ à $+$ : $+\varepsilon$.</li>
+<li>Choisir les sens des courants arbitrairement ; un résultat négatif signifie juste que le courant va dans l'autre sens.</li>
+<li>Associations : série $R=\sum R_i$ ; parallèle $\frac1R=\sum\frac1{R_i}$. Pour un réseau compliqué, chercher les <b>symétries</b> (points au même potentiel qu'on peut relier, ou branches sans courant).</li>
+</ul>
+
+<h3>4. Le circuit RC : remplir et vider un réservoir</h3>
+<p>Image : un condensateur est un réservoir, la résistance un tuyau étroit. Plus le réservoir est plein, plus la « pression » qui s'oppose au remplissage est forte, et le débit ralentit : c'est une exponentielle.</p>
+<div class="box">
+$$\text{Charge : }q(t)=C\varepsilon\left(1-e^{-t/\tau}\right),\quad I(t)=\frac{\varepsilon}{R}e^{-t/\tau}\qquad\text{Décharge : }q(t)=Q_0e^{-t/\tau},\quad I=\frac{Q_0}{RC}e^{-t/\tau}\qquad\tau=RC$$
+$$U_C(t)=\frac{q^2}{2C}\ \Rightarrow\ \text{en décharge, }U_C\propto e^{-2t/\tau}$$</div>
+<ul>
+<li>À $t=0^+$, un condensateur <b>déchargé</b> se comporte comme un <b>fil</b> (sa tension ne peut pas sauter). Au bout d'un temps long, il se comporte comme un <b>circuit ouvert</b> (plus de courant dans sa branche).</li>
+<li>Pour un circuit avec plusieurs résistances : $\tau=R_{\text{éq}}C$, où $R_{\text{éq}}$ est la résistance « vue » par le condensateur, sources de tension éteintes (remplacées par des fils).</li>
+<li>Énergie : pendant une charge à travers $R$, la batterie fournit $C\varepsilon^2$ ; la moitié est stockée ($\frac12C\varepsilon^2$), l'autre moitié est dissipée dans $R$, quelle que soit la valeur de $R$. Pendant une décharge, toute l'énergie initiale $\frac{Q_0^2}{2C}$ est dissipée.</li>
+<li>Conducteur isolé (sphère) : sa « capacité » vaut $C=R/k=4\pi\varepsilon_0R$. Il peut jouer le rôle de condensateur dans un circuit RC.</li>
+</ul>
+<div class="trap">« Temps pour que la charge tombe à $x\%$ » : $t=\tau\ln(100/x)$. Pour l'énergie, le facteur est $e^{-2t/\tau}$, donc $t=\frac\tau2\ln(100/x)$.</div>
+</section>
+
+<section lang="he">
+<h2>זרם חשמלי ומעגלים</h2>
+
+<h3>1. זרם, ספיקה של מטען</h3>
+<p>תמונה הידראולית: המטען הוא המים, הזרם $I$ הוא הספיקה (C/s = A), הפוטנציאל הוא הלחץ (או הגובה), נגד הוא צינור צר, וסוללה היא משאבה שמעלה את המים. <b>צפיפות הזרם</b> $\vec J$ (A/m²) מתארת את הספיקה בכל נקודה: $\vec J=\rho_{\text{נע}}\vec v=nq\vec v$ ו-$I=\int\vec J\cdot d\vec A$.</p>
+<div class="box">$$\text{שימור מטען: }\ \vec\nabla\cdot\vec J=-\frac{\partial\rho}{\partial t}\qquad\Longleftrightarrow\qquad \oint\vec J\cdot d\vec A=-\frac{dQ_{\text{in}}}{dt}$$</div>
+<p>מה שיוצא מנפח מקטין את המטען בתוכו. במצב יציב $\nabla\cdot\vec J=0$: הזרם דרך כל חתך של אותו מוליך זהה. האילוץ הזה הוא שקובע את $J(r)$ בגאומטריות רדיאליות.</p>
+
+<h3>2. חוק אוהם המקומי והתנגדות</h3>
+<div class="box">$$\vec J=\sigma\vec E\quad(\sigma\text{: מוליכות},\ \rho_r=1/\sigma\text{: התנגדות סגולית}),\qquad V=RI,\qquad R=\frac{\rho_rL}{A}\ \text{(חתך קבוע)},\qquad P=VI=RI^2=\frac{V^2}{R}$$</div>
+<p><b>התנגדות של גאומטריה לא טריוויאלית</b> (σ משתנה, גאומטריה רדיאלית): שתי אסטרטגיות.</p>
+<ul>
+<li><b>פרוסות בטור</b> (הזרם עובר את הפרוסות אחת אחרי השנייה): $dR=\dfrac{dx}{\sigma(x)A(x)}$, ואז $R=\int dR$. דוגמאות: קואקסיאלי רדיאלי $dR=\dfrac{dr}{\sigma(r)\,2\pi rL}$, כדור רדיאלי $dR=\dfrac{dr}{\sigma(r)4\pi r^2}$.</li>
+<li><b>סיבים במקביל</b> (σ משתנה <i>בניצב</i> לזרם): $dG=\dfrac{\sigma\,dA}{L}$, ואז $G=1/R=\int dG$. דוגמה: תיבה עם $\sigma(y,z)$ וזרם בכיוון $x$: $I=\dfrac VL\int\sigma\,dA$.</li>
+</ul>
+<p><b>שיטת "השדה"</b> בגאומטריה רדיאלית: $I$ זהה דרך כל משטח, ולכן $J(r)=I/A(r)$, $E=J/\sigma$, ו-$V=\int E\,dr$ מקשר בין $I$ ל-$V$. מקבלים גם את $E(r)$ ישירות.</p>
+<div class="trap">מודל דרודה (פיתוח מיקרוסקופי של $\sigma$) אינו בחומר. רק חוק אוהם, המקומי והמקרוסקופי, בחומר.</div>
+
+<h3>3. חוקי קירכהוף</h3>
+<ul>
+<li><b>צמתים</b> (שימור מטען): $\sum I_{\text{נכנס}}=\sum I_{\text{יוצא}}$.</li>
+<li><b>לולאות</b> (הפוטנציאל חוזר לערכו): $\sum\Delta V=0$ לאורך לולאה. נגד בכיוון $I$: $-RI$; סוללה מ-$-$ ל-$+$: $+\varepsilon$.</li>
+<li>בוחרים את כיווני הזרמים שרירותית; תוצאה שלילית פירושה רק שהזרם בכיוון ההפוך.</li>
+<li>חיבורים: טור $R=\sum R_i$; מקביל $\frac1R=\sum\frac1{R_i}$. ברשת מסובכת מחפשים <b>סימטריות</b> (נקודות באותו פוטנציאל שאפשר לחבר, או ענפים שאין בהם זרם).</li>
+</ul>
+
+<h3>4. מעגל RC: מילוי וריקון של מכל</h3>
+<p>תמונה: קבל הוא מכל, נגד הוא צינור צר. ככל שהמכל מלא יותר, ה"לחץ" שמתנגד למילוי גדל והספיקה יורדת: זו פונקציה מעריכית.</p>
+<div class="box">
+$$\text{טעינה: }q(t)=C\varepsilon\left(1-e^{-t/\tau}\right),\quad I(t)=\frac{\varepsilon}{R}e^{-t/\tau}\qquad\text{פריקה: }q(t)=Q_0e^{-t/\tau},\quad I=\frac{Q_0}{RC}e^{-t/\tau}\qquad\tau=RC$$
+$$U_C(t)=\frac{q^2}{2C}\ \Rightarrow\ \text{בפריקה }U_C\propto e^{-2t/\tau}$$</div>
+<ul>
+<li>ב-$t=0^+$ קבל <b>לא טעון</b> מתנהג כמו <b>תיל</b> (המתח עליו לא יכול לקפוץ). אחרי זמן רב הוא מתנהג כמו <b>נתק</b> (אין זרם בענף שלו).</li>
+<li>במעגל עם כמה נגדים: $\tau=R_{\text{שקול}}C$, כאשר $R_{\text{שקול}}$ היא ההתנגדות ש"רואה" הקבל, כשמקורות המתח מכובים (מוחלפים בתילים).</li>
+<li>אנרגיה: בטעינה דרך $R$ הסוללה מספקת $C\varepsilon^2$; חצי נאגר ($\frac12C\varepsilon^2$) וחצי מתבזבז ב-$R$, בלי קשר לערך $R$. בפריקה כל האנרגיה ההתחלתית $\frac{Q_0^2}{2C}$ מתבזבזת.</li>
+<li>מוליך בודד (כדור): ה"קיבול" שלו $C=R/k=4\pi\varepsilon_0R$. הוא יכול לשמש כקבל במעגל RC.</li>
+</ul>
+<div class="trap">"הזמן עד שהמטען יורד ל-$x\%$": $t=\tau\ln(100/x)$. לאנרגיה הגורם הוא $e^{-2t/\tau}$, ולכן $t=\frac\tau2\ln(100/x)$.</div>
+</section>
