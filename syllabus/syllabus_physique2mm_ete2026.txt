@@ -1,0 +1,97 @@
+=== SYLLABUS — PHYSIQUE 2mm (114075), SESSION D'ÉTÉ 2026 ===
+
+Ce syllabus REMPLACE celui du printemps. Tu t'en tiens STRICTEMENT à cette liste.
+Examen : vendredi 30/10/2026 — QCM, 12 questions, 3 heures. Le נוסחאון officiel et les feuilles perso sont autorisés.
+Sources : syllabus Moodle (version avec sujets barrés) + mail du responsable du cours, Gidi (Gideon Alon), du 15/10/2026, objet « חומר לבחינה ».
+Semestre d'été raccourci : on ne traite rien en dehors de cette liste.
+
+=== AU PROGRAMME ===
+
+1. ÉLECTROSTATIQUE — charges et champs (אלקטרוסטטיקה)
+   Charge électrique, loi de Coulomb, énergie électrostatique, champ électrique,
+   flux électrique et théorème de Gauss.
+
+2. POTENTIEL ÉLECTRIQUE (פוטנציאל חשמלי)
+   Champs conservatifs, définition du potentiel, gradient et divergence,
+   théorème de Gauss, équation de Laplace, rotationnel (רוטור).
+
+3. CHAMPS AUTOUR DES CONDUCTEURS (שדות סביב מוליכים)
+   Conducteur idéal dans un champ électrique, électrostatique des conducteurs,
+   problèmes par la méthode des images (שיטת הדמויות), condensateurs
+   (capacité, association série/parallèle, énergie stockée).
+
+4. COURANT ÉLECTRIQUE (זרם חשמלי)
+   Densité de courant et conservation de la charge, loi d'Ohm (forme locale
+   et macroscopique, SANS dérivation par le modèle de Drude), circuits
+   stationnaires (lois de Kirchhoff), circuit RC.
+
+5. CHAMPS DE CHARGES EN MOUVEMENT (שדות של מטענים נעים)
+   (Prérequis : relativité restreinte — à rafraîchir.)
+   Transformation de Lorentz et son application au champ électrique, champ
+   d'une charge ponctuelle en mouvement uniforme, forces sur charges en
+   mouvement dans différents référentiels, champ d'une charge accélérée
+   limité à la sphère d'information (כדור אינפורמציה) : l'information
+   voyage à la vitesse c, le champ à l'intérieur de la sphère est celui du
+   mouvement uniforme actuel, à l'extérieur celui d'avant le changement,
+   forme qualitative des lignes de champ.
+
+6. CHAMP MAGNÉTIQUE (השדה המגנטי)
+   Définition via la force de Lorentz, propriétés du champ magnétique (dont
+   la loi de Gauss du magnétisme : flux de B nul sur toute surface fermée),
+   loi d'Ampère, loi de Biot-Savart, champ d'une spire de courant, force sur
+   une boucle de courant, solénoïde et nappe de courant, transformation de
+   Lorentz des champs E et B, grandeurs invariantes de cette transformation.
+
+7. INDUCTION ÉLECTROMAGNÉTIQUE (השראה אלקטרומגנטית)
+   Champ électrique et fem induits dans différents référentiels, loi de
+   Faraday, inductance propre (self-inductance), circuits RL.
+
+8. ÉQUATIONS DE MAXWELL (משוואות מקסוול)
+   Courant de déplacement, synthèse des équations de Maxwell dans le vide.
+
+9. ONDES MÉCANIQUES / INTRO AUX ONDES (גלים מכניים ומבוא לגלים)
+   Qu'est-ce qu'une onde, équation d'onde, ondes périodiques et leurs
+   caractéristiques (période, fréquence, vitesse, longueur d'onde,
+   amplitude), onde stationnaire (גל עומד), ondes sur une corde.
+
+10. ONDES ÉLECTROMAGNÉTIQUES (גלים אלקטרומגנטיים)
+    Dérivation de l'équation d'onde EM, propagation dans le vide, vecteur de
+    Poynting (וקטור פוינטינג), flux d'énergie.
+
+11. INTERFÉRENCE (התאבכות)
+    Expérience de Young (deux fentes) : différence de marche, maxima et
+    minima, intensité, interfrange, effet d'une lame mince. Interférence de
+    quelques sources cohérentes ponctuelles (2 ou 3), traitée par différence
+    de marche et addition des amplitudes.
+
+=== HORS PROGRAMME — NE ME POSE JAMAIS ÇA (9 sujets) ===
+
+- Diélectriques dans un condensateur (חומר דיאלקטרי בקבל)
+- Circuits RLC (מעגלי RLC)
+- Rayonnement d'une charge en mouvement (קרינת מטען נע) : champ rayonné en
+  1/r, puissance rayonnée, formule de Larmor
+- Modèle de Drude (מודל דרודה) : dérivation microscopique de la conductivité
+- Inductance mutuelle (השראות הדדית), donc pas de transformateur
+- Interférence à N fentes (התאבכות מ-N סדקים) : formule d'intensité du réseau
+- Diffraction par une fente unique (עקיפה מסדק יחיד)
+- Potentiel vecteur (פוטנציאל וקטורי)
+- Dipôle magnétique (דיפול מגנטי) : moment dipolaire, magnétisation
+- Non listés au syllabus, donc non travaillés : dipôle électrique,
+  polarisation.
+
+Si un exercice classique touche à l'un de ces sujets, tu me le signales et
+tu l'adaptes ou tu le remplaces.
+
+=== FRONTIÈRES (règles de tri des exercices) ===
+
+- Charge accélérée : OK = où est l'information (rayon c·t), champ dedans et
+  dehors, lignes de champ. PAS OK = champ rayonné, puissance rayonnée.
+- Loi d'Ohm : OK. Démonstration par Drude : PAS OK.
+- Inductance : propre OK, mutuelle PAS OK. Circuits : RL OK, RLC PAS OK.
+- Magnétisme : force et couple sur une boucle de courant OK (calcul direct),
+  notion de dipôle magnétique PAS OK. Gauss du magnétisme OK.
+- Interférence : Young et sources cohérentes par différence de marche OK,
+  formule du réseau à N fentes PAS OK, diffraction par une fente PAS OK.
+- Ondes EM : Poynting OK pour l'onde plane et les cas de flux d'énergie.
+- Anciens examens : un exercice dont une partie touche un sujet hors
+  programme est remplacé ou la partie est sautée.
