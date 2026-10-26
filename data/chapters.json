@@ -1,0 +1,93 @@
+{
+ "N": 110,
+ "chapters": [
+  {
+   "n": 1,
+   "title": "Electrostatics",
+   "topics": "Coulomb, fields of distributions, flux, Gauss",
+   "ids": [
+    "25wnA-q01",
+    "26spM-q02",
+    "26spA-q01",
+    "26spA-q02",
+    "26spB-q01",
+    "26spB-q02",
+    "26wnA-q01",
+    "25wnA-q02",
+    "25wnB-q01",
+    "25wnB-q02"
+   ],
+   "count": 10
+  },
+  {
+   "n": 2,
+   "title": "Electric potential",
+   "topics": "Potential, energy, work, gradient / divergence / curl",
+   "ids": [],
+   "count": 10
+  },
+  {
+   "n": 3,
+   "title": "Conductors, images, capacitors",
+   "topics": "Concentric shells, method of images, capacitance",
+   "ids": [],
+   "count": 12
+  },
+  {
+   "n": 4,
+   "title": "Current and circuits",
+   "topics": "Current density, Ohm, Kirchhoff, RC circuits",
+   "ids": [],
+   "count": 10
+  },
+  {
+   "n": 5,
+   "title": "Moving charges and relativity of fields",
+   "topics": "Information sphere, Lorentz transformation of E and B, invariants",
+   "ids": [],
+   "count": 11
+  },
+  {
+   "n": 6,
+   "title": "Magnetic field",
+   "topics": "Lorentz force, Ampère, Biot-Savart, forces on currents, Gauss for B",
+   "ids": [],
+   "count": 10
+  },
+  {
+   "n": 7,
+   "title": "Electromagnetic induction",
+   "topics": "Faraday, motional EMF, self-inductance, RL circuits",
+   "ids": [],
+   "count": 12
+  },
+  {
+   "n": 8,
+   "title": "Maxwell equations",
+   "topics": "Displacement current, induced electric field",
+   "ids": [],
+   "count": 7
+  },
+  {
+   "n": 9,
+   "title": "Mechanical waves",
+   "topics": "Wave equation, strings, standing waves",
+   "ids": [],
+   "count": 8
+  },
+  {
+   "n": 10,
+   "title": "Electromagnetic waves",
+   "topics": "E, B and k, Poynting vector, power",
+   "ids": [],
+   "count": 10
+  },
+  {
+   "n": 11,
+   "title": "Interference",
+   "topics": "Young's double slit, coherent sources",
+   "ids": [],
+   "count": 10
+  }
+ ]
+}

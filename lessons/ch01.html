@@ -1,0 +1,125 @@
+<section lang="fr">
+<h2>Électrostatique : charges, champs, flux et théorème de Gauss</h2>
+
+<h3>1. L'idée physique</h3>
+<p>Une charge immobile modifie l'espace autour d'elle : en chaque point elle crée un <b>champ</b> $\vec E$, défini comme la force par unité de charge qu'y subirait une petite charge test : $\vec F = q\vec E$. Le champ permet de séparer le problème en deux : <i>(1)</i> les sources fabriquent $\vec E$, <i>(2)</i> $\vec E$ agit sur les charges. Comme les équations sont linéaires, le champ de plusieurs sources est la <b>somme vectorielle</b> des champs de chacune : c'est le principe de superposition, l'outil n° 1 de tout le chapitre.</p>
+
+<h3>2. Loi de Coulomb et superposition</h3>
+<div class="box">
+$$\vec F_{12}=k\frac{q_1q_2}{r^2}\,\hat r_{12},\qquad \vec E(\vec r)=k\frac{q}{|\vec r-\vec r\,{}'|^2}\,\hat u,\qquad k=\frac{1}{4\pi\varepsilon_0}\approx 9\cdot10^9\ \mathrm{N\,m^2/C^2}$$
+</div>
+<p>Pour une distribution continue on découpe en éléments $dq$ et on additionne <b>vectoriellement</b> :</p>
+$$\vec E=\int k\,\frac{dq}{r^2}\,\hat u,\qquad dq=\lambda\,dl=\sigma\,dA=\rho\,dV .$$
+<p><b>Méthode sûre</b> (fil courbe, disque, anneau…) :</p>
+<ol>
+<li>Dessiner un élément $dq$, le vecteur qui va de $dq$ au point d'observation, sa longueur $r$.</li>
+<li>Utiliser la <b>symétrie</b> pour annuler des composantes avant d'intégrer (sur l'axe d'un anneau, seule la composante axiale survit).</li>
+<li>Projeter : $dE_x=dE\cos\theta$, etc., puis intégrer chaque composante séparément.</li>
+</ol>
+<p><b>Résultats à connaître</b> (ils servent de briques) :</p>
+<table>
+<tr><th>Source</th><th>Champ</th></tr>
+<tr><td>Arc de rayon $R$, densité $\lambda$, au centre, ouverture $2\alpha$ symétrique</td><td>$E=\dfrac{2k\lambda}{R}\sin\alpha$ (demi-cercle : $2k\lambda/R$ ; quart de cercle : $\sqrt2\,k\lambda/R$)</td></tr>
+<tr><td>Anneau $Q$, rayon $R$, sur l'axe à la hauteur $z$</td><td>$E_z=\dfrac{kQz}{(z^2+R^2)^{3/2}}$, maximal pour $z=R/\sqrt2$</td></tr>
+<tr><td>Disque $\sigma$ uniforme, rayon $R$, sur l'axe</td><td>$E_z=2\pi k\sigma\left(1-\dfrac{z}{\sqrt{z^2+R^2}}\right)$</td></tr>
+<tr><td>Fil infini $\lambda$</td><td>$E=\dfrac{2k\lambda}{r}=\dfrac{\lambda}{2\pi\varepsilon_0 r}$</td></tr>
+<tr><td>Plan infini $\sigma$</td><td>$E=\dfrac{\sigma}{2\varepsilon_0}$ de chaque côté</td></tr>
+<tr><td>Segment fini (vu sous les angles $\theta_1,\theta_2$ depuis la perpendiculaire)</td><td>$E_\perp=\dfrac{k\lambda}{d}(\sin\theta_2-\sin\theta_1)$, $E_\parallel=\dfrac{k\lambda}{d}(\cos\theta_1-\cos\theta_2)$ (angles orientés)</td></tr>
+</table>
+
+<h3>3. Flux et théorème de Gauss : l'image des lignes de champ</h3>
+<p>Le <b>flux</b> $\Phi_E=\oint\vec E\cdot d\vec A$ compte (avec signe) les lignes de champ qui traversent une surface. Les lignes naissent sur les charges positives et meurent sur les négatives : à travers une surface <b>fermée</b>, le bilan ne dépend donc que de ce qui est enfermé.</p>
+<div class="box">$$\oint_S \vec E\cdot d\vec A=\frac{Q_{\text{int}}}{\varepsilon_0}\qquad\Longleftrightarrow\qquad \vec\nabla\cdot\vec E=\frac{\rho}{\varepsilon_0}$$</div>
+<p><b>Ce que Gauss dit toujours</b> : le <i>flux total</i> à travers une surface fermée. Une charge extérieure fait entrer autant de lignes qu'elle en fait sortir : sa contribution au flux total est nulle (mais pas au champ !).</p>
+<p><b>Ce que Gauss ne donne que s'il y a de la symétrie</b> : le <i>champ</i>. Pour sortir $E$ de l'intégrale, il faut que $|\vec E|$ soit constant et $\vec E\parallel d\vec A$ sur la surface (ou perpendiculaire, flux nul). Les trois symétries utilisables :</p>
+<table>
+<tr><th>Symétrie</th><th>Surface de Gauss</th><th>Résultat</th></tr>
+<tr><td>Sphérique $\rho(r)$</td><td>Sphère de rayon $r$</td><td>$E\cdot4\pi r^2=Q_{\text{int}}(r)/\varepsilon_0$, soit $E=kQ_{\text{int}}(r)/r^2$</td></tr>
+<tr><td>Cylindrique $\rho(r)$ infini</td><td>Cylindre de rayon $r$, longueur $\ell$</td><td>$E\cdot2\pi r\ell=Q_{\text{int}}/\varepsilon_0$</td></tr>
+<tr><td>Plane $\rho(z)$ infinie</td><td>« Boîte à camembert » d'aire $A$</td><td>$(E(z_2)-E(z_1))A=Q_{\text{int}}/\varepsilon_0$</td></tr>
+</table>
+<p>Avec une densité variable, on calcule $Q_{\text{int}}(r)=\int_0^r\rho(r')\,4\pi r'^2dr'$ (sphère) ou $\int_0^r\rho\,2\pi r'\ell\,dr'$ (cylindre).</p>
+
+<h3>4. Forme différentielle : lire la charge dans le champ</h3>
+<p>Si on connaît $\vec E$ partout, $\rho=\varepsilon_0\vec\nabla\cdot\vec E$. En coordonnées sphériques, pour un champ radial :</p>
+$$\vec\nabla\cdot\vec E=\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2E_r\right),\qquad\text{cylindriques : }\frac1r\frac{\partial}{\partial r}(rE_r),\qquad\text{plan : }\frac{dE_z}{dz}.$$
+<p>Un <b>saut</b> de champ normal à travers une surface signale une charge surfacique : $E_{n,2}-E_{n,1}=\sigma/\varepsilon_0$.</p>
+
+<h3>5. Quand utiliser quoi ?</h3>
+<ul>
+<li><b>Peu de charges ponctuelles</b> : Coulomb + superposition, en vecteurs.</li>
+<li><b>Distribution continue sans haute symétrie</b> (arc, segment, disque sur l'axe) : intégrale de Coulomb, en exploitant la symétrie pour éliminer des composantes.</li>
+<li><b>Sphère, cylindre infini, plan infini</b> : Gauss.</li>
+<li><b>On donne $\vec E$, on demande la charge</b> : Gauss intégral (charge dans un volume = flux sortant $\times\varepsilon_0$) ou différentiel ($\rho=\varepsilon_0\nabla\cdot\vec E$).</li>
+<li><b>Flux à travers une partie d'une surface fermée</b> : symétrie (une face de cube autour d'une charge centrale = $\frac16$ du flux total).</li>
+</ul>
+
+<h3>6. Pièges classiques</h3>
+<div class="trap"><b>Gauss sans symétrie.</b> Une charge extérieure près d'une coquille : $Q_{\text{int}}=0$ donne un flux nul, mais pas $E=0$ en chaque point de la surface de Gauss, car $E$ n'est ni constant ni radial. Écrire $\Phi=4\pi r^2E$ suppose une symétrie sphérique qui n'existe plus.</div>
+<div class="trap"><b>Flux à travers un cylindre posé dans un champ uniforme $E_z$.</b> Le flux latéral est nul, seules les bases comptent, avec des normales opposées : $\Phi=E(\text{haut})A-E(\text{bas})A$. Lire attentivement dans quel intervalle se trouve chaque base.</div>
+<div class="trap"><b>Charge exactement sur la surface de Gauss</b> (sur une face, un coin) : elle n'est qu'en partie « dedans ». Un coin de cube partage la charge entre 8 cubes, donc $\Phi=q/(8\varepsilon_0)$.</div>
+<div class="trap"><b>Composantes qui s'additionnent ou se compensent.</b> Sur un arc, les composantes perpendiculaires à l'axe de symétrie s'annulent : on n'intègre que la composante le long de l'axe, avec $\cos\theta$.</div>
+</section>
+
+<section lang="he">
+<h2>אלקטרוסטטיקה: מטענים, שדות, שטף וחוק גאוס</h2>
+
+<h3>1. הרעיון הפיזיקלי</h3>
+<p>מטען נח משנה את המרחב סביבו: בכל נקודה הוא יוצר <b>שדה</b> $\vec E$, המוגדר ככוח ליחידת מטען שהיה פועל על מטען בוחן קטן: $\vec F=q\vec E$. השדה מפריד את הבעיה לשניים: <i>(1)</i> המקורות יוצרים את $\vec E$, <i>(2)</i> השדה פועל על המטענים. מכיוון שהמשוואות ליניאריות, השדה של כמה מקורות הוא <b>הסכום הווקטורי</b> של השדות של כל אחד מהם. זהו עקרון הסופרפוזיציה, הכלי המרכזי של כל הפרק.</p>
+
+<h3>2. חוק קולון וסופרפוזיציה</h3>
+<div class="box">
+$$\vec F_{12}=k\frac{q_1q_2}{r^2}\,\hat r_{12},\qquad \vec E(\vec r)=k\frac{q}{|\vec r-\vec r\,{}'|^2}\,\hat u,\qquad k=\frac{1}{4\pi\varepsilon_0}\approx 9\cdot10^9\ \mathrm{N\,m^2/C^2}$$
+</div>
+<p>עבור התפלגות רציפה מחלקים לאלמנטים $dq$ וסוכמים <b>וקטורית</b>:</p>
+$$\vec E=\int k\,\frac{dq}{r^2}\,\hat u,\qquad dq=\lambda\,dl=\sigma\,dA=\rho\,dV .$$
+<p><b>שיטה בטוחה</b> (תיל מעוקל, דסקה, טבעת…):</p>
+<ol>
+<li>לצייר אלמנט $dq$, את הווקטור מ-$dq$ לנקודת המדידה ואת אורכו $r$.</li>
+<li>להשתמש ב<b>סימטריה</b> כדי לאפס רכיבים לפני האינטגרציה (על ציר טבעת נשאר רק הרכיב הצירי).</li>
+<li>להטיל: $dE_x=dE\cos\theta$ וכו', ואז לבצע אינטגרל לכל רכיב בנפרד.</li>
+</ol>
+<p><b>תוצאות שכדאי לזכור</b> (אבני בניין):</p>
+<table>
+<tr><th>מקור</th><th>שדה</th></tr>
+<tr><td>קשת ברדיוס $R$, צפיפות $\lambda$, במרכז, זווית פתיחה $2\alpha$ סימטרית</td><td>$E=\dfrac{2k\lambda}{R}\sin\alpha$ (חצי מעגל: $2k\lambda/R$; רבע מעגל: $\sqrt2\,k\lambda/R$)</td></tr>
+<tr><td>טבעת $Q$ ברדיוס $R$, על הציר בגובה $z$</td><td>$E_z=\dfrac{kQz}{(z^2+R^2)^{3/2}}$, מקסימלי ב-$z=R/\sqrt2$</td></tr>
+<tr><td>דסקה עם $\sigma$ אחידה ברדיוס $R$, על הציר</td><td>$E_z=2\pi k\sigma\left(1-\dfrac{z}{\sqrt{z^2+R^2}}\right)$</td></tr>
+<tr><td>תיל אינסופי $\lambda$</td><td>$E=\dfrac{2k\lambda}{r}=\dfrac{\lambda}{2\pi\varepsilon_0 r}$</td></tr>
+<tr><td>מישור אינסופי $\sigma$</td><td>$E=\dfrac{\sigma}{2\varepsilon_0}$ בכל צד</td></tr>
+<tr><td>קטע סופי (נראה בזוויות $\theta_1,\theta_2$ מהאנך)</td><td>$E_\perp=\dfrac{k\lambda}{d}(\sin\theta_2-\sin\theta_1)$, $E_\parallel=\dfrac{k\lambda}{d}(\cos\theta_1-\cos\theta_2)$ (זוויות מכוונות)</td></tr>
+</table>
+
+<h3>3. שטף וחוק גאוס: התמונה של קווי השדה</h3>
+<p>ה<b>שטף</b> $\Phi_E=\oint\vec E\cdot d\vec A$ סופר (עם סימן) את קווי השדה שחוצים משטח. קווים מתחילים במטענים חיוביים ומסתיימים בשליליים, ולכן דרך משטח <b>סגור</b> המאזן תלוי רק במה שבפנים.</p>
+<div class="box">$$\oint_S \vec E\cdot d\vec A=\frac{Q_{\text{in}}}{\varepsilon_0}\qquad\Longleftrightarrow\qquad \vec\nabla\cdot\vec E=\frac{\rho}{\varepsilon_0}$$</div>
+<p><b>מה חוק גאוס נותן תמיד</b>: את ה<i>שטף הכולל</i> דרך משטח סגור. מטען חיצוני מכניס כמות קווים שווה לזו שהוא מוציא, ולכן תרומתו לשטף הכולל אפס (אבל לא לשדה!).</p>
+<p><b>מה גאוס נותן רק כשיש סימטריה</b>: את ה<i>שדה</i>. כדי להוציא את $E$ מהאינטגרל צריך ש-$|\vec E|$ יהיה קבוע ו-$\vec E\parallel d\vec A$ על המשטח (או ניצב, ואז השטף אפס). שלוש הסימטריות השימושיות:</p>
+<table>
+<tr><th>סימטריה</th><th>משטח גאוס</th><th>תוצאה</th></tr>
+<tr><td>כדורית $\rho(r)$</td><td>ספרה ברדיוס $r$</td><td>$E\cdot4\pi r^2=Q_{\text{in}}(r)/\varepsilon_0$, כלומר $E=kQ_{\text{in}}(r)/r^2$</td></tr>
+<tr><td>גלילית $\rho(r)$, אינסופית</td><td>גליל ברדיוס $r$ ובאורך $\ell$</td><td>$E\cdot2\pi r\ell=Q_{\text{in}}/\varepsilon_0$</td></tr>
+<tr><td>מישורית $\rho(z)$, אינסופית</td><td>"קופסת פילבוקס" בשטח $A$</td><td>$(E(z_2)-E(z_1))A=Q_{\text{in}}/\varepsilon_0$</td></tr>
+</table>
+<p>עם צפיפות משתנה מחשבים $Q_{\text{in}}(r)=\int_0^r\rho(r')\,4\pi r'^2dr'$ (כדור) או $\int_0^r\rho\,2\pi r'\ell\,dr'$ (גליל).</p>
+
+<h3>4. הצורה הדיפרנציאלית: לקרוא את המטען מתוך השדה</h3>
+<p>אם $\vec E$ ידוע בכל מקום, $\rho=\varepsilon_0\vec\nabla\cdot\vec E$. בקואורדינטות כדוריות, לשדה רדיאלי:</p>
+$$\vec\nabla\cdot\vec E=\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2E_r\right),\qquad\text{גליליות: }\frac1r\frac{\partial}{\partial r}(rE_r),\qquad\text{מישור: }\frac{dE_z}{dz}.$$
+<p><b>קפיצה</b> ברכיב הניצב של השדה דרך משטח מעידה על מטען משטחי: $E_{n,2}-E_{n,1}=\sigma/\varepsilon_0$.</p>
+
+<h3>5. מתי להשתמש במה?</h3>
+<ul>
+<li><b>מעט מטענים נקודתיים</b>: קולון וסופרפוזיציה, בווקטורים.</li>
+<li><b>התפלגות רציפה ללא סימטריה גבוהה</b> (קשת, קטע, דסקה על הציר): אינטגרל קולון, תוך ניצול הסימטריה לאיפוס רכיבים.</li>
+<li><b>כדור, גליל אינסופי, מישור אינסופי</b>: חוק גאוס.</li>
+<li><b>נתון $\vec E$ ומבקשים מטען</b>: גאוס אינטגרלי (מטען בנפח = השטף היוצא כפול $\varepsilon_0$) או דיפרנציאלי ($\rho=\varepsilon_0\nabla\cdot\vec E$).</li>
+<li><b>שטף דרך חלק ממשטח סגור</b>: סימטריה (פאה של קובייה סביב מטען מרכזי = $\frac16$ מהשטף הכולל).</li>
+</ul>
+
+<h3>6. מלכודות נפוצות</h3>
+<div class="trap"><b>גאוס בלי סימטריה.</b> מטען חיצוני ליד קליפה: $Q_{\text{in}}=0$ נותן שטף אפס, אבל לא $E=0$ בכל נקודה על משטח גאוס, כי $E$ אינו קבוע ואינו רדיאלי. הכתיבה $\Phi=4\pi r^2E$ מניחה סימטריה כדורית שכבר אינה קיימת.</div>
+<div class="trap"><b>שטף דרך גליל בשדה אחיד $E_z$.</b> השטף דרך המעטפת הצדדית אפס, ורק הבסיסים תורמים, עם נורמלים הפוכים: $\Phi=E(\text{עליון})A-E(\text{תחתון})A$. יש לבדוק בזהירות באיזה תחום נמצא כל בסיס.</div>
+<div class="trap"><b>מטען שנמצא בדיוק על משטח גאוס</b> (על פאה, בפינה): הוא רק בחלקו "בפנים". פינה של קובייה משותפת ל-8 קוביות, ולכן $\Phi=q/(8\varepsilon_0)$.</div>
+<div class="trap"><b>רכיבים שמתחברים או מתבטלים.</b> על קשת, הרכיבים הניצבים לציר הסימטריה מתבטלים: מבצעים אינטגרל רק לרכיב לאורך הציר, עם $\cos\theta$.</div>
+</section>

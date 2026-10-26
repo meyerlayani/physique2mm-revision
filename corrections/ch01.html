@@ -1,0 +1,231 @@
+<article data-id="25wnA-q01">
+<div lang="fr">
+<p><b>Idée.</b> Le théorème de Gauss est toujours vrai, mais il ne donne que le <i>flux total</i>. Pour en déduire le champ, il faut pouvoir écrire $\oint\vec E\cdot d\vec s=E\cdot4\pi r^2$, ce qui exige que $|\vec E|$ soit le même partout sur la sphère et dirigé radialement.</p>
+<ol>
+<li>Ici, la charge $q$ est à l'extérieur de la coquille : le système n'a <b>pas</b> la symétrie sphérique. Le champ de $q$ à l'intérieur n'est ni radial (par rapport au centre de la coquille) ni de module constant sur la sphère de Gauss.</li>
+<li>La partie « $Q_{\text{in}}=0$, donc flux nul » est juste : la coquille (de rayon $R>r$) et $q$ sont à l'extérieur de la surface de Gauss.</li>
+<li>L'erreur est l'étape $\Phi_E=4\pi r^2E$ : flux nul n'implique pas champ nul. Le champ de $q$ entre d'un côté de la sphère et ressort de l'autre.</li>
+<li>Et en fait le champ à l'intérieur <b>n'est pas nul</b> : la coquille uniforme donne 0 à l'intérieur, mais $q$ y crée $kq/d^2$.</li>
+</ol>
+<p>Les autres options : Gauss vaut pour les isolants comme pour les conducteurs ; $\sigma_0$ n'est pas dans le volume ($r<R$) ; une sphère qui englobe $q$, ou qui est centrée ailleurs, ne rend pas le problème symétrique.</p>
+<p><b>Réponse :</b> la preuve est fausse, car le calcul du flux $\Phi_E\neq4\pi r^2E$ suppose une symétrie absente.</p>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> חוק גאוס תמיד נכון, אבל הוא נותן רק את ה<i>שטף הכולל</i>. כדי להסיק ממנו את השדה צריך לכתוב $\oint\vec E\cdot d\vec s=E\cdot4\pi r^2$, וזה מחייב ש-$|\vec E|$ יהיה זהה בכל נקודה על הספרה ויכוון רדיאלית.</p>
+<ol>
+<li>כאן המטען $q$ נמצא מחוץ לקליפה: למערכת <b>אין</b> סימטריה כדורית. השדה של $q$ בפנים אינו רדיאלי (ביחס למרכז הקליפה) וגודלו אינו קבוע על ספרת גאוס.</li>
+<li>החלק "$Q_{\text{in}}=0$ ולכן השטף אפס" נכון: הקליפה (ברדיוס $R>r$) והמטען $q$ נמצאים מחוץ למשטח גאוס.</li>
+<li>הטעות היא בשלב $\Phi_E=4\pi r^2E$: שטף אפס אינו גורר שדה אפס. השדה של $q$ נכנס מצד אחד של הספרה ויוצא מהצד השני.</li>
+<li>ולמעשה השדה בפנים <b>אינו אפס</b>: הקליפה האחידה תורמת אפס בפנים, אבל $q$ יוצר שם $kq/d^2$.</li>
+</ol>
+<p>שאר האפשרויות: חוק גאוס תקף למבודדים כמו למוליכים; $\sigma_0$ אינו בתוך הנפח ($r<R$); ספרה שמקיפה את $q$, או שמרכזה במקום אחר, אינה הופכת את הבעיה לסימטרית.</p>
+<p><b>תשובה:</b> ההוכחה שגויה, כי חישוב השטף $\Phi_E\neq4\pi r^2E$ מניח סימטריה שאינה קיימת.</p>
+</div>
+</article>
+
+<article data-id="26spM-q02">
+<div lang="fr">
+<p><b>Idée.</b> On connaît $\vec E$ partout, et on veut la charge dans un volume : c'est exactement le théorème de Gauss « à l'envers », $Q_{\text{in}}=\varepsilon_0\oint\vec E\cdot d\vec s$.</p>
+<ol>
+<li>Le champ est partout selon $\hat z$ : le flux à travers la paroi latérale du cylindre ($d\vec s\perp\hat z$) est nul. Seules les deux bases comptent.</li>
+<li>Base du haut en $z=L/2$. Comme $L/2>3L/8$, on est dans la zone $E=\dfrac{\sigma}{\varepsilon_0}\hat z$. La normale sortante est $+\hat z$ : $\Phi_{\text{haut}}=+\dfrac{\sigma}{\varepsilon_0}\pi R^2$.</li>
+<li>Base du bas en $z=-L/2<0$ : $E=\dfrac{\sigma}{3\varepsilon_0}\hat z$, avec une normale sortante $-\hat z$, donc $\Phi_{\text{bas}}=-\dfrac{\sigma}{3\varepsilon_0}\pi R^2$.</li>
+<li>$$Q_{\text{in}}=\varepsilon_0\left(\frac{\sigma}{\varepsilon_0}-\frac{\sigma}{3\varepsilon_0}\right)\pi R^2=\frac23\,\sigma\pi R^2 .$$</li>
+</ol>
+<p><b>Vérification physique :</b> les sauts de $E_z$ indiquent deux plans chargés : en $z=0$, $\sigma_1=\varepsilon_0(\frac{\sigma}{5\varepsilon_0}-\frac{\sigma}{3\varepsilon_0})=-\frac{2}{15}\sigma$, et en $z=3L/8$, $\sigma_2=\frac45\sigma$. Les deux plans sont dans le cylindre : $(\frac45-\frac2{15})\sigma\pi R^2=\frac23\sigma\pi R^2$ ✔.</p>
+<div class="trap">Le piège : lire le champ au mauvais endroit. Le cylindre va de $-L/2$ à $+L/2$, donc la base du haut est <i>au-dessus</i> de $3L/8$.</div>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> השדה $\vec E$ ידוע בכל מקום ומבקשים את המטען בנפח מסוים: זה בדיוק חוק גאוס "הפוך", $Q_{\text{in}}=\varepsilon_0\oint\vec E\cdot d\vec s$.</p>
+<ol>
+<li>השדה בכל מקום בכיוון $\hat z$: השטף דרך המעטפת הצדדית של הגליל ($d\vec s\perp\hat z$) הוא אפס. רק שני הבסיסים תורמים.</li>
+<li>הבסיס העליון ב-$z=L/2$. מכיוון ש-$L/2>3L/8$, אנחנו בתחום שבו $E=\dfrac{\sigma}{\varepsilon_0}\hat z$. הנורמל היוצא הוא $+\hat z$, ולכן $\Phi_{\text{עליון}}=+\dfrac{\sigma}{\varepsilon_0}\pi R^2$.</li>
+<li>הבסיס התחתון ב-$z=-L/2<0$: $E=\dfrac{\sigma}{3\varepsilon_0}\hat z$, עם נורמל יוצא $-\hat z$, ולכן $\Phi_{\text{תחתון}}=-\dfrac{\sigma}{3\varepsilon_0}\pi R^2$.</li>
+<li>$$Q_{\text{in}}=\varepsilon_0\left(\frac{\sigma}{\varepsilon_0}-\frac{\sigma}{3\varepsilon_0}\right)\pi R^2=\frac23\,\sigma\pi R^2 .$$</li>
+</ol>
+<p><b>בדיקה פיזיקלית:</b> הקפיצות ב-$E_z$ מעידות על שני מישורים טעונים: ב-$z=0$, $\sigma_1=\varepsilon_0(\frac{\sigma}{5\varepsilon_0}-\frac{\sigma}{3\varepsilon_0})=-\frac{2}{15}\sigma$, וב-$z=3L/8$, $\sigma_2=\frac45\sigma$. שני המישורים בתוך הגליל: $(\frac45-\frac2{15})\sigma\pi R^2=\frac23\sigma\pi R^2$ ✔.</p>
+<div class="trap">המלכודת: לקרוא את השדה במקום הלא נכון. הגליל נמתח מ-$-L/2$ עד $+L/2$, ולכן הבסיס העליון נמצא <i>מעל</i> $3L/8$.</div>
+</div>
+</article>
+
+<article data-id="26spA-q01">
+<div lang="fr">
+<p><b>Idée.</b> Intégrale de Coulomb sur un arc. Tous les éléments $dq$ sont à la même distance $R$ de l'origine, ce qui rend le calcul simple.</p>
+<ol>
+<li>Densité : la longueur de l'arc est $\pi R/2$, donc $\lambda=\dfrac{Q}{\pi R/2}=\dfrac{2Q}{\pi R}$.</li>
+<li>Un élément à l'angle $\theta$ : $dq=\lambda R\,d\theta$ et $dE=\dfrac{k\,dq}{R^2}=\dfrac{k\lambda}{R}d\theta$. Il pointe <b>de</b> l'élément <b>vers</b> l'origine (charges positives).</li>
+<li>Composantes (en module) : $|E_x|=\displaystyle\int_0^{\pi/2}\frac{k\lambda}{R}\cos\theta\,d\theta=\frac{k\lambda}{R}$, et de même $|E_y|=\dfrac{k\lambda}{R}$ (symétrie par rapport à la bissectrice).</li>
+<li>$|\vec E|=\sqrt2\,\dfrac{k\lambda}{R}=\dfrac{2\sqrt2\,kQ}{\pi R^2}$, d'où $F=q|\vec E|=\dfrac{2\sqrt2\,kqQ}{\pi R^2}$.</li>
+</ol>
+<p><b>Raccourci :</b> pour un arc d'ouverture $2\alpha$, $E=\dfrac{2k\lambda}{R}\sin\alpha$. Avec $\alpha=\pi/4$ : $E=\sqrt2\,k\lambda/R$, le même résultat.</p>
+<p><b>Contrôle de vraisemblance :</b> si toute la charge était en un seul point à distance $R$, on aurait $kqQ/R^2$. L'étalement fait que les composantes se compensent en partie, d'où le facteur $2\sqrt2/\pi\approx0{,}90<1$ ✔.</p>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> אינטגרל קולון על קשת. כל אלמנטי $dq$ נמצאים באותו מרחק $R$ מהראשית, וזה מפשט את החישוב.</p>
+<ol>
+<li>צפיפות: אורך הקשת $\pi R/2$, ולכן $\lambda=\dfrac{Q}{\pi R/2}=\dfrac{2Q}{\pi R}$.</li>
+<li>אלמנט בזווית $\theta$: $dq=\lambda R\,d\theta$ ו-$dE=\dfrac{k\,dq}{R^2}=\dfrac{k\lambda}{R}d\theta$. הוא מכוון <b>מ</b>האלמנט <b>אל</b> הראשית (מטענים חיוביים).</li>
+<li>רכיבים (בגודל): $|E_x|=\displaystyle\int_0^{\pi/2}\frac{k\lambda}{R}\cos\theta\,d\theta=\frac{k\lambda}{R}$, ובאותו אופן $|E_y|=\dfrac{k\lambda}{R}$ (סימטריה ביחס לאלכסון).</li>
+<li>$|\vec E|=\sqrt2\,\dfrac{k\lambda}{R}=\dfrac{2\sqrt2\,kQ}{\pi R^2}$, ומכאן $F=q|\vec E|=\dfrac{2\sqrt2\,kqQ}{\pi R^2}$.</li>
+</ol>
+<p><b>קיצור דרך:</b> לקשת בזווית פתיחה $2\alpha$, $E=\dfrac{2k\lambda}{R}\sin\alpha$. עם $\alpha=\pi/4$ מקבלים $E=\sqrt2\,k\lambda/R$, אותה תוצאה.</p>
+<p><b>בדיקת סבירות:</b> אילו כל המטען היה בנקודה אחת במרחק $R$, היינו מקבלים $kqQ/R^2$. הפיזור גורם לרכיבים להתבטל חלקית, ולכן מופיע הגורם $2\sqrt2/\pi\approx0.90<1$ ✔.</p>
+</div>
+</article>
+
+<article data-id="26spA-q02">
+<div lang="fr">
+<p><b>Idée.</b> On donne le champ, on demande la densité locale : forme différentielle de Gauss, $\rho=\varepsilon_0\,\vec\nabla\cdot\vec E$.</p>
+<ol>
+<li>Le champ est radial et ne dépend que de $r$ : $\vec\nabla\cdot\vec E=\dfrac1{r^2}\dfrac{\partial}{\partial r}\left(r^2E_r\right)$.</li>
+<li>$r^2E_r=\dfrac{E_0}{R^3}r^5$, donc $\dfrac{\partial}{\partial r}(r^2E_r)=\dfrac{5E_0r^4}{R^3}$ et $\vec\nabla\cdot\vec E=\dfrac{5E_0r^2}{R^3}$.</li>
+<li>$\rho(r)=\dfrac{5\varepsilon_0E_0r^2}{R^3}$.</li>
+</ol>
+<p><b>Vérification par Gauss intégral :</b> $Q_{\text{in}}(r)=\varepsilon_0E\cdot4\pi r^2=\dfrac{4\pi\varepsilon_0E_0r^5}{R^3}$, et $\displaystyle\int_0^r\frac{5\varepsilon_0E_0r'^2}{R^3}4\pi r'^2dr'$ donne bien la même chose ✔.</p>
+<div class="trap">Erreur fréquente : écrire $\nabla\cdot\vec E=\partial E_r/\partial r=3E_0r^2/R^3$, comme en coordonnées cartésiennes. En sphérique, le facteur $r^2$ (la surface de la sphère qui grandit) est indispensable.</div>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> נתון השדה ומבקשים את הצפיפות המקומית: הצורה הדיפרנציאלית של חוק גאוס, $\rho=\varepsilon_0\,\vec\nabla\cdot\vec E$.</p>
+<ol>
+<li>השדה רדיאלי ותלוי רק ב-$r$: $\vec\nabla\cdot\vec E=\dfrac1{r^2}\dfrac{\partial}{\partial r}\left(r^2E_r\right)$.</li>
+<li>$r^2E_r=\dfrac{E_0}{R^3}r^5$, ולכן $\dfrac{\partial}{\partial r}(r^2E_r)=\dfrac{5E_0r^4}{R^3}$ ו-$\vec\nabla\cdot\vec E=\dfrac{5E_0r^2}{R^3}$.</li>
+<li>$\rho(r)=\dfrac{5\varepsilon_0E_0r^2}{R^3}$.</li>
+</ol>
+<p><b>בדיקה בעזרת גאוס האינטגרלי:</b> $Q_{\text{in}}(r)=\varepsilon_0E\cdot4\pi r^2=\dfrac{4\pi\varepsilon_0E_0r^5}{R^3}$, ו-$\displaystyle\int_0^r\frac{5\varepsilon_0E_0r'^2}{R^3}4\pi r'^2dr'$ נותן בדיוק אותו דבר ✔.</p>
+<div class="trap">טעות נפוצה: לכתוב $\nabla\cdot\vec E=\partial E_r/\partial r=3E_0r^2/R^3$, כמו בקואורדינטות קרטזיות. בקואורדינטות כדוריות הגורם $r^2$ (שטח הספרה שגדל) הכרחי.</div>
+</div>
+</article>
+
+<article data-id="26spB-q01">
+<div lang="fr">
+<p><b>Idée.</b> Champ sur l'axe d'un disque : on le découpe en anneaux. Par symétrie de révolution, seule la composante $z$ survit.</p>
+<ol>
+<li>Anneau de rayon $r$, d'épaisseur $dr$ : $dq=\sigma\,2\pi r\,dr=2\pi A r^3dr$.</li>
+<li>Champ axial d'un anneau à la hauteur $h$ : $dE_z=\dfrac{k\,dq\,h}{(r^2+h^2)^{3/2}}$ (le facteur $h/\sqrt{r^2+h^2}$ est le cosinus de projection).</li>
+<li>$$E_z=2\pi kAh\int_0^R\frac{r^3dr}{(r^2+h^2)^{3/2}}=2\pi kAh\left[\frac{r^2+2h^2}{\sqrt{r^2+h^2}}\right]_0^R$$ en utilisant l'intégrale fournie avec $a=h$.</li>
+<li>En $r=0$ le crochet vaut $\dfrac{2h^2}{h}=2h$. D'où $\vec E(P)=2\pi khA\left(\dfrac{R^2+2h^2}{\sqrt{R^2+h^2}}-2h\right)\hat z$.</li>
+</ol>
+<p><b>Contrôle :</b> pour $h\gg R$, le développement donne $E\approx\dfrac{k(\pi AR^4/2)}{h^2}=\dfrac{kQ_{\text{tot}}}{h^2}$, avec $Q_{\text{tot}}=\int_0^R Ar^2\,2\pi r\,dr=\pi AR^4/2$ : on retrouve une charge ponctuelle ✔. Le calcul a aussi été vérifié symboliquement.</p>
+<div class="trap">Ne pas oublier la borne inférieure : le terme $-2h$ vient de $r=0$. Les options sans ce terme sont fausses.</div>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> שדה על ציר דסקה: מחלקים אותה לטבעות. בגלל הסימטריה הסיבובית נשאר רק רכיב $z$.</p>
+<ol>
+<li>טבעת ברדיוס $r$ ובעובי $dr$: $dq=\sigma\,2\pi r\,dr=2\pi A r^3dr$.</li>
+<li>השדה הצירי של טבעת בגובה $h$: $dE_z=\dfrac{k\,dq\,h}{(r^2+h^2)^{3/2}}$ (הגורם $h/\sqrt{r^2+h^2}$ הוא קוסינוס ההטלה).</li>
+<li>$$E_z=2\pi kAh\int_0^R\frac{r^3dr}{(r^2+h^2)^{3/2}}=2\pi kAh\left[\frac{r^2+2h^2}{\sqrt{r^2+h^2}}\right]_0^R$$ בעזרת האינטגרל הנתון עם $a=h$.</li>
+<li>ב-$r=0$ הסוגריים שווים ל-$\dfrac{2h^2}{h}=2h$. לכן $\vec E(P)=2\pi khA\left(\dfrac{R^2+2h^2}{\sqrt{R^2+h^2}}-2h\right)\hat z$.</li>
+</ol>
+<p><b>בדיקה:</b> עבור $h\gg R$ הפיתוח נותן $E\approx\dfrac{k(\pi AR^4/2)}{h^2}=\dfrac{kQ_{\text{tot}}}{h^2}$, כאשר $Q_{\text{tot}}=\int_0^R Ar^2\,2\pi r\,dr=\pi AR^4/2$: מתקבל מטען נקודתי ✔. החישוב נבדק גם סימבולית.</p>
+<div class="trap">לא לשכוח את הגבול התחתון: האיבר $-2h$ מגיע מ-$r=0$. האפשרויות בלי האיבר הזה שגויות.</div>
+</div>
+</article>
+
+<article data-id="26spB-q02">
+<div lang="fr">
+<p><b>Idée.</b> Symétrie sphérique : Gauss avec une sphère de rayon $r<R$. Toute la difficulté est la charge enfermée, puisque $\rho$ varie.</p>
+<ol>
+<li>$$Q_{\text{in}}(r)=\int_0^r\rho_0\left(1-\frac{r'}{R}\right)4\pi r'^2dr'=4\pi\rho_0\left(\frac{r^3}{3}-\frac{r^4}{4R}\right).$$</li>
+<li>Gauss : $E\cdot4\pi r^2=\dfrac{Q_{\text{in}}}{\varepsilon_0}$, donc $E=\dfrac{\rho_0}{\varepsilon_0}\left(\dfrac r3-\dfrac{r^2}{4R}\right)$.</li>
+</ol>
+<p><b>Contrôles :</b> près du centre, $\rho\approx\rho_0$ et on retrouve le résultat d'une boule uniforme $\rho_0r/(3\varepsilon_0)$ ✔. Les dimensions sont homogènes à $\rho_0 r/\varepsilon_0$ ✔.</p>
+<div class="trap">Mettre $\rho(r)$ directement dans $\rho r/(3\varepsilon_0)$ (option $\frac{\rho_0r}{3\varepsilon_0}(1-\frac rR)$) est faux : cette formule n'est valable que pour une densité uniforme. Avec une densité variable, il faut intégrer.</div>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> סימטריה כדורית: חוק גאוס עם ספרה ברדיוס $r<R$. כל הקושי הוא המטען הכלוא, כי $\rho$ משתנה.</p>
+<ol>
+<li>$$Q_{\text{in}}(r)=\int_0^r\rho_0\left(1-\frac{r'}{R}\right)4\pi r'^2dr'=4\pi\rho_0\left(\frac{r^3}{3}-\frac{r^4}{4R}\right).$$</li>
+<li>גאוס: $E\cdot4\pi r^2=\dfrac{Q_{\text{in}}}{\varepsilon_0}$, ולכן $E=\dfrac{\rho_0}{\varepsilon_0}\left(\dfrac r3-\dfrac{r^2}{4R}\right)$.</li>
+</ol>
+<p><b>בדיקות:</b> ליד המרכז $\rho\approx\rho_0$, ומתקבלת התוצאה של כדור אחיד $\rho_0r/(3\varepsilon_0)$ ✔. היחידות זהות ל-$\rho_0 r/\varepsilon_0$ ✔.</p>
+<div class="trap">להציב את $\rho(r)$ ישירות ב-$\rho r/(3\varepsilon_0)$ (האפשרות $\frac{\rho_0r}{3\varepsilon_0}(1-\frac rR)$) זו טעות: הנוסחה הזו נכונה רק לצפיפות אחידה. עם צפיפות משתנה חייבים לבצע אינטגרל.</div>
+</div>
+</article>
+
+<article data-id="26wnA-q01">
+<div lang="fr">
+<p><b>Idée.</b> Superposition : champ du demi-cercle + champ des deux tiges. La symétrie gauche/droite annule toutes les composantes $x$ : on ne garde que les composantes $y$.</p>
+<ol>
+<li><b>Demi-cercle</b> (sous le centre, rayon $d$) : arc d'ouverture $2\alpha=\pi$, donc $E=\dfrac{2k\lambda_0}{d}$, dirigé vers le haut ($+y$), puisque les charges sont en dessous et repoussent.</li>
+<li><b>Une tige</b> : elle va de $(d,0)$ à $(d,d)$. Un élément en $(d,y)$ est à la distance $\sqrt{d^2+y^2}$. Sa composante verticale au centre, dirigée vers le bas, vaut $$\frac{k\lambda_0\,dy}{d^2+y^2}\cdot\frac{y}{\sqrt{d^2+y^2}},\qquad E_{y,\text{tige}}=-k\lambda_0\int_0^d\frac{y\,dy}{(d^2+y^2)^{3/2}}=-\frac{k\lambda_0}{d}\left(1-\frac1{\sqrt2}\right).$$</li>
+<li>Deux tiges : $-\dfrac{k\lambda_0}{d}(2-\sqrt2)$.</li>
+<li>Total : $E=\dfrac{k\lambda_0}{d}\left(2-2+\sqrt2\right)=\sqrt2\,\dfrac{k\lambda_0}{d}\approx1{,}41\,\dfrac{k\lambda_0}{d}$.</li>
+</ol>
+<div class="trap">Les tiges sont <i>au-dessus</i> du centre : leur contribution verticale s'oppose à celle du demi-cercle. Les additionner donnerait $\approx2{,}59$, une valeur absente des options mais proche de 2,53, donc dangereuse.</div>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> סופרפוזיציה: השדה של חצי המעגל ועוד השדה של שני המוטות. הסימטריה ימין/שמאל מבטלת את כל רכיבי $x$, ונשארים רק רכיבי $y$.</p>
+<ol>
+<li><b>חצי המעגל</b> (מתחת למרכז, ברדיוס $d$): קשת בזווית פתיחה $2\alpha=\pi$, ולכן $E=\dfrac{2k\lambda_0}{d}$, בכיוון מעלה ($+y$), כי המטענים מתחת למרכז ודוחים אותו.</li>
+<li><b>מוט אחד</b>: נמתח מ-$(d,0)$ עד $(d,d)$. אלמנט ב-$(d,y)$ נמצא במרחק $\sqrt{d^2+y^2}$. הרכיב האנכי שלו במרכז, מכוון מטה, הוא $$\frac{k\lambda_0\,dy}{d^2+y^2}\cdot\frac{y}{\sqrt{d^2+y^2}},\qquad E_{y,\text{מוט}}=-k\lambda_0\int_0^d\frac{y\,dy}{(d^2+y^2)^{3/2}}=-\frac{k\lambda_0}{d}\left(1-\frac1{\sqrt2}\right).$$</li>
+<li>שני מוטות: $-\dfrac{k\lambda_0}{d}(2-\sqrt2)$.</li>
+<li>סך הכול: $E=\dfrac{k\lambda_0}{d}\left(2-2+\sqrt2\right)=\sqrt2\,\dfrac{k\lambda_0}{d}\approx1.41\,\dfrac{k\lambda_0}{d}$.</li>
+</ol>
+<div class="trap">המוטות נמצאים <i>מעל</i> המרכז: התרומה האנכית שלהם מנוגדת לזו של חצי המעגל. חיבור התרומות היה נותן $\approx2.59$, ערך שאינו בין התשובות אבל קרוב ל-2.53, ולכן מסוכן.</div>
+</div>
+</article>
+
+<article data-id="25wnA-q02">
+<div lang="fr">
+<p><b>Idée.</b> Symétrie sphérique, et le point est à l'extérieur de tout ($r>b$) : par Gauss, $E=kQ_{\text{tot}}/r^2$. Il suffit de calculer la charge totale.</p>
+<ol>
+<li>Charge de la coquille : $$Q_{\text{coq}}=\int_a^b\frac Ar\,4\pi r^2dr=4\pi A\int_a^b r\,dr=2\pi A(b^2-a^2).$$</li>
+<li>$Q_{\text{tot}}=Q+2\pi A(b^2-a^2)$.</li>
+<li>$$E(r)=\frac{kQ}{r^2}+\frac{2\pi kA(b^2-a^2)}{r^2}.$$</li>
+</ol>
+<div class="trap">Les options en $(r^2-a^2)$ correspondent à la région <i>dans</i> la coquille ($a<r<b$), et celle en $(r^2-b^2)$ n'a pas de sens. Toujours vérifier dans quelle région se trouve le point demandé.</div>
+<p>Remarque : la même configuration est demandée dans 2024 printemps C Q2 (« trouver $A$ pour que $E$ soit uniforme dans la coquille »). Dans la coquille, $E=\dfrac{k(Q-2\pi Aa^2)}{r^2}+2\pi kA$, uniforme si $Q=2\pi Aa^2$.</p>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> סימטריה כדורית, והנקודה נמצאת מחוץ לכל המערכת ($r>b$): לפי גאוס $E=kQ_{\text{tot}}/r^2$. מספיק לחשב את המטען הכולל.</p>
+<ol>
+<li>מטען הקליפה: $$Q_{\text{קליפה}}=\int_a^b\frac Ar\,4\pi r^2dr=4\pi A\int_a^b r\,dr=2\pi A(b^2-a^2).$$</li>
+<li>$Q_{\text{tot}}=Q+2\pi A(b^2-a^2)$.</li>
+<li>$$E(r)=\frac{kQ}{r^2}+\frac{2\pi kA(b^2-a^2)}{r^2}.$$</li>
+</ol>
+<div class="trap">האפשרויות עם $(r^2-a^2)$ מתאימות לתחום <i>בתוך</i> הקליפה ($a<r<b$), והאפשרות עם $(r^2-b^2)$ חסרת משמעות. תמיד לבדוק באיזה תחום נמצאת הנקודה המבוקשת.</div>
+<p>הערה: אותה מערכת מופיעה באביב 2024 מועד ג שאלה 2 ("מצאו את $A$ כך ש-$E$ יהיה אחיד בתוך הקליפה"). בתוך הקליפה $E=\dfrac{k(Q-2\pi Aa^2)}{r^2}+2\pi kA$, והשדה אחיד אם $Q=2\pi Aa^2$.</p>
+</div>
+</article>
+
+<article data-id="25wnB-q01">
+<div lang="fr">
+<p><b>Idée.</b> On ne peut pas calculer le flux à travers une seule face directement, mais la <b>symétrie</b> le permet : la boule est centrée dans le cube, donc les 6 faces sont équivalentes et reçoivent chacune $\frac16$ du flux total. Le flux total vient de Gauss.</p>
+<ol>
+<li>Charge totale : $$Q=\int_0^R\rho_0\frac{R^2}{r^2}e^{-r/R}\,4\pi r^2dr=4\pi\rho_0R^2\int_0^Re^{-r/R}dr=4\pi\rho_0R^3\left(1-\frac1e\right).$$ Le $r^2$ du volume compense le $1/r^2$ de la densité.</li>
+<li>Gauss sur le cube (qui contient toute la charge) : $\Phi_{\text{tot}}=Q/\varepsilon_0$.</li>
+<li>$$\Phi_{\text{bas}}=\frac16\frac{Q}{\varepsilon_0}=\frac{2\pi}{3}\frac{R^3\rho_0}{\varepsilon_0}\left(1-\frac1e\right).$$</li>
+</ol>
+<div class="trap">La boule touche les faces, mais cela ne change rien : toute la charge est à l'intérieur du cube (ou sur un ensemble de points de mesure nulle). Seule compte la position du centre, qui garantit la symétrie.</div>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> אי אפשר לחשב ישירות את השטף דרך פאה אחת, אבל <b>הסימטריה</b> מאפשרת זאת: הכדור ממורכז בקובייה, ולכן 6 הפאות שקולות וכל אחת מקבלת $\frac16$ מהשטף הכולל. את השטף הכולל נותן חוק גאוס.</p>
+<ol>
+<li>המטען הכולל: $$Q=\int_0^R\rho_0\frac{R^2}{r^2}e^{-r/R}\,4\pi r^2dr=4\pi\rho_0R^2\int_0^Re^{-r/R}dr=4\pi\rho_0R^3\left(1-\frac1e\right).$$ ה-$r^2$ של הנפח מבטל את ה-$1/r^2$ של הצפיפות.</li>
+<li>גאוס על הקובייה (שמכילה את כל המטען): $\Phi_{\text{tot}}=Q/\varepsilon_0$.</li>
+<li>$$\Phi_{\text{תחתונה}}=\frac16\frac{Q}{\varepsilon_0}=\frac{2\pi}{3}\frac{R^3\rho_0}{\varepsilon_0}\left(1-\frac1e\right).$$</li>
+</ol>
+<div class="trap">הכדור משיק לפאות, אבל זה לא משנה דבר: כל המטען בתוך הקובייה (או על קבוצת נקודות בעלת מידה אפס). רק מיקום המרכז חשוב, כי הוא מבטיח את הסימטריה.</div>
+</div>
+</article>
+
+<article data-id="25wnB-q02">
+<div lang="fr">
+<p><b>Idée.</b> Champ de l'anneau sur son axe, puis recherche d'un maximum par dérivation.</p>
+<ol>
+<li>Chaque $dq$ est à la distance $\sqrt{R^2+z^2}$. Les composantes radiales s'annulent deux à deux, et la composante axiale est $dE\cdot\dfrac{z}{\sqrt{R^2+z^2}}$. D'où $$E_z(z)=\frac{kQz}{(R^2+z^2)^{3/2}}.$$</li>
+<li>$E_z(0)=0$ (par symétrie, les contributions s'annulent au centre) et $E_z\to0$ quand $z\to\infty$ : il y a donc un maximum entre les deux.</li>
+<li>$$\frac{dE_z}{dz}=kQ\,\frac{(R^2+z^2)-3z^2}{(R^2+z^2)^{5/2}}=0\iff R^2=2z^2\iff z=\frac{R}{\sqrt2}.$$</li>
+</ol>
+<p><b>Image physique :</b> près du centre, le champ est petit car les charges « tirent » dans tous les sens. Loin, il décroît en $1/z^2$. Le maximum est au compromis $z=R/\sqrt2\approx0{,}71R$.</p>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> שדה טבעת על צירה, ואחר כך מציאת מקסימום בגזירה.</p>
+<ol>
+<li>כל $dq$ נמצא במרחק $\sqrt{R^2+z^2}$. הרכיבים הרדיאליים מתבטלים בזוגות, והרכיב הצירי הוא $dE\cdot\dfrac{z}{\sqrt{R^2+z^2}}$. לכן $$E_z(z)=\frac{kQz}{(R^2+z^2)^{3/2}}.$$</li>
+<li>$E_z(0)=0$ (מסימטריה, התרומות מתבטלות במרכז) ו-$E_z\to0$ כאשר $z\to\infty$: יש אם כן מקסימום ביניהם.</li>
+<li>$$\frac{dE_z}{dz}=kQ\,\frac{(R^2+z^2)-3z^2}{(R^2+z^2)^{5/2}}=0\iff R^2=2z^2\iff z=\frac{R}{\sqrt2}.$$</li>
+</ol>
+<p><b>תמונה פיזיקלית:</b> ליד המרכז השדה קטן, כי המטענים "מושכים" לכל הכיוונים. רחוק השדה דועך כ-$1/z^2$. המקסימום נמצא בפשרה $z=R/\sqrt2\approx0.71R$.</p>
+</div>
+</article>
