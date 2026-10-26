@@ -1,0 +1,67 @@
+<section lang="fr">
+<h2>Les équations de Maxwell</h2>
+
+<h3>1. Le problème qui a mené au courant de déplacement</h3>
+<p>Prenons un condensateur en charge et appliquons Ampère à une boucle qui entoure le fil. Avec une surface plate traversée par le fil, on trouve $\oint\vec B\cdot d\vec l=\mu_0I$. Avec une surface « en sac » qui passe <b>entre les plaques</b>, aucun courant ne la traverse, et on trouve $0$. Même boucle, deux réponses : Ampère est incomplet.</p>
+<p>La solution de Maxwell : entre les plaques, le <b>flux électrique change</b>. Ce terme joue exactement le rôle d'un courant, le <b>courant de déplacement</b> :</p>
+<div class="box">$$I_d=\varepsilon_0\frac{d\Phi_E}{dt},\qquad \oint\vec B\cdot d\vec l=\mu_0\left(I_{\text{enl}}+\varepsilon_0\frac{d\Phi_E}{dt}\right)$$</div>
+<p>Entre les plaques d'un condensateur plan (aire $A$, charge $Q(t)$), $\Phi_E=Q/\varepsilon_0$ à travers toute l'aire, donc $I_d=dQ/dt=I$ : le courant de déplacement « continue » le courant du fil. Pour un cercle de rayon $r$ plus petit que les plaques (rayon $a$), seule la fraction $r^2/a^2$ du flux est enlacée :</p>
+$$B(r)\cdot2\pi r=\mu_0\frac{r^2}{a^2}\frac{dQ}{dt}\quad\Rightarrow\quad B(r)=\frac{\mu_0r}{2\pi a^2}\left|\frac{dQ}{dt}\right|.$$
+
+<h3>2. Les quatre équations dans le vide</h3>
+<table>
+<tr><th>Forme intégrale</th><th>Forme locale</th><th>Sens physique</th></tr>
+<tr><td>$\oint\vec E\cdot d\vec A=\dfrac{Q_{\text{int}}}{\varepsilon_0}$</td><td>$\nabla\cdot\vec E=\dfrac{\rho}{\varepsilon_0}$</td><td>Les charges sont les sources de $\vec E$</td></tr>
+<tr><td>$\oint\vec B\cdot d\vec A=0$</td><td>$\nabla\cdot\vec B=0$</td><td>Pas de monopôle magnétique</td></tr>
+<tr><td>$\oint\vec E\cdot d\vec l=-\dfrac{d\Phi_B}{dt}$</td><td>$\nabla\times\vec E=-\dfrac{\partial\vec B}{\partial t}$</td><td>Faraday : $\vec B$ variable crée $\vec E$ tourbillonnant</td></tr>
+<tr><td>$\oint\vec B\cdot d\vec l=\mu_0I+\mu_0\varepsilon_0\dfrac{d\Phi_E}{dt}$</td><td>$\nabla\times\vec B=\mu_0\vec J+\mu_0\varepsilon_0\dfrac{\partial\vec E}{\partial t}$</td><td>Ampère-Maxwell : courants et $\vec E$ variable créent $\vec B$</td></tr>
+</table>
+<p>La symétrie entre les deux dernières équations (un $\vec B$ variable crée $\vec E$, un $\vec E$ variable crée $\vec B$) permet aux champs de s'auto-entretenir loin des sources : ce sont les ondes électromagnétiques (chapitre 10), qui se propagent à $c=1/\sqrt{\mu_0\varepsilon_0}$.</p>
+
+<h3>3. Champ électrique induit (symétrie cylindrique)</h3>
+<p>Solénoïde ou région cylindrique de rayon $R$ où $B(t)$ est uniforme. Par symétrie, $\vec E$ induit est <b>azimutal</b>, et Faraday sur un cercle de rayon $r$ donne :</p>
+<div class="box">$$E\cdot2\pi r=\left|\frac{d\Phi_B}{dt}\right|\ \Rightarrow\ E(r)=\begin{cases}\dfrac r2\left|\dfrac{dB}{dt}\right| & r&lt;R\\[2mm] \dfrac{R^2}{2r}\left|\dfrac{dB}{dt}\right| & r>R\end{cases}$$</div>
+<p>À l'extérieur, $B=0$ mais $\vec E\neq0$ : le flux enlacé change. Le sens est donné par Lenz.</p>
+<p><b>Retrouver $\vec B$ à partir d'un $\vec E$ induit donné</b> : $\dfrac{\partial\vec B}{\partial t}=-\nabla\times\vec E$, puis on intègre en temps.</p>
+
+<h3>4. Que conclure d'un flux nul ?</h3>
+<ul>
+<li>$\oint\vec E\cdot d\vec A=0$ : la charge <b>totale</b> intérieure est nulle. Il peut y avoir des charges (positives et négatives), au repos ou en mouvement.</li>
+<li>$\oint\vec B\cdot d\vec A=0$ : c'est <b>toujours</b> vrai. On ne peut rien en conclure sur l'intérieur.</li>
+<li>Gauss électrique reste valable pour des charges en mouvement et même pendant leur création ou annihilation, puisque la charge totale est conservée.</li>
+</ul>
+</section>
+
+<section lang="he">
+<h2>משוואות מקסוול</h2>
+
+<h3>1. הבעיה שהובילה לזרם ההעתקה</h3>
+<p>ניקח קבל בטעינה ונפעיל את חוק אמפר על לולאה שמקיפה את התיל. עם משטח שטוח שהתיל חוצה, מקבלים $\oint\vec B\cdot d\vec l=\mu_0I$. עם משטח "שק" שעובר <b>בין הלוחות</b>, אף זרם לא חוצה אותו, ומקבלים $0$. אותה לולאה, שתי תשובות: חוק אמפר אינו שלם.</p>
+<p>הפתרון של מקסוול: בין הלוחות <b>השטף החשמלי משתנה</b>. האיבר הזה ממלא בדיוק את התפקיד של זרם, <b>זרם ההעתקה</b>:</p>
+<div class="box">$$I_d=\varepsilon_0\frac{d\Phi_E}{dt},\qquad \oint\vec B\cdot d\vec l=\mu_0\left(I_{\text{enc}}+\varepsilon_0\frac{d\Phi_E}{dt}\right)$$</div>
+<p>בין לוחות קבל (שטח $A$, מטען $Q(t)$), $\Phi_E=Q/\varepsilon_0$ דרך כל השטח, ולכן $I_d=dQ/dt=I$: זרם ההעתקה "ממשיך" את הזרם בתיל. למעגל ברדיוס $r$ קטן מהלוחות (רדיוס $a$), רק החלק $r^2/a^2$ של השטף כלוא:</p>
+$$B(r)\cdot2\pi r=\mu_0\frac{r^2}{a^2}\frac{dQ}{dt}\quad\Rightarrow\quad B(r)=\frac{\mu_0r}{2\pi a^2}\left|\frac{dQ}{dt}\right|.$$
+
+<h3>2. ארבע המשוואות בריק</h3>
+<table>
+<tr><th>צורה אינטגרלית</th><th>צורה דיפרנציאלית</th><th>משמעות פיזיקלית</th></tr>
+<tr><td>$\oint\vec E\cdot d\vec A=\dfrac{Q_{\text{in}}}{\varepsilon_0}$</td><td>$\nabla\cdot\vec E=\dfrac{\rho}{\varepsilon_0}$</td><td>המטענים הם המקורות של $\vec E$</td></tr>
+<tr><td>$\oint\vec B\cdot d\vec A=0$</td><td>$\nabla\cdot\vec B=0$</td><td>אין מונופול מגנטי</td></tr>
+<tr><td>$\oint\vec E\cdot d\vec l=-\dfrac{d\Phi_B}{dt}$</td><td>$\nabla\times\vec E=-\dfrac{\partial\vec B}{\partial t}$</td><td>פאראדיי: $\vec B$ משתנה יוצר $\vec E$ מסתחרר</td></tr>
+<tr><td>$\oint\vec B\cdot d\vec l=\mu_0I+\mu_0\varepsilon_0\dfrac{d\Phi_E}{dt}$</td><td>$\nabla\times\vec B=\mu_0\vec J+\mu_0\varepsilon_0\dfrac{\partial\vec E}{\partial t}$</td><td>אמפר-מקסוול: זרמים ו-$\vec E$ משתנה יוצרים $\vec B$</td></tr>
+</table>
+<p>הסימטריה בין שתי המשוואות האחרונות ($\vec B$ משתנה יוצר $\vec E$, ו-$\vec E$ משתנה יוצר $\vec B$) מאפשרת לשדות לקיים זה את זה הרחק מהמקורות: אלה הגלים האלקטרומגנטיים (פרק 10), שמתקדמים במהירות $c=1/\sqrt{\mu_0\varepsilon_0}$.</p>
+
+<h3>3. שדה חשמלי מושרה (סימטריה גלילית)</h3>
+<p>סליל או אזור גלילי ברדיוס $R$ שבו $B(t)$ אחיד. מסימטריה, $\vec E$ המושרה <b>אזימוטלי</b>, ופאראדיי על מעגל ברדיוס $r$ נותן:</p>
+<div class="box">$$E\cdot2\pi r=\left|\frac{d\Phi_B}{dt}\right|\ \Rightarrow\ E(r)=\begin{cases}\dfrac r2\left|\dfrac{dB}{dt}\right| & r&lt;R\\[2mm] \dfrac{R^2}{2r}\left|\dfrac{dB}{dt}\right| & r>R\end{cases}$$</div>
+<p>בחוץ $B=0$ אבל $\vec E\neq0$: השטף הכלוא משתנה. הכיוון נקבע לפי לנץ.</p>
+<p><b>מציאת $\vec B$ מתוך $\vec E$ מושרה נתון</b>: $\dfrac{\partial\vec B}{\partial t}=-\nabla\times\vec E$, ואז אינטגרציה בזמן.</p>
+
+<h3>4. מה אפשר להסיק משטף אפס?</h3>
+<ul>
+<li>$\oint\vec E\cdot d\vec A=0$: המטען <b>הכולל</b> בפנים אפס. ייתכנו מטענים (חיוביים ושליליים), נחים או נעים.</li>
+<li>$\oint\vec B\cdot d\vec A=0$: זה <b>תמיד</b> נכון. אי אפשר להסיק ממנו דבר על הפנים.</li>
+<li>חוק גאוס החשמלי תקף גם למטענים נעים, ואפילו בזמן יצירתם או השמדתם, כי המטען הכולל נשמר.</li>
+</ul>
+</section>

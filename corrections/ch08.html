@@ -1,0 +1,130 @@
+<article data-id="26wnA-q09">
+<div lang="fr">
+<p><b>Idée.</b> Entre les plaques il n'y a pas de courant de conduction, mais le flux électrique change : c'est le <b>courant de déplacement</b> qui crée $\vec B$ (Ampère-Maxwell).</p>
+<ol>
+<li>Champ entre les plaques : $E=\dfrac{Q(t)}{\varepsilon_0\pi a^2}$, uniforme. Flux à travers un disque de rayon $r&lt;a$ : $\Phi_E=E\pi r^2=\dfrac{Q r^2}{\varepsilon_0a^2}$.</li>
+<li>$B\cdot2\pi r=\mu_0\varepsilon_0\dfrac{d\Phi_E}{dt}=\mu_0\dfrac{r^2}{a^2}\dfrac{dQ}{dt}$, donc $|B|=\dfrac{\mu_0r}{2\pi a^2}\left|\dfrac{dQ}{dt}\right|$.</li>
+<li>$\left|\dfrac{dQ}{dt}\right|=\dfrac{Q_0}{\tau}e^{-t/\tau}=\dfrac{Q_0}{2\tau}$ à $t=\tau\ln2$.</li>
+<li>Avec $r=a/2$ : $|B|=\dfrac{\mu_0(a/2)}{2\pi a^2}\cdot\dfrac{Q_0}{2\tau}=\dfrac{\mu_0Q_0}{8\pi a\tau}$.</li>
+</ol>
+<p><b>Image :</b> le courant de déplacement entre les plaques « continue » le courant du fil ; vu de loin, c'est comme si le fil n'était pas interrompu.</p>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> בין הלוחות אין זרם הולכה, אבל השטף החשמלי משתנה: <b>זרם ההעתקה</b> הוא שיוצר את $\vec B$ (אמפר-מקסוול).</p>
+<ol>
+<li>השדה בין הלוחות: $E=\dfrac{Q(t)}{\varepsilon_0\pi a^2}$, אחיד. השטף דרך עיגול ברדיוס $r&lt;a$: $\Phi_E=E\pi r^2=\dfrac{Q r^2}{\varepsilon_0a^2}$.</li>
+<li>$B\cdot2\pi r=\mu_0\varepsilon_0\dfrac{d\Phi_E}{dt}=\mu_0\dfrac{r^2}{a^2}\dfrac{dQ}{dt}$, ולכן $|B|=\dfrac{\mu_0r}{2\pi a^2}\left|\dfrac{dQ}{dt}\right|$.</li>
+<li>$\left|\dfrac{dQ}{dt}\right|=\dfrac{Q_0}{\tau}e^{-t/\tau}=\dfrac{Q_0}{2\tau}$ ב-$t=\tau\ln2$.</li>
+<li>עם $r=a/2$: $|B|=\dfrac{\mu_0(a/2)}{2\pi a^2}\cdot\dfrac{Q_0}{2\tau}=\dfrac{\mu_0Q_0}{8\pi a\tau}$.</li>
+</ol>
+<p><b>תמונה:</b> זרם ההעתקה בין הלוחות "ממשיך" את הזרם בתיל; מרחוק זה כאילו התיל לא נקטע.</p>
+</div>
+</article>
+
+<article data-id="24wnA-q09">
+<div lang="fr">
+<p><b>Idée.</b> Faraday sous forme locale : $\nabla\times\vec E=-\dfrac{\partial\vec B}{\partial t}$. On calcule le rotationnel, puis on intègre en temps.</p>
+<ol>
+<li>$\vec E=\alpha(y,-x,0)$ : $(\nabla\times\vec E)_z=\partial_xE_y-\partial_yE_x=-\alpha-\alpha=-2\alpha$ (les autres composantes sont nulles).</li>
+<li>$\dfrac{\partial\vec B}{\partial t}=2\alpha\hat z$, d'où $\vec B=2\alpha t\,\hat z$ (+ une constante, prise nulle).</li>
+</ol>
+<p><b>Image :</b> $\vec E$ tourne dans le sens horaire autour de l'axe $z$ ; c'est le champ induit par un $B_z$ croissant (Lenz) ✔.</p>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> פאראדיי בצורה המקומית: $\nabla\times\vec E=-\dfrac{\partial\vec B}{\partial t}$. מחשבים את הרוטור ומבצעים אינטגרל בזמן.</p>
+<ol>
+<li>$\vec E=\alpha(y,-x,0)$: $(\nabla\times\vec E)_z=\partial_xE_y-\partial_yE_x=-\alpha-\alpha=-2\alpha$ (שאר הרכיבים אפס).</li>
+<li>$\dfrac{\partial\vec B}{\partial t}=2\alpha\hat z$, ומכאן $\vec B=2\alpha t\,\hat z$ (ועוד קבוע, שנבחר אפס).</li>
+</ol>
+<p><b>תמונה:</b> $\vec E$ מסתובב עם כיוון השעון סביב ציר $z$; זה השדה המושרה על ידי $B_z$ גדל (לנץ) ✔.</p>
+</div>
+</article>
+
+<article data-id="24spB-q07">
+<div lang="fr">
+<p><b>Idée.</b> Pas de courant de conduction : $\oint\vec B\cdot d\vec l=\mu_0\varepsilon_0\dfrac{d\Phi_E}{dt}=\dfrac1{c^2}\dfrac{d\Phi_E}{dt}$. Il faut le flux de $\vec E$ (selon $\hat z$) à travers le disque de rayon $b$.</p>
+<ol>
+<li>$\Phi_E=\displaystyle\int_0^{2\pi}\!\!\int_0^bE_0\frac ra\sin^2\theta\cos\omega t\;r\,dr\,d\theta=\frac{E_0}{a}\cos\omega t\cdot\pi\cdot\frac{b^3}{3}$ (car $\int_0^{2\pi}\sin^2\theta\,d\theta=\pi$).</li>
+<li>$\oint\vec B\cdot d\vec l=\dfrac1{c^2}\dfrac{d}{dt}\left(\dfrac{\pi E_0b^3}{3a}\cos\omega t\right)=-\dfrac{\pi\omega b^3E_0\sin\omega t}{3ac^2}$.</li>
+</ol>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> אין זרם הולכה: $\oint\vec B\cdot d\vec l=\mu_0\varepsilon_0\dfrac{d\Phi_E}{dt}=\dfrac1{c^2}\dfrac{d\Phi_E}{dt}$. צריך את השטף של $\vec E$ (בכיוון $\hat z$) דרך העיגול ברדיוס $b$.</p>
+<ol>
+<li>$\Phi_E=\displaystyle\int_0^{2\pi}\!\!\int_0^bE_0\frac ra\sin^2\theta\cos\omega t\;r\,dr\,d\theta=\frac{E_0}{a}\cos\omega t\cdot\pi\cdot\frac{b^3}{3}$ (כי $\int_0^{2\pi}\sin^2\theta\,d\theta=\pi$).</li>
+<li>$\oint\vec B\cdot d\vec l=\dfrac1{c^2}\dfrac{d}{dt}\left(\dfrac{\pi E_0b^3}{3a}\cos\omega t\right)=-\dfrac{\pi\omega b^3E_0\sin\omega t}{3ac^2}$.</li>
+</ol>
+</div>
+</article>
+
+<article data-id="23spA-q10">
+<div lang="fr">
+<p><b>Idée.</b> Symétrie cylindrique : $\vec E$ induit est azimutal. Faraday sur un cercle de rayon $r$.</p>
+<ol>
+<li>$r&lt;R$ : $E\cdot2\pi r=\pi r^2\alpha$, donc $E=\dfrac{r\alpha}{2}$.</li>
+<li>$r&gt;R$ : le flux enlacé est $\pi R^2B_0$, donc $E\cdot2\pi r=\pi R^2\alpha$ et $E=\dfrac{R^2\alpha}{2r}$. Il est non nul même là où $B=0$.</li>
+<li>Sens : $B_z$ croît, et Lenz donne un champ qui tourne dans le sens horaire vu de $+z$, soit $-\hat\theta$.</li>
+</ol>
+<div class="trap">L'option « $E=0$ hors du cylindre » est tentante mais fausse. Le champ électrique induit dépend du flux <b>enlacé</b>, pas du champ local.</div>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> סימטריה גלילית: $\vec E$ המושרה אזימוטלי. פאראדיי על מעגל ברדיוס $r$.</p>
+<ol>
+<li>$r&lt;R$: $E\cdot2\pi r=\pi r^2\alpha$, ולכן $E=\dfrac{r\alpha}{2}$.</li>
+<li>$r&gt;R$: השטף הכלוא הוא $\pi R^2B_0$, ולכן $E\cdot2\pi r=\pi R^2\alpha$ ו-$E=\dfrac{R^2\alpha}{2r}$. הוא שונה מאפס גם במקום שבו $B=0$.</li>
+<li>כיוון: $B_z$ גדל, ולנץ נותן שדה שמסתובב עם כיוון השעון במבט מ-$+z$, כלומר $-\hat\theta$.</li>
+</ol>
+<div class="trap">האפשרות "$E=0$ מחוץ לגליל" מפתה אבל שגויה. השדה החשמלי המושרה תלוי בשטף <b>הכלוא</b>, לא בשדה המקומי.</div>
+</div>
+</article>
+
+<article data-id="22wnC-q03">
+<div lang="fr">
+<p><b>Idée.</b> Gauss électrique : un flux total nul signifie seulement que la charge <b>totale</b> intérieure est nulle.</p>
+<ul>
+<li>Il peut y avoir des charges $+$ et $-$, au repos ou en mouvement : Gauss reste valable pour des charges en mouvement.</li>
+<li>Le champ n'est pas forcément nul sur la sphère (charges extérieures, ou dipôle intérieur), et le flux à travers une demi-sphère n'est pas nul non plus.</li>
+</ul>
+<p><b>Réponse :</b> des charges sont possibles dans la sphère, mais leur somme est nulle.</p>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> גאוס החשמלי: שטף כולל אפס פירושו רק שהמטען <b>הכולל</b> בפנים הוא אפס.</p>
+<ul>
+<li>ייתכנו מטענים $+$ ו-$-$, נחים או נעים: חוק גאוס תקף גם למטענים נעים.</li>
+<li>השדה על הספרה אינו בהכרח אפס (מטענים חיצוניים, או דיפול בפנים), וגם השטף דרך חצי ספרה אינו אפס.</li>
+</ul>
+<p><b>תשובה:</b> בתוך הכדור ייתכנו מטענים, אבל סכומם אפס.</p>
+</div>
+</article>
+
+<article data-id="22wnC-q07">
+<div lang="fr">
+<p><b>Idée.</b> $\oint\vec B\cdot d\vec A=0$ est vrai <b>pour toute surface fermée</b>, toujours (pas de monopôle magnétique). Le donner comme « information » n'apprend donc rien.</p>
+<p><b>Réponse :</b> on ne peut rien conclure. En particulier, le flux à travers une demi-sphère n'est pas forcément nul, et il peut y avoir n'importe quelles charges et courants à l'intérieur.</p>
+<div class="trap">Comparer avec la question jumelle sur le flux <i>électrique</i> (même examen, Q3) : là, un flux nul impose une charge totale nulle. Ici, c'est une identité.</div>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> $\oint\vec B\cdot d\vec A=0$ נכון <b>לכל משטח סגור</b>, תמיד (אין מונופול מגנטי). לכן הנתון אינו מלמד דבר.</p>
+<p><b>תשובה:</b> לא נוכל להסיק דבר. בפרט, השטף דרך חצי ספרה אינו בהכרח אפס, וייתכנו בפנים מטענים וזרמים כלשהם.</p>
+<div class="trap">להשוות לשאלה התאומה על השטף ה<i>חשמלי</i> (אותו מבחן, שאלה 3): שם שטף אפס מחייב מטען כולל אפס. כאן זו זהות.</div>
+</div>
+</article>
+
+<article data-id="22wnB-q08">
+<div lang="fr">
+<p><b>Idée.</b> Gauss reste vrai pour des charges en mouvement et à chaque instant : le flux à travers la sphère $R=2c$ (en unités de longueur : $2\,\text{s}\times c$) vaut $4\pi kQ_{\text{int}}(t)$. Il suffit de savoir quand chaque charge est dedans.</p>
+<ol>
+<li>Rencontre à l'origine en $t=0$. $+Q$ (à $0{,}2c$) entre dans la sphère à $t_+=-\dfrac{2c}{0{,}2c}=-10\,\text{s}$ ; $-Q$ (à $0{,}4c$) entre à $t_-=-5\,\text{s}$.</li>
+<li>$-10&lt;t&lt;-5$ : seule $+Q$ est dedans, donc $\Phi=4\pi kQ$. Entre $-5$ et $0$ : charge totale nulle, donc $\Phi=0$. Après l'annihilation : $\Phi=0$.</li>
+</ol>
+<p><b>Remarque :</b> l'annihilation conserve la charge (elle produit des photons neutres), donc le flux reste nul ensuite.</p>
+</div>
+<div lang="he">
+<p><b>רעיון.</b> חוק גאוס תקף גם למטענים נעים ובכל רגע: השטף דרך הספרה $R=2c$ (ביחידות אורך: $2\,\text{s}\times c$) שווה ל-$4\pi kQ_{\text{in}}(t)$. מספיק לדעת מתי כל מטען בפנים.</p>
+<ol>
+<li>המפגש בראשית ב-$t=0$. $+Q$ (ב-$0.2c$) נכנס לספרה ב-$t_+=-\dfrac{2c}{0.2c}=-10\,\text{s}$; $-Q$ (ב-$0.4c$) נכנס ב-$t_-=-5\,\text{s}$.</li>
+<li>$-10&lt;t&lt;-5$: רק $+Q$ בפנים, ולכן $\Phi=4\pi kQ$. בין $-5$ ל-$0$: מטען כולל אפס, ולכן $\Phi=0$. אחרי ההשמדה: $\Phi=0$.</li>
+</ol>
+<p><b>הערה:</b> ההשמדה שומרת על המטען (נוצרים פוטונים ניטרליים), ולכן השטף נשאר אפס אחר כך.</p>
+</div>
+</article>
